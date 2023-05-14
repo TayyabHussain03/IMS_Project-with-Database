@@ -68,3 +68,28 @@ D:\inventory system\inventory system\obj\Debug\net6.0-windows\refint\inventory s
 D:\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.pdb
 D:\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.genruntimeconfig.cache
 D:\inventory system\inventory system\obj\Debug\net6.0-windows\ref\inventory system.dll
+D:\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.exe
+D:\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.deps.json
+D:\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.runtimeconfig.json
+D:\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.dll
+D:\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.pdb
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.AssemblyReference.cache
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.index.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmAddProduct.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.login.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.overview.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Properties.Resources.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Screens.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.signin.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlLogin.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlSignin.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.GenerateResource.cache
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.GeneratedMSBuildEditorConfig.editorconfig
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.AssemblyInfoInputs.cache
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.AssemblyInfo.cs
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.CoreCompileInputs.cache
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.dll
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\refint\inventory system.dll
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.pdb
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.genruntimeconfig.cache
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\ref\inventory system.dll
