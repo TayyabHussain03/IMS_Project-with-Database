@@ -93,3 +93,4 @@ D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\refint
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.pdb
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.genruntimeconfig.cache
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\ref\inventory system.dll
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductCategory.resources
