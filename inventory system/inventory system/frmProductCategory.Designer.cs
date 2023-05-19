@@ -48,16 +48,6 @@
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             label3 = new Label();
-            panel4 = new Panel();
-            panel5 = new Panel();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            label5 = new Label();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            label6 = new Label();
             panel6 = new Panel();
             panel7 = new Panel();
             textBox16 = new TextBox();
@@ -68,14 +58,24 @@
             textBox20 = new TextBox();
             textBox21 = new TextBox();
             label8 = new Label();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            textBox10 = new TextBox();
+            textBox11 = new TextBox();
+            textBox12 = new TextBox();
+            label5 = new Label();
+            textBox13 = new TextBox();
+            textBox14 = new TextBox();
+            textBox15 = new TextBox();
+            label6 = new Label();
             flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
             panel6.SuspendLayout();
             panel7.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // btnSearchProducts
@@ -92,12 +92,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Sitka Banner", 15.7499981F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.Font = new Font("Sitka Banner", 20.2499981F, FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkSlateGray;
-            label1.Location = new Point(320, 18);
+            label1.Location = new Point(297, 18);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(161, 30);
+            label1.Size = new Size(208, 39);
             label1.TabIndex = 3;
             label1.Text = "Product Categories";
             // 
@@ -308,129 +308,6 @@
             label3.TabIndex = 0;
             label3.Text = "2. Beauty Products";
             // 
-            // panel4
-            // 
-            panel4.BackColor = Color.Moccasin;
-            panel4.Controls.Add(panel5);
-            panel4.Controls.Add(textBox13);
-            panel4.Controls.Add(textBox14);
-            panel4.Controls.Add(textBox15);
-            panel4.Controls.Add(label6);
-            panel4.ForeColor = Color.Transparent;
-            panel4.Location = new Point(3, 486);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(648, 155);
-            panel4.TabIndex = 7;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.Moccasin;
-            panel5.Controls.Add(textBox10);
-            panel5.Controls.Add(textBox11);
-            panel5.Controls.Add(textBox12);
-            panel5.Controls.Add(label5);
-            panel5.ForeColor = Color.Transparent;
-            panel5.Location = new Point(3, 325);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(648, 155);
-            panel5.TabIndex = 5;
-            // 
-            // textBox10
-            // 
-            textBox10.BackColor = Color.Moccasin;
-            textBox10.BorderStyle = BorderStyle.None;
-            textBox10.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox10.ForeColor = Color.DarkSlateGray;
-            textBox10.Location = new Point(532, 125);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(100, 18);
-            textBox10.TabIndex = 3;
-            textBox10.Text = "Categories : 5";
-            // 
-            // textBox11
-            // 
-            textBox11.BackColor = Color.Moccasin;
-            textBox11.BorderStyle = BorderStyle.None;
-            textBox11.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox11.ForeColor = Color.DarkSlateGray;
-            textBox11.Location = new Point(385, 126);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(125, 18);
-            textBox11.TabIndex = 2;
-            textBox11.Text = "Items Available : 102";
-            // 
-            // textBox12
-            // 
-            textBox12.BackColor = Color.Moccasin;
-            textBox12.BorderStyle = BorderStyle.None;
-            textBox12.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox12.ForeColor = SystemColors.WindowFrame;
-            textBox12.Location = new Point(7, 58);
-            textBox12.Multiline = true;
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(613, 59);
-            textBox12.TabIndex = 1;
-            textBox12.Text = resources.GetString("textBox12.Text");
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Sitka Banner", 24F, FontStyle.Italic, GraphicsUnit.Point);
-            label5.ForeColor = Color.DarkSlateGray;
-            label5.Location = new Point(7, 8);
-            label5.Name = "label5";
-            label5.Size = new Size(246, 47);
-            label5.TabIndex = 0;
-            label5.Text = "2. Beauty Products";
-            // 
-            // textBox13
-            // 
-            textBox13.BackColor = Color.Moccasin;
-            textBox13.BorderStyle = BorderStyle.None;
-            textBox13.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox13.ForeColor = Color.DarkSlateGray;
-            textBox13.Location = new Point(532, 125);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(100, 18);
-            textBox13.TabIndex = 3;
-            textBox13.Text = "Categories : 5";
-            // 
-            // textBox14
-            // 
-            textBox14.BackColor = Color.Moccasin;
-            textBox14.BorderStyle = BorderStyle.None;
-            textBox14.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox14.ForeColor = Color.DarkSlateGray;
-            textBox14.Location = new Point(385, 126);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(125, 18);
-            textBox14.TabIndex = 2;
-            textBox14.Text = "Items Available : 102";
-            // 
-            // textBox15
-            // 
-            textBox15.BackColor = Color.Moccasin;
-            textBox15.BorderStyle = BorderStyle.None;
-            textBox15.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox15.ForeColor = SystemColors.WindowFrame;
-            textBox15.Location = new Point(7, 58);
-            textBox15.Multiline = true;
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(613, 62);
-            textBox15.TabIndex = 1;
-            textBox15.Text = resources.GetString("textBox15.Text");
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Sitka Banner", 24F, FontStyle.Italic, GraphicsUnit.Point);
-            label6.ForeColor = Color.DarkSlateGray;
-            label6.Location = new Point(7, 8);
-            label6.Name = "label6";
-            label6.Size = new Size(265, 47);
-            label6.TabIndex = 0;
-            label6.Text = "4. Cleaning Supplies";
-            // 
             // panel6
             // 
             panel6.BackColor = Color.Moccasin;
@@ -554,6 +431,129 @@
             label8.TabIndex = 0;
             label8.Text = "3. Household Essentials";
             // 
+            // panel4
+            // 
+            panel4.BackColor = Color.Moccasin;
+            panel4.Controls.Add(panel5);
+            panel4.Controls.Add(textBox13);
+            panel4.Controls.Add(textBox14);
+            panel4.Controls.Add(textBox15);
+            panel4.Controls.Add(label6);
+            panel4.ForeColor = Color.Transparent;
+            panel4.Location = new Point(3, 486);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(648, 155);
+            panel4.TabIndex = 7;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.Moccasin;
+            panel5.Controls.Add(textBox10);
+            panel5.Controls.Add(textBox11);
+            panel5.Controls.Add(textBox12);
+            panel5.Controls.Add(label5);
+            panel5.ForeColor = Color.Transparent;
+            panel5.Location = new Point(3, 325);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(648, 155);
+            panel5.TabIndex = 5;
+            // 
+            // textBox10
+            // 
+            textBox10.BackColor = Color.Moccasin;
+            textBox10.BorderStyle = BorderStyle.None;
+            textBox10.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox10.ForeColor = Color.DarkSlateGray;
+            textBox10.Location = new Point(532, 125);
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(100, 18);
+            textBox10.TabIndex = 3;
+            textBox10.Text = "Categories : 5";
+            // 
+            // textBox11
+            // 
+            textBox11.BackColor = Color.Moccasin;
+            textBox11.BorderStyle = BorderStyle.None;
+            textBox11.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox11.ForeColor = Color.DarkSlateGray;
+            textBox11.Location = new Point(385, 126);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(125, 18);
+            textBox11.TabIndex = 2;
+            textBox11.Text = "Items Available : 102";
+            // 
+            // textBox12
+            // 
+            textBox12.BackColor = Color.Moccasin;
+            textBox12.BorderStyle = BorderStyle.None;
+            textBox12.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox12.ForeColor = SystemColors.WindowFrame;
+            textBox12.Location = new Point(7, 58);
+            textBox12.Multiline = true;
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(613, 59);
+            textBox12.TabIndex = 1;
+            textBox12.Text = resources.GetString("textBox12.Text");
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Sitka Banner", 24F, FontStyle.Italic, GraphicsUnit.Point);
+            label5.ForeColor = Color.DarkSlateGray;
+            label5.Location = new Point(7, 8);
+            label5.Name = "label5";
+            label5.Size = new Size(246, 47);
+            label5.TabIndex = 0;
+            label5.Text = "2. Beauty Products";
+            // 
+            // textBox13
+            // 
+            textBox13.BackColor = Color.Moccasin;
+            textBox13.BorderStyle = BorderStyle.None;
+            textBox13.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox13.ForeColor = Color.DarkSlateGray;
+            textBox13.Location = new Point(532, 125);
+            textBox13.Name = "textBox13";
+            textBox13.Size = new Size(100, 18);
+            textBox13.TabIndex = 3;
+            textBox13.Text = "Categories : 5";
+            // 
+            // textBox14
+            // 
+            textBox14.BackColor = Color.Moccasin;
+            textBox14.BorderStyle = BorderStyle.None;
+            textBox14.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox14.ForeColor = Color.DarkSlateGray;
+            textBox14.Location = new Point(385, 126);
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(125, 18);
+            textBox14.TabIndex = 2;
+            textBox14.Text = "Items Available : 102";
+            // 
+            // textBox15
+            // 
+            textBox15.BackColor = Color.Moccasin;
+            textBox15.BorderStyle = BorderStyle.None;
+            textBox15.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox15.ForeColor = SystemColors.WindowFrame;
+            textBox15.Location = new Point(7, 58);
+            textBox15.Multiline = true;
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(613, 62);
+            textBox15.TabIndex = 1;
+            textBox15.Text = resources.GetString("textBox15.Text");
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Sitka Banner", 24F, FontStyle.Italic, GraphicsUnit.Point);
+            label6.ForeColor = Color.DarkSlateGray;
+            label6.Location = new Point(7, 8);
+            label6.Name = "label6";
+            label6.Size = new Size(265, 47);
+            label6.TabIndex = 0;
+            label6.Text = "4. Cleaning Supplies";
+            // 
             // frmProductCategory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -573,14 +573,14 @@
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

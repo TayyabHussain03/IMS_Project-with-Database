@@ -94,3 +94,4 @@ D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\invent
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.genruntimeconfig.cache
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\ref\inventory system.dll
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductCategory.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductTypes.resources
