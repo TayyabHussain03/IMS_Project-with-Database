@@ -31,6 +31,9 @@
     <Compile Update="usercontrol\userctrlLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="usercontrol\userctrlPurchaseOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="usercontrol\userctrlSignin.cs">
       <SubType>UserControl</SubType>
     </Compile>
