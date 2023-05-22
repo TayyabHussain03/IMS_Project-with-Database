@@ -143,7 +143,7 @@
             btnUpdateInventory.BackColor = Color.FromArgb(0, 192, 0);
             btnUpdateInventory.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnUpdateInventory.ForeColor = Color.White;
-            btnUpdateInventory.Location = new Point(237, 269);
+            btnUpdateInventory.Location = new Point(231, 269);
             btnUpdateInventory.Name = "btnUpdateInventory";
             btnUpdateInventory.Size = new Size(157, 44);
             btnUpdateInventory.TabIndex = 18;
@@ -155,7 +155,7 @@
             label14.AutoSize = true;
             label14.Location = new Point(395, 224);
             label14.Name = "label14";
-            label14.Size = new Size(61, 15);
+            label14.Size = new Size(62, 15);
             label14.TabIndex = 26;
             label14.Text = "Sub Total :";
             // 
@@ -258,7 +258,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(395, 146);
             label6.Name = "label6";
-            label6.Size = new Size(87, 15);
+            label6.Size = new Size(88, 15);
             label6.TabIndex = 11;
             label6.Text = "Payment Type :";
             // 
@@ -285,7 +285,7 @@
             label9.AutoSize = true;
             label9.Location = new Point(395, 31);
             label9.Name = "label9";
-            label9.Size = new Size(88, 15);
+            label9.Size = new Size(87, 15);
             label9.TabIndex = 8;
             label9.Text = "Expected Date :";
             // 
