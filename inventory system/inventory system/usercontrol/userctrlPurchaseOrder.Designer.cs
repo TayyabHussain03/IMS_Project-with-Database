@@ -63,6 +63,8 @@
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             ID = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            textBox3 = new TextBox();
+            label15 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -73,7 +75,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Sitka Banner", 20.2499981F, FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkSlateGray;
-            label1.Location = new Point(299, 10);
+            label1.Location = new Point(211, -3);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(249, 39);
@@ -83,6 +85,8 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.FloralWhite;
+            groupBox1.Controls.Add(label15);
+            groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(btnClearForm);
             groupBox1.Controls.Add(txtBoxSubTotal);
             groupBox1.Controls.Add(btnUpdateInventory);
@@ -111,9 +115,9 @@
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(19, 64);
+            groupBox1.Location = new Point(20, 43);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(788, 325);
+            groupBox1.Size = new Size(612, 325);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Transaction:";
@@ -124,7 +128,7 @@
             btnClearForm.BackColor = Color.DarkRed;
             btnClearForm.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnClearForm.ForeColor = Color.White;
-            btnClearForm.Location = new Point(432, 266);
+            btnClearForm.Location = new Point(318, 266);
             btnClearForm.Name = "btnClearForm";
             btnClearForm.Size = new Size(152, 44);
             btnClearForm.TabIndex = 19;
@@ -133,7 +137,7 @@
             // 
             // txtBoxSubTotal
             // 
-            txtBoxSubTotal.Location = new Point(536, 224);
+            txtBoxSubTotal.Location = new Point(422, 224);
             txtBoxSubTotal.Name = "txtBoxSubTotal";
             txtBoxSubTotal.Size = new Size(160, 23);
             txtBoxSubTotal.TabIndex = 27;
@@ -143,7 +147,7 @@
             btnUpdateInventory.BackColor = Color.ForestGreen;
             btnUpdateInventory.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnUpdateInventory.ForeColor = Color.White;
-            btnUpdateInventory.Location = new Point(193, 266);
+            btnUpdateInventory.Location = new Point(134, 266);
             btnUpdateInventory.Name = "btnUpdateInventory";
             btnUpdateInventory.Size = new Size(152, 44);
             btnUpdateInventory.TabIndex = 18;
@@ -153,7 +157,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(432, 224);
+            label14.Location = new Point(318, 224);
             label14.Name = "label14";
             label14.Size = new Size(62, 15);
             label14.TabIndex = 26;
@@ -169,7 +173,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(432, 190);
+            label12.Location = new Point(318, 190);
             label12.Name = "label12";
             label12.Size = new Size(81, 15);
             label12.TabIndex = 24;
@@ -178,7 +182,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(536, 187);
+            textBox2.Location = new Point(422, 187);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(40, 23);
             textBox2.TabIndex = 23;
@@ -186,7 +190,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(591, 190);
+            label13.Location = new Point(477, 190);
             label13.Name = "label13";
             label13.Size = new Size(59, 15);
             label13.TabIndex = 22;
@@ -194,7 +198,7 @@
             // 
             // txtBoxProductName
             // 
-            txtBoxProductName.Location = new Point(185, 221);
+            txtBoxProductName.Location = new Point(123, 225);
             txtBoxProductName.Name = "txtBoxProductName";
             txtBoxProductName.Size = new Size(160, 23);
             txtBoxProductName.TabIndex = 21;
@@ -202,7 +206,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(82, 224);
+            label11.Location = new Point(20, 228);
             label11.Name = "label11";
             label11.Size = new Size(90, 15);
             label11.TabIndex = 20;
@@ -210,7 +214,7 @@
             // 
             // txtBoxProductID
             // 
-            txtBoxProductID.Location = new Point(185, 182);
+            txtBoxProductID.Location = new Point(123, 186);
             txtBoxProductID.Name = "txtBoxProductID";
             txtBoxProductID.Size = new Size(160, 23);
             txtBoxProductID.TabIndex = 19;
@@ -218,7 +222,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(82, 185);
+            label10.Location = new Point(20, 189);
             label10.Name = "label10";
             label10.Size = new Size(69, 15);
             label10.TabIndex = 18;
@@ -227,7 +231,7 @@
             // dateTimePickerDateReceived
             // 
             dateTimePickerDateReceived.Format = DateTimePickerFormat.Short;
-            dateTimePickerDateReceived.Location = new Point(536, 107);
+            dateTimePickerDateReceived.Location = new Point(422, 107);
             dateTimePickerDateReceived.Name = "dateTimePickerDateReceived";
             dateTimePickerDateReceived.Size = new Size(160, 23);
             dateTimePickerDateReceived.TabIndex = 17;
@@ -236,14 +240,14 @@
             // 
             cmbBoxPaymentType.FormattingEnabled = true;
             cmbBoxPaymentType.Items.AddRange(new object[] { "Cash", "Check" });
-            cmbBoxPaymentType.Location = new Point(536, 146);
+            cmbBoxPaymentType.Location = new Point(422, 146);
             cmbBoxPaymentType.Name = "cmbBoxPaymentType";
             cmbBoxPaymentType.Size = new Size(160, 23);
             cmbBoxPaymentType.TabIndex = 16;
             // 
             // txtBoxVendorName
             // 
-            txtBoxVendorName.Location = new Point(536, 69);
+            txtBoxVendorName.Location = new Point(422, 69);
             txtBoxVendorName.Name = "txtBoxVendorName";
             txtBoxVendorName.Size = new Size(160, 23);
             txtBoxVendorName.TabIndex = 14;
@@ -251,7 +255,7 @@
             // dateTimePickerExpectedDate
             // 
             dateTimePickerExpectedDate.Format = DateTimePickerFormat.Short;
-            dateTimePickerExpectedDate.Location = new Point(536, 30);
+            dateTimePickerExpectedDate.Location = new Point(422, 30);
             dateTimePickerExpectedDate.Name = "dateTimePickerExpectedDate";
             dateTimePickerExpectedDate.Size = new Size(160, 23);
             dateTimePickerExpectedDate.TabIndex = 12;
@@ -259,7 +263,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(432, 146);
+            label6.Location = new Point(318, 146);
             label6.Name = "label6";
             label6.Size = new Size(88, 15);
             label6.TabIndex = 11;
@@ -268,7 +272,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(432, 110);
+            label7.Location = new Point(318, 110);
             label7.Name = "label7";
             label7.Size = new Size(87, 15);
             label7.TabIndex = 10;
@@ -277,7 +281,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(432, 72);
+            label8.Location = new Point(318, 72);
             label8.Name = "label8";
             label8.Size = new Size(85, 15);
             label8.TabIndex = 9;
@@ -286,7 +290,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(432, 31);
+            label9.Location = new Point(318, 31);
             label9.Name = "label9";
             label9.Size = new Size(87, 15);
             label9.TabIndex = 8;
@@ -294,14 +298,14 @@
             // 
             // txtBoxCreatedBy
             // 
-            txtBoxCreatedBy.Location = new Point(185, 106);
+            txtBoxCreatedBy.Location = new Point(123, 110);
             txtBoxCreatedBy.Name = "txtBoxCreatedBy";
             txtBoxCreatedBy.Size = new Size(160, 23);
             txtBoxCreatedBy.TabIndex = 7;
             // 
             // txtBoxPurchaseOrderNumber
             // 
-            txtBoxPurchaseOrderNumber.Location = new Point(185, 68);
+            txtBoxPurchaseOrderNumber.Location = new Point(123, 72);
             txtBoxPurchaseOrderNumber.Name = "txtBoxPurchaseOrderNumber";
             txtBoxPurchaseOrderNumber.Size = new Size(160, 23);
             txtBoxPurchaseOrderNumber.TabIndex = 6;
@@ -309,7 +313,7 @@
             // dateTimePickerCreationDate
             // 
             dateTimePickerCreationDate.Format = DateTimePickerFormat.Short;
-            dateTimePickerCreationDate.Location = new Point(185, 139);
+            dateTimePickerCreationDate.Location = new Point(123, 143);
             dateTimePickerCreationDate.Name = "dateTimePickerCreationDate";
             dateTimePickerCreationDate.Size = new Size(160, 23);
             dateTimePickerCreationDate.TabIndex = 5;
@@ -317,7 +321,7 @@
             // dateTimePickerCurrentDate
             // 
             dateTimePickerCurrentDate.Format = DateTimePickerFormat.Short;
-            dateTimePickerCurrentDate.Location = new Point(185, 29);
+            dateTimePickerCurrentDate.Location = new Point(123, 33);
             dateTimePickerCurrentDate.Name = "dateTimePickerCurrentDate";
             dateTimePickerCurrentDate.Size = new Size(160, 23);
             dateTimePickerCurrentDate.TabIndex = 4;
@@ -325,7 +329,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(82, 145);
+            label5.Location = new Point(20, 149);
             label5.Name = "label5";
             label5.Size = new Size(85, 15);
             label5.TabIndex = 3;
@@ -334,7 +338,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(82, 109);
+            label4.Location = new Point(20, 113);
             label4.Name = "label4";
             label4.Size = new Size(70, 15);
             label4.TabIndex = 2;
@@ -343,7 +347,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(82, 71);
+            label3.Location = new Point(20, 75);
             label3.Name = "label3";
             label3.Size = new Size(76, 15);
             label3.TabIndex = 1;
@@ -352,7 +356,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(82, 30);
+            label2.Location = new Point(134, 34);
             label2.Name = "label2";
             label2.Size = new Size(80, 15);
             label2.TabIndex = 0;
@@ -362,9 +366,9 @@
             // 
             groupBox2.BackColor = Color.FloralWhite;
             groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(20, 403);
+            groupBox2.Location = new Point(20, 380);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(787, 139);
+            groupBox2.Size = new Size(612, 139);
             groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
             groupBox2.Text = "Purchase Order Details";
@@ -376,7 +380,7 @@
             dataGridView1.Location = new Point(6, 22);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(775, 111);
+            dataGridView1.Size = new Size(606, 111);
             dataGridView1.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn2
@@ -394,6 +398,22 @@
             dataGridViewTextBoxColumn1.HeaderText = "Product ID";
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(542, 186);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(40, 23);
+            textBox3.TabIndex = 28;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(18, 33);
+            label15.Name = "label15";
+            label15.Size = new Size(87, 15);
+            label15.TabIndex = 29;
+            label15.Text = "Expected Date :";
+            // 
             // userctrlPurchaseOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -403,7 +423,7 @@
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Name = "userctrlPurchaseOrder";
-            Size = new Size(845, 545);
+            Size = new Size(646, 524);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -449,5 +469,7 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private TextBox textBox3;
+        private Label label15;
     }
 }
