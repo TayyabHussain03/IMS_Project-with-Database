@@ -43,14 +43,15 @@
             panel5 = new Panel();
             btnProducts = new Button();
             userctrlSignin1 = new usercontrol.userctrlSignin();
-            userctrlSignin2 = new usercontrol.userctrlSignin();
-            panel6 = new Panel();
-            userctrlLogin2 = new usercontrol.userctrlLogin();
-            userctrlSignin4 = new usercontrol.userctrlSignin();
-            userctrlSignin3 = new usercontrol.userctrlSignin();
             main_panel = new Panel();
             label2 = new Label();
             sidebarTimer = new System.Windows.Forms.Timer(components);
+            panel6 = new Panel();
+            userctrlSignin2 = new usercontrol.userctrlSignin();
+            userctrlLogin2 = new usercontrol.userctrlLogin();
+            userctrlSignin4 = new usercontrol.userctrlSignin();
+            userctrlSignin3 = new usercontrol.userctrlSignin();
+            button1 = new Button();
             sidebarContainer.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)hamburgerBtn).BeginInit();
@@ -58,8 +59,8 @@
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
-            panel6.SuspendLayout();
             main_panel.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // sidebarContainer
@@ -192,6 +193,7 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(button1);
             panel5.Controls.Add(btnProducts);
             panel5.Location = new Point(3, 220);
             panel5.Name = "panel5";
@@ -223,45 +225,6 @@
             userctrlSignin1.Size = new Size(17, 22);
             userctrlSignin1.TabIndex = 5;
             // 
-            // userctrlSignin2
-            // 
-            userctrlSignin2.Location = new Point(-11, -3);
-            userctrlSignin2.Name = "userctrlSignin2";
-            userctrlSignin2.Size = new Size(646, 524);
-            userctrlSignin2.TabIndex = 8;
-            // 
-            // panel6
-            // 
-            panel6.Controls.Add(userctrlSignin2);
-            panel6.Controls.Add(userctrlLogin2);
-            panel6.Controls.Add(userctrlSignin4);
-            panel6.Controls.Add(userctrlSignin3);
-            panel6.Location = new Point(190, 2);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(646, 524);
-            panel6.TabIndex = 1;
-            // 
-            // userctrlLogin2
-            // 
-            userctrlLogin2.Location = new Point(-3, -2);
-            userctrlLogin2.Name = "userctrlLogin2";
-            userctrlLogin2.Size = new Size(646, 524);
-            userctrlLogin2.TabIndex = 6;
-            // 
-            // userctrlSignin4
-            // 
-            userctrlSignin4.Location = new Point(-3, -2);
-            userctrlSignin4.Name = "userctrlSignin4";
-            userctrlSignin4.Size = new Size(646, 524);
-            userctrlSignin4.TabIndex = 9;
-            // 
-            // userctrlSignin3
-            // 
-            userctrlSignin3.Location = new Point(-3, -3);
-            userctrlSignin3.Name = "userctrlSignin3";
-            userctrlSignin3.Size = new Size(646, 524);
-            userctrlSignin3.TabIndex = 9;
-            // 
             // main_panel
             // 
             main_panel.BackColor = SystemColors.ControlLight;
@@ -286,6 +249,61 @@
             sidebarTimer.Interval = 30;
             sidebarTimer.Tick += sidebarTimer_Tick;
             // 
+            // panel6
+            // 
+            panel6.Controls.Add(userctrlSignin2);
+            panel6.Controls.Add(userctrlLogin2);
+            panel6.Controls.Add(userctrlSignin4);
+            panel6.Controls.Add(userctrlSignin3);
+            panel6.Location = new Point(190, 2);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(646, 524);
+            panel6.TabIndex = 1;
+            // 
+            // userctrlSignin2
+            // 
+            userctrlSignin2.Location = new Point(-9, -3);
+            userctrlSignin2.Name = "userctrlSignin2";
+            userctrlSignin2.Size = new Size(554, 454);
+            userctrlSignin2.TabIndex = 8;
+            // 
+            // userctrlLogin2
+            // 
+            userctrlLogin2.Location = new Point(-3, -2);
+            userctrlLogin2.Name = "userctrlLogin2";
+            userctrlLogin2.Size = new Size(554, 454);
+            userctrlLogin2.TabIndex = 6;
+            // 
+            // userctrlSignin4
+            // 
+            userctrlSignin4.Location = new Point(-3, -2);
+            userctrlSignin4.Name = "userctrlSignin4";
+            userctrlSignin4.Size = new Size(554, 454);
+            userctrlSignin4.TabIndex = 9;
+            // 
+            // userctrlSignin3
+            // 
+            userctrlSignin3.Location = new Point(-3, -3);
+            userctrlSignin3.Name = "userctrlSignin3";
+            userctrlSignin3.Size = new Size(554, 454);
+            userctrlSignin3.TabIndex = 9;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(3, 297);
+            button1.Name = "button1";
+            button1.Padding = new Padding(20, 0, 0, 0);
+            button1.Size = new Size(199, 56);
+            button1.TabIndex = 3;
+            button1.Text = "          Login In";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = true;
+            // 
             // overview
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -307,9 +325,9 @@
             panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
-            panel6.ResumeLayout(false);
             main_panel.ResumeLayout(false);
             main_panel.PerformLayout();
+            panel6.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -326,15 +344,16 @@
         private Panel panel4;
         private Button btnCategory;
         private Button btnProducts;
-        private Panel panel6;
-        private usercontrol.userctrlSignin userctrlSignin2;
         private Panel panel5;
         private usercontrol.userctrlSignin userctrlSignin1;
-        private usercontrol.userctrlLogin userctrlLogin2;
-        private usercontrol.userctrlSignin userctrlSignin4;
-        private usercontrol.userctrlSignin userctrlSignin3;
         private Panel main_panel;
         private Label label2;
         private System.Windows.Forms.Timer sidebarTimer;
+        private Panel panel6;
+        private usercontrol.userctrlSignin userctrlSignin2;
+        private usercontrol.userctrlLogin userctrlLogin2;
+        private usercontrol.userctrlSignin userctrlSignin4;
+        private usercontrol.userctrlSignin userctrlSignin3;
+        private Button button1;
     }
 }

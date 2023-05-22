@@ -28,6 +28,12 @@
     <Compile Update="signin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="usercontrol\userctrlanalysis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\userctrldailysale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="usercontrol\userctrlLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -35,6 +41,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\userctrlSignin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\usermonthlysale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\useryearlysale.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
