@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN_PC\\.nuget\\packages\\": {},
+    "C:\\Users\\Anum\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Demo\\IMS_Project\\inventory system\\inventory system\\inventory system.csproj",
+      "projectUniqueName": "C:\\Users\\Anum\\Desktop\\demo\\IMS_Project\\inventory system\\inventory system\\inventory system.csproj",
       "projectName": "inventory system",
-      "projectPath": "D:\\Demo\\IMS_Project\\inventory system\\inventory system\\inventory system.csproj",
-      "packagesPath": "C:\\Users\\ADMIN_PC\\.nuget\\packages\\",
-      "outputPath": "D:\\Demo\\IMS_Project\\inventory system\\inventory system\\obj\\",
+      "projectPath": "C:\\Users\\Anum\\Desktop\\demo\\IMS_Project\\inventory system\\inventory system\\inventory system.csproj",
+      "packagesPath": "C:\\Users\\Anum\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Anum\\Desktop\\demo\\IMS_Project\\inventory system\\inventory system\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ADMIN_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Anum\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
