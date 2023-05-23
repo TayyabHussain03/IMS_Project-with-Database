@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="frmAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,7 +13,16 @@
     <Compile Update="frmProductTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="login.cs">
+    <Compile Update="frmPurhaseReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmSalesReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="overview.cs">
@@ -25,8 +31,14 @@
     <Compile Update="Screens.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="signin.cs">
-      <SubType>Form</SubType>
+    <Compile Update="usercontrol\usercontrolPurchasereturn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\usercontrolSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\usercontrolStock.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\userctrlanalysis.cs">
       <SubType>UserControl</SubType>
@@ -44,6 +56,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\usermonthlysale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\userontrolSaleReturn.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\useryearlysale.cs">
