@@ -42,10 +42,9 @@ namespace inventory_system
 
         private void btnOverview_Click(object sender, EventArgs e)
         {
-            userctrlSignin2.Hide();
-            userctrlLogin2.Hide();
+    
             main_panel.Show();
-
+            main_panel.BringToFront();
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)

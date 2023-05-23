@@ -41,6 +41,7 @@
             panel4 = new Panel();
             btnCategory = new Button();
             panel5 = new Panel();
+            button1 = new Button();
             btnProducts = new Button();
             userctrlSignin1 = new usercontrol.userctrlSignin();
             main_panel = new Panel();
@@ -51,7 +52,6 @@
             userctrlLogin2 = new usercontrol.userctrlLogin();
             userctrlSignin4 = new usercontrol.userctrlSignin();
             userctrlSignin3 = new usercontrol.userctrlSignin();
-            button1 = new Button();
             sidebarContainer.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)hamburgerBtn).BeginInit();
@@ -201,6 +201,22 @@
             panel5.Size = new Size(168, 43);
             panel5.TabIndex = 4;
             // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(3, 297);
+            button1.Name = "button1";
+            button1.Padding = new Padding(20, 0, 0, 0);
+            button1.Size = new Size(199, 56);
+            button1.TabIndex = 3;
+            button1.Text = "          Login In";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = true;
+            // 
             // btnProducts
             // 
             btnProducts.FlatStyle = FlatStyle.Flat;
@@ -251,10 +267,10 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(userctrlSignin3);
             panel6.Controls.Add(userctrlSignin2);
             panel6.Controls.Add(userctrlLogin2);
             panel6.Controls.Add(userctrlSignin4);
-            panel6.Controls.Add(userctrlSignin3);
             panel6.Location = new Point(190, 2);
             panel6.Name = "panel6";
             panel6.Size = new Size(646, 524);
@@ -288,30 +304,14 @@
             userctrlSignin3.Size = new Size(554, 454);
             userctrlSignin3.TabIndex = 9;
             // 
-            // button1
-            // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(3, 297);
-            button1.Name = "button1";
-            button1.Padding = new Padding(20, 0, 0, 0);
-            button1.Size = new Size(199, 56);
-            button1.TabIndex = 3;
-            button1.Text = "          Login In";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
-            // 
             // overview
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(837, 526);
-            Controls.Add(main_panel);
             Controls.Add(panel6);
             Controls.Add(sidebarContainer);
+            Controls.Add(main_panel);
             Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(3, 2, 3, 2);
             MaximumSize = new Size(853, 565);
