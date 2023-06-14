@@ -16,5 +16,10 @@ namespace inventory_system.usercontrol
         {
             InitializeComponent();
         }
+
+        private void usermonthlysale_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -220,7 +220,7 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
-            groupBox1.Location = new Point(16, 87);
+            groupBox1.Location = new Point(68, 162);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(615, 329);
             groupBox1.TabIndex = 24;
@@ -278,24 +278,22 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.SteelBlue;
-            label1.Font = new Font("Segoe UI", 25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(274, 14);
+            label1.Font = new Font("Sitka Banner", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.ForeColor = Color.DarkSlateGray;
+            label1.Location = new Point(337, 38);
             label1.Name = "label1";
-            label1.Size = new Size(100, 46);
-            label1.TabIndex = 23;
+            label1.Size = new Size(79, 42);
+            label1.TabIndex = 26;
             label1.Text = "Sales";
-            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // usercontrolSales
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(groupBox1);
             Controls.Add(label1);
+            Controls.Add(groupBox1);
             Name = "usercontrolSales";
-            Size = new Size(646, 524);
+            Size = new Size(762, 660);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

@@ -1,35 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="frmAddProduct.cs">
+    <Compile Update="dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmProductCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="frmProductDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="frmProductTypes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="frmPurhaseReturn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="frmSales.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="frmSalesReturn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="frmStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="overview.cs">
+    <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Screens.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="usercontrol\UserControlAddproduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\UserControlPrdCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\UserControlPrdDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\UserControlPrdType.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\usercontrolPurchasereturn.cs">
       <SubType>UserControl</SubType>
@@ -46,7 +37,7 @@
     <Compile Update="usercontrol\userctrldailysale.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="usercontrol\userctrlLogin.cs">
+    <Compile Update="usercontrol\userctrlProductPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\userctrlPurchaseOrder.cs">

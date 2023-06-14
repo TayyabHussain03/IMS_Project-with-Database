@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label7 = new Label();
+            label11 = new Label();
             label8 = new Label();
             label10 = new Label();
             label9 = new Label();
-            label1 = new Label();
             dataGridView1 = new DataGridView();
             date = new DataGridViewTextBoxColumn();
             item_name = new DataGridViewTextBoxColumn();
@@ -51,67 +52,78 @@
             txtemail = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            label11 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Sitka Banner", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label7.ForeColor = Color.DarkSlateGray;
+            label7.Location = new Point(264, 5);
+            label7.Name = "label7";
+            label7.Size = new Size(274, 42);
+            label7.TabIndex = 18;
+            label7.Text = "Monthly Sales Report";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.Font = new Font("Sitka Small", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.DarkSlateGray;
+            label11.Location = new Point(657, 596);
+            label11.Name = "label11";
+            label11.Size = new Size(44, 31);
+            label11.TabIndex = 24;
+            label11.Text = "00";
+            // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.BackColor = Color.DarkGray;
+            label8.BackColor = Color.Transparent;
             label8.Font = new Font("Sitka Small", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.DarkSlateGray;
-            label8.Location = new Point(209, 448);
+            label8.Location = new Point(264, 596);
             label8.Name = "label8";
             label8.Size = new Size(44, 31);
-            label8.TabIndex = 17;
+            label8.TabIndex = 23;
             label8.Text = "00";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.BackColor = Color.DarkGray;
+            label10.BackColor = Color.Transparent;
             label10.Font = new Font("Sitka Small", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.DarkSlateGray;
-            label10.Location = new Point(301, 448);
+            label10.Location = new Point(369, 596);
             label10.Name = "label10";
-            label10.Size = new Size(251, 31);
-            label10.TabIndex = 16;
-            label10.Text = "Total Revnue Genrate:";
+            label10.Size = new Size(276, 31);
+            label10.TabIndex = 22;
+            label10.Text = "Total Revnue Generated:";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.BackColor = Color.DarkGray;
+            label9.BackColor = Color.Transparent;
             label9.Font = new Font("Sitka Small", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.DarkSlateGray;
-            label9.Location = new Point(9, 448);
+            label9.Location = new Point(53, 596);
             label9.Name = "label9";
-            label9.Size = new Size(184, 31);
-            label9.TabIndex = 15;
-            label9.Text = "Total Item Sold:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Sitka Banner", 15.7499981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = Color.DarkSlateGray;
-            label1.Location = new Point(252, 13);
-            label1.Name = "label1";
-            label1.Size = new Size(200, 30);
-            label1.TabIndex = 14;
-            label1.Text = "Monthly Sales Report";
+            label9.Size = new Size(195, 31);
+            label9.TabIndex = 21;
+            label9.Text = "Total Items Sold:";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { date, item_name, item_caetgory, item_price, item_quantity, total_sales });
-            dataGridView1.Location = new Point(3, 229);
+            dataGridView1.Location = new Point(54, 251);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(640, 283);
-            dataGridView1.TabIndex = 13;
+            dataGridView1.Size = new Size(644, 315);
+            dataGridView1.TabIndex = 20;
             // 
             // date
             // 
@@ -158,10 +170,10 @@
             panel1.Controls.Add(txtemail);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(25, 64);
+            panel1.Location = new Point(82, 83);
             panel1.Name = "panel1";
             panel1.Size = new Size(596, 142);
-            panel1.TabIndex = 12;
+            panel1.TabIndex = 19;
             // 
             // btnlogin
             // 
@@ -268,18 +280,6 @@
             label2.TabIndex = 8;
             label2.Text = "Net Price";
             // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.DarkGray;
-            label11.Font = new Font("Sitka Small", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.DarkSlateGray;
-            label11.Location = new Point(567, 448);
-            label11.Name = "label11";
-            label11.Size = new Size(44, 31);
-            label11.TabIndex = 17;
-            label11.Text = "00";
-            // 
             // usermonthlysale
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -288,11 +288,12 @@
             Controls.Add(label8);
             Controls.Add(label10);
             Controls.Add(label9);
-            Controls.Add(label1);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
+            Controls.Add(label7);
             Name = "usermonthlysale";
-            Size = new Size(646, 524);
+            Size = new Size(762, 660);
+            Load += usermonthlysale_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -301,11 +302,11 @@
         }
 
         #endregion
-
+        private Label label7;
+        private Label label11;
         private Label label8;
         private Label label10;
         private Label label9;
-        private Label label1;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn date;
         private DataGridViewTextBoxColumn item_name;
@@ -325,6 +326,5 @@
         private TextBox txtemail;
         private Label label3;
         private Label label2;
-        private Label label11;
     }
 }

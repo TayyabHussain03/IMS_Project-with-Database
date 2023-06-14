@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             groupBox1 = new GroupBox();
+            label15 = new Label();
+            textBox3 = new TextBox();
             btnClearForm = new Button();
             txtBoxSubTotal = new TextBox();
             btnUpdateInventory = new Button();
@@ -63,24 +64,11 @@
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             ID = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            textBox3 = new TextBox();
-            label15 = new Label();
+            label16 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Sitka Banner", 20.2499981F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = Color.DarkSlateGray;
-            label1.Location = new Point(211, -3);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(249, 39);
-            label1.TabIndex = 9;
-            label1.Text = "Purchase Order Details";
             // 
             // groupBox1
             // 
@@ -115,13 +103,29 @@
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(20, 43);
+            groupBox1.Location = new Point(70, 110);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(612, 325);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Transaction:";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(20, 34);
+            label15.Name = "label15";
+            label15.Size = new Size(88, 15);
+            label15.TabIndex = 29;
+            label15.Text = "Expected Date :";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(542, 186);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(40, 23);
+            textBox3.TabIndex = 28;
             // 
             // btnClearForm
             // 
@@ -159,7 +163,7 @@
             label14.AutoSize = true;
             label14.Location = new Point(318, 224);
             label14.Name = "label14";
-            label14.Size = new Size(62, 15);
+            label14.Size = new Size(61, 15);
             label14.TabIndex = 26;
             label14.Text = "Sub Total :";
             // 
@@ -265,7 +269,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(318, 146);
             label6.Name = "label6";
-            label6.Size = new Size(88, 15);
+            label6.Size = new Size(87, 15);
             label6.TabIndex = 11;
             label6.Text = "Payment Type :";
             // 
@@ -292,7 +296,7 @@
             label9.AutoSize = true;
             label9.Location = new Point(318, 31);
             label9.Name = "label9";
-            label9.Size = new Size(87, 15);
+            label9.Size = new Size(88, 15);
             label9.TabIndex = 8;
             label9.Text = "Expected Date :";
             // 
@@ -366,7 +370,7 @@
             // 
             groupBox2.BackColor = Color.FloralWhite;
             groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(20, 380);
+            groupBox2.Location = new Point(70, 473);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(612, 139);
             groupBox2.TabIndex = 11;
@@ -398,32 +402,27 @@
             dataGridViewTextBoxColumn1.HeaderText = "Product ID";
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // textBox3
+            // label16
             // 
-            textBox3.Location = new Point(542, 186);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(40, 23);
-            textBox3.TabIndex = 28;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(20, 34);
-            label15.Name = "label15";
-            label15.Size = new Size(87, 15);
-            label15.TabIndex = 29;
-            label15.Text = "Expected Date :";
+            label16.AutoSize = true;
+            label16.Font = new Font("Sitka Banner", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label16.ForeColor = Color.DarkSlateGray;
+            label16.Location = new Point(245, 33);
+            label16.Name = "label16";
+            label16.Size = new Size(287, 42);
+            label16.TabIndex = 12;
+            label16.Text = "Purchase Order Details";
             // 
             // userctrlPurchaseOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
+            Controls.Add(label16);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(label1);
             Name = "userctrlPurchaseOrder";
-            Size = new Size(646, 524);
+            Size = new Size(762, 660);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -433,8 +432,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private GroupBox groupBox1;
         private Button btnClearForm;
         private TextBox txtBoxSubTotal;
@@ -471,5 +468,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private TextBox textBox3;
         private Label label15;
+        private Label label16;
     }
 }

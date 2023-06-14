@@ -129,6 +129,7 @@
             btnsignup.TabIndex = 2;
             btnsignup.Text = "Sign Up";
             btnsignup.UseVisualStyleBackColor = false;
+            btnsignup.Click += btnsignup_Click;
             // 
             // txtusername
             // 

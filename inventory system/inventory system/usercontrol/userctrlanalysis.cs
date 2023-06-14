@@ -16,5 +16,15 @@ namespace inventory_system
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void userctrlanalysis_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

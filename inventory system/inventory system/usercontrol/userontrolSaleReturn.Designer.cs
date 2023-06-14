@@ -44,11 +44,11 @@
             txtCurrentDate = new TextBox();
             label2 = new Label();
             groupBox1 = new GroupBox();
-            txtItemName = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
             textBox1 = new TextBox();
             label9 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            txtItemName = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             label1.BackColor = Color.SteelBlue;
             label1.Font = new Font("Segoe UI", 25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(228, 14);
+            label1.Location = new Point(275, 67);
             label1.Name = "label1";
             label1.Size = new Size(217, 46);
             label1.TabIndex = 21;
@@ -228,7 +228,7 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
-            groupBox1.Location = new Point(16, 87);
+            groupBox1.Location = new Point(74, 196);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(615, 329);
             groupBox1.TabIndex = 22;
@@ -236,14 +236,25 @@
             groupBox1.Text = "Sales Return";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // txtItemName
+            // textBox1
             // 
-            txtItemName.BackColor = SystemColors.InactiveBorder;
-            txtItemName.ForeColor = Color.SteelBlue;
-            txtItemName.Location = new Point(145, 133);
-            txtItemName.Name = "txtItemName";
-            txtItemName.Size = new Size(147, 27);
-            txtItemName.TabIndex = 11;
+            textBox1.BackColor = SystemColors.InactiveBorder;
+            textBox1.ForeColor = Color.SteelBlue;
+            textBox1.Location = new Point(450, 176);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(147, 27);
+            textBox1.TabIndex = 25;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.SteelBlue;
+            label9.Location = new Point(332, 180);
+            label9.Name = "label9";
+            label9.Size = new Size(114, 20);
+            label9.TabIndex = 24;
+            label9.Text = "Total Amount :";
             // 
             // button1
             // 
@@ -269,25 +280,14 @@
             button2.Text = "Update Inventory";
             button2.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtItemName
             // 
-            textBox1.BackColor = SystemColors.InactiveBorder;
-            textBox1.ForeColor = Color.SteelBlue;
-            textBox1.Location = new Point(450, 176);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(147, 27);
-            textBox1.TabIndex = 25;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.SteelBlue;
-            label9.Location = new Point(332, 180);
-            label9.Name = "label9";
-            label9.Size = new Size(114, 20);
-            label9.TabIndex = 24;
-            label9.Text = "Total Amount :";
+            txtItemName.BackColor = SystemColors.InactiveBorder;
+            txtItemName.ForeColor = Color.SteelBlue;
+            txtItemName.Location = new Point(145, 133);
+            txtItemName.Name = "txtItemName";
+            txtItemName.Size = new Size(147, 27);
+            txtItemName.TabIndex = 11;
             // 
             // userontrolSaleReturn
             // 
@@ -296,7 +296,7 @@
             Controls.Add(label1);
             Controls.Add(groupBox1);
             Name = "userontrolSaleReturn";
-            Size = new Size(646, 524);
+            Size = new Size(762, 660);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

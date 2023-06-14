@@ -42,7 +42,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(label2, 0, 0);
             tableLayoutPanel1.Controls.Add(label3, 1, 0);
-            tableLayoutPanel1.Location = new Point(26, 128);
+            tableLayoutPanel1.Location = new Point(254, 215);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -73,24 +73,23 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.SteelBlue;
-            label1.Font = new Font("Segoe UI", 25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(249, 18);
+            label1.Font = new Font("Sitka Banner", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.ForeColor = Color.DarkSlateGray;
+            label1.Location = new Point(326, 29);
             label1.Name = "label1";
-            label1.Size = new Size(107, 46);
-            label1.TabIndex = 4;
-            label1.Text = "Stock";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            label1.Size = new Size(94, 42);
+            label1.TabIndex = 5;
+            label1.Text = "Stocks";
             // 
             // usercontrolStock
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(tableLayoutPanel1);
             Controls.Add(label1);
+            Controls.Add(tableLayoutPanel1);
             Name = "usercontrolStock";
-            Size = new Size(646, 524);
+            Size = new Size(762, 660);
+            Load += usercontrolStock_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);

@@ -74,14 +74,8 @@ D:\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\invent
 D:\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.dll
 D:\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.pdb
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.AssemblyReference.cache
-D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.index.resources
-D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmAddProduct.resources
-D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.login.resources
-D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.overview.resources
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Properties.Resources.resources
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Screens.resources
-D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.signin.resources
-D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlLogin.resources
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlSignin.resources
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.GenerateResource.cache
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.GeneratedMSBuildEditorConfig.editorconfig
@@ -93,8 +87,6 @@ D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\refint
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.pdb
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.genruntimeconfig.cache
 D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\ref\inventory system.dll
-D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductCategory.resources
-D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductTypes.resources
 E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.AssemblyReference.cache
 E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmAddProduct.resources
 E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductCategory.resources
@@ -128,8 +120,147 @@ E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\re
 E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmPurhaseReturn.resources
 E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmSales.resources
 E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmSalesReturn.resources
-E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmStock.resources
 E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolPurchasereturn.resources
 E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolSales.resources
 E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolStock.resources
 E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userontrolSaleReturn.resources
+E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlAddproduct.resources
+E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdCategory.resources
+E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdDetails.resources
+E:\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdType.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.exe
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.deps.json
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.runtimeconfig.json
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.dll
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.pdb
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.AssemblyReference.cache
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.dashboard.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmAddProduct.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductCategory.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductDetails.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductTypes.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmPurhaseReturn.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmSales.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmSalesReturn.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.overview.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Properties.Resources.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Screens.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlAddproduct.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdCategory.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdDetails.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdType.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolPurchasereturn.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolSales.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolStock.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrlanalysis.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrldailysale.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlLogin.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlPurchaseOrder.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlSignin.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usermonthlysale.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userontrolSaleReturn.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.useryearlysale.resources
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.GenerateResource.cache
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.AssemblyInfoInputs.cache
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.AssemblyInfo.cs
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.dll
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\refint\inventory system.dll
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.pdb
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.genruntimeconfig.cache
+C:\Users\ADMIN_PC\Documents\ims\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\ref\inventory system.dll
+D:\TodoApp\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.exe
+D:\TodoApp\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.deps.json
+D:\TodoApp\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.runtimeconfig.json
+D:\TodoApp\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.dll
+D:\TodoApp\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.pdb
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.AssemblyReference.cache
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.dashboard.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmAddProduct.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductCategory.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductDetails.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmProductTypes.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmPurhaseReturn.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmSales.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.frmSalesReturn.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.overview.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Properties.Resources.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Screens.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlAddproduct.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdCategory.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdDetails.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdType.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolPurchasereturn.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolSales.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolStock.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrlanalysis.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrldailysale.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlLogin.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlPurchaseOrder.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlSignin.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usermonthlysale.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userontrolSaleReturn.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.useryearlysale.resources
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.GenerateResource.cache
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.GeneratedMSBuildEditorConfig.editorconfig
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.AssemblyInfoInputs.cache
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.AssemblyInfo.cs
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.CoreCompileInputs.cache
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.dll
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\refint\inventory system.dll
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.pdb
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.genruntimeconfig.cache
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\ref\inventory system.dll
+D:\TodoApp\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlProductPage.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.dashboard.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlAddproduct.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdCategory.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdDetails.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdType.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolPurchasereturn.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolSales.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolStock.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrlanalysis.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrldailysale.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlProductPage.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlPurchaseOrder.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usermonthlysale.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userontrolSaleReturn.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.useryearlysale.resources
+D:\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Login.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.exe
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.deps.json
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.runtimeconfig.json
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.dll
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.pdb
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.AssemblyReference.cache
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.dashboard.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Login.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Properties.Resources.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Screens.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlAddproduct.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdCategory.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdDetails.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdType.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolPurchasereturn.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolSales.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolStock.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrlanalysis.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrldailysale.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlProductPage.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlPurchaseOrder.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlSignin.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usermonthlysale.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userontrolSaleReturn.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.useryearlysale.resources
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.GenerateResource.cache
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.GeneratedMSBuildEditorConfig.editorconfig
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.AssemblyInfoInputs.cache
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.AssemblyInfo.cs
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.CoreCompileInputs.cache
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.dll
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\refint\inventory system.dll
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.pdb
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.genruntimeconfig.cache
+D:\IMS_Project (1)\IMS_Project\inventory system\inventory system\obj\Debug\net6.0-windows\ref\inventory system.dll
