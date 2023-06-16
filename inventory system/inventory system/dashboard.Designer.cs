@@ -62,6 +62,15 @@
             useryearlysale1 = new usercontrol.useryearlysale();
             usermonthlysale1 = new usercontrol.usermonthlysale();
             userctrldailysale1 = new userctrldailysale();
+            userControlAddproduct1 = new usercontrol.UserControlAddproduct();
+            userControlPrdCategory1 = new usercontrol.UserControlPrdCategory();
+            userControlPrdDetails1 = new usercontrol.UserControlPrdDetails();
+            usercontrolPurchasereturn2 = new usercontrol.usercontrolPurchasereturn();
+            usercontrolSales1 = new usercontrol.usercontrolSales();
+            userctrlProductPage1 = new usercontrol.userctrlProductPage();
+            userctrlPurchaseOrder1 = new usercontrol.userctrlPurchaseOrder();
+            userontrolSaleReturn1 = new usercontrol.userontrolSaleReturn();
+            userControlPrdType1 = new usercontrol.UserControlPrdType();
             panel7.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
@@ -521,6 +530,70 @@
             userctrldailysale1.Size = new Size(762, 660);
             userctrldailysale1.TabIndex = 14;
             // 
+            // userControlAddproduct1
+            // 
+            userControlAddproduct1.Location = new Point(238, 61);
+            userControlAddproduct1.Name = "userControlAddproduct1";
+            userControlAddproduct1.Size = new Size(762, 660);
+            userControlAddproduct1.TabIndex = 15;
+            // 
+            // userControlPrdCategory1
+            // 
+            userControlPrdCategory1.Location = new Point(238, 61);
+            userControlPrdCategory1.Name = "userControlPrdCategory1";
+            userControlPrdCategory1.Size = new Size(762, 660);
+            userControlPrdCategory1.TabIndex = 16;
+            // 
+            // userControlPrdDetails1
+            // 
+            userControlPrdDetails1.Location = new Point(238, 61);
+            userControlPrdDetails1.Name = "userControlPrdDetails1";
+            userControlPrdDetails1.Size = new Size(762, 660);
+            userControlPrdDetails1.TabIndex = 17;
+            // 
+            // usercontrolPurchasereturn2
+            // 
+            usercontrolPurchasereturn2.Location = new Point(238, 61);
+            usercontrolPurchasereturn2.Name = "usercontrolPurchasereturn2";
+            usercontrolPurchasereturn2.Size = new Size(762, 660);
+            usercontrolPurchasereturn2.TabIndex = 18;
+            // 
+            // usercontrolSales1
+            // 
+            usercontrolSales1.Location = new Point(238, 61);
+            usercontrolSales1.Name = "usercontrolSales1";
+            usercontrolSales1.Size = new Size(762, 660);
+            usercontrolSales1.TabIndex = 19;
+            // 
+            // userctrlProductPage1
+            // 
+            userctrlProductPage1.Location = new Point(238, 61);
+            userctrlProductPage1.Name = "userctrlProductPage1";
+            userctrlProductPage1.Size = new Size(762, 660);
+            userctrlProductPage1.TabIndex = 20;
+            // 
+            // userctrlPurchaseOrder1
+            // 
+            userctrlPurchaseOrder1.BackColor = SystemColors.Control;
+            userctrlPurchaseOrder1.Location = new Point(238, 61);
+            userctrlPurchaseOrder1.Name = "userctrlPurchaseOrder1";
+            userctrlPurchaseOrder1.Size = new Size(762, 660);
+            userctrlPurchaseOrder1.TabIndex = 21;
+            // 
+            // userontrolSaleReturn1
+            // 
+            userontrolSaleReturn1.Location = new Point(238, 61);
+            userontrolSaleReturn1.Name = "userontrolSaleReturn1";
+            userontrolSaleReturn1.Size = new Size(762, 660);
+            userontrolSaleReturn1.TabIndex = 22;
+            // 
+            // userControlPrdType1
+            // 
+            userControlPrdType1.Location = new Point(238, 61);
+            userControlPrdType1.Name = "userControlPrdType1";
+            userControlPrdType1.Size = new Size(762, 660);
+            userControlPrdType1.TabIndex = 23;
+            // 
             // dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -534,6 +607,15 @@
             Controls.Add(useryearlysale1);
             Controls.Add(userctrldailysale1);
             Controls.Add(usermonthlysale1);
+            Controls.Add(userControlPrdType1);
+            Controls.Add(userontrolSaleReturn1);
+            Controls.Add(userctrlPurchaseOrder1);
+            Controls.Add(userctrlProductPage1);
+            Controls.Add(usercontrolSales1);
+            Controls.Add(usercontrolPurchasereturn2);
+            Controls.Add(userControlPrdDetails1);
+            Controls.Add(userControlPrdCategory1);
+            Controls.Add(userControlAddproduct1);
             Name = "dashboard";
             Text = "dashboard";
             Load += dashboard_Load;
@@ -585,5 +667,14 @@
         private usercontrol.useryearlysale useryearlysale1;
         private usercontrol.usermonthlysale usermonthlysale1;
         private userctrldailysale userctrldailysale1;
+        private usercontrol.UserControlAddproduct userControlAddproduct1;
+        private usercontrol.UserControlPrdCategory userControlPrdCategory1;
+        private usercontrol.UserControlPrdDetails userControlPrdDetails1;
+        private usercontrol.usercontrolPurchasereturn usercontrolPurchasereturn2;
+        private usercontrol.usercontrolSales usercontrolSales1;
+        private usercontrol.userctrlProductPage userctrlProductPage1;
+        private usercontrol.userctrlPurchaseOrder userctrlPurchaseOrder1;
+        private usercontrol.userontrolSaleReturn userontrolSaleReturn1;
+        private usercontrol.UserControlPrdType userControlPrdType1;
     }
 }

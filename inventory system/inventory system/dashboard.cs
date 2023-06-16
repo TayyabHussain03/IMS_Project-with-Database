@@ -21,32 +21,32 @@ namespace inventory_system
 
         private void products_Click(object sender, EventArgs e)
         {
-            //userControlAddproduct1.Show();
-            //userControlAddproduct1.BringToFront();
+            userControlAddproduct1.Show();
+            userControlAddproduct1.BringToFront();
         }
 
         private void btnProductCategory_Click(object sender, EventArgs e)
         {
-            //userControlPrdCategory1.Show();
-            //userControlPrdCategory1.BringToFront();
+            userControlPrdCategory1.Show();
+            userControlPrdCategory1.BringToFront();
         }
 
         private void btnProductTypes_Click(object sender, EventArgs e)
         {
-            //userControlPrdType1.Show();
-            //userControlPrdType1.BringToFront();
+            userControlPrdType1.Show();
+            userControlPrdType1.BringToFront();
         }
 
         private void btnProductDetails_Click(object sender, EventArgs e)
         {
-            //userControlPrdDetails1.Show();
-            //userControlPrdDetails1.BringToFront();
+            userControlPrdDetails1.Show();
+            userControlPrdDetails1.BringToFront();
         }
 
         private void btnPurchases_Click(object sender, EventArgs e)
         {
-            //userctrlPurchaseOrder1.Show();
-            //userctrlPurchaseOrder1.BringToFront();
+            userctrlPurchaseOrder1.Show();
+            userctrlPurchaseOrder1.BringToFront();
         }
 
         private void dashboard_Load(object sender, EventArgs e)
@@ -59,20 +59,20 @@ namespace inventory_system
             usercontrolPurchasereturn1.Show();
             usercontrolPurchasereturn1.BringToFront();
 
-            //usercontrolPurchasereturn2.Show();
-            //usercontrolPurchasereturn2.BringToFront();
+            usercontrolPurchasereturn2.Show();
+            usercontrolPurchasereturn2.BringToFront();
         }
 
         private void btnSale_Click(object sender, EventArgs e)
         {
-            //usercontrolSales1.Show();
-            //usercontrolSales1.BringToFront();
+            usercontrolSales1.Show();
+            usercontrolSales1.BringToFront();
         }
 
         private void btnSalesReturn_Click(object sender, EventArgs e)
         {
-            //userontrolSaleReturn1.Show();
-            //userontrolSaleReturn1.BringToFront();
+            userontrolSaleReturn1.Show();
+            userontrolSaleReturn1.BringToFront();
         }
 
         private void btnReport_Click(object sender, EventArgs e)
