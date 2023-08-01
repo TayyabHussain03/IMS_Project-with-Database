@@ -16,5 +16,10 @@ namespace inventory_system.usercontrol
         {
             InitializeComponent();
         }
+
+        private void btnCtgPage_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

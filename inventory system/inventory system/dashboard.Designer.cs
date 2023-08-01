@@ -33,8 +33,6 @@
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             btnLogout = new Button();
             siderbarTimer = new System.Windows.Forms.Timer(components);
-            panel7 = new Panel();
-            btnAnalysis = new Button();
             panel5 = new Panel();
             btnStock = new Button();
             btnYearlySales = new Button();
@@ -48,15 +46,14 @@
             btnPurchaseReturn = new Button();
             panel3 = new Panel();
             btnPurchases = new Button();
-            btnProductDetails = new Button();
-            btnProductTypes = new Button();
-            btnProductCategory = new Button();
             panel2 = new Panel();
             products = new Button();
             panel1 = new Panel();
             label1 = new Label();
             menubtn = new PictureBox();
             sidebar = new FlowLayoutPanel();
+            panel7 = new Panel();
+            btnAnalytics = new Button();
             button1 = new Button();
             userctrlanalysis1 = new userctrlanalysis();
             useryearlysale1 = new usercontrol.useryearlysale();
@@ -71,7 +68,7 @@
             userctrlPurchaseOrder1 = new usercontrol.userctrlPurchaseOrder();
             userontrolSaleReturn1 = new usercontrol.userontrolSaleReturn();
             userControlPrdType1 = new usercontrol.UserControlPrdType();
-            panel7.SuspendLayout();
+            userControlAddproduct2 = new usercontrol.UserControlAddproduct();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
@@ -80,6 +77,7 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)menubtn).BeginInit();
             sidebar.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // usercontrolPurchasereturn1
@@ -110,39 +108,12 @@
             siderbarTimer.Interval = 20;
             siderbarTimer.Tick += siderbarTimer_Tick;
             // 
-            // panel7
-            // 
-            panel7.BackColor = Color.FromArgb(35, 59, 59);
-            panel7.Controls.Add(btnAnalysis);
-            panel7.ForeColor = Color.White;
-            panel7.Location = new Point(3, 593);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(232, 34);
-            panel7.TabIndex = 6;
-            // 
-            // btnAnalysis
-            // 
-            btnAnalysis.FlatStyle = FlatStyle.Flat;
-            btnAnalysis.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAnalysis.ForeColor = Color.FromArgb(224, 224, 224);
-            btnAnalysis.Image = Properties.Resources.icons8_graph_report_241;
-            btnAnalysis.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAnalysis.Location = new Point(-10, -12);
-            btnAnalysis.Name = "btnAnalysis";
-            btnAnalysis.Padding = new Padding(35, 0, 0, 0);
-            btnAnalysis.Size = new Size(253, 57);
-            btnAnalysis.TabIndex = 1;
-            btnAnalysis.Text = "              Analysis";
-            btnAnalysis.TextAlign = ContentAlignment.MiddleLeft;
-            btnAnalysis.UseVisualStyleBackColor = true;
-            btnAnalysis.Click += btnAnalysis_Click;
-            // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(35, 59, 59);
             panel5.Controls.Add(btnStock);
             panel5.ForeColor = Color.White;
-            panel5.Location = new Point(3, 553);
+            panel5.Location = new Point(3, 427);
             panel5.Name = "panel5";
             panel5.Size = new Size(232, 34);
             panel5.TabIndex = 4;
@@ -154,7 +125,7 @@
             btnStock.ForeColor = Color.FromArgb(224, 224, 224);
             btnStock.Image = Properties.Resources.icons8_stock_24;
             btnStock.ImageAlign = ContentAlignment.MiddleLeft;
-            btnStock.Location = new Point(-10, -12);
+            btnStock.Location = new Point(-10, -13);
             btnStock.Name = "btnStock";
             btnStock.Padding = new Padding(35, 0, 0, 0);
             btnStock.Size = new Size(253, 57);
@@ -172,7 +143,7 @@
             btnYearlySales.ForeColor = Color.FromArgb(224, 224, 224);
             btnYearlySales.Image = Properties.Resources.icons8_dot_16;
             btnYearlySales.ImageAlign = ContentAlignment.MiddleLeft;
-            btnYearlySales.Location = new Point(3, 511);
+            btnYearlySales.Location = new Point(3, 385);
             btnYearlySales.Name = "btnYearlySales";
             btnYearlySales.Padding = new Padding(35, 0, 0, 0);
             btnYearlySales.Size = new Size(227, 36);
@@ -191,7 +162,7 @@
             btnMonthlySales.ForeColor = Color.FromArgb(224, 224, 224);
             btnMonthlySales.Image = Properties.Resources.icons8_dot_16;
             btnMonthlySales.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMonthlySales.Location = new Point(3, 469);
+            btnMonthlySales.Location = new Point(3, 343);
             btnMonthlySales.Name = "btnMonthlySales";
             btnMonthlySales.Padding = new Padding(35, 0, 0, 0);
             btnMonthlySales.Size = new Size(227, 36);
@@ -210,7 +181,7 @@
             btnDailySales.ForeColor = Color.FromArgb(224, 224, 224);
             btnDailySales.Image = Properties.Resources.icons8_dot_16;
             btnDailySales.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDailySales.Location = new Point(3, 427);
+            btnDailySales.Location = new Point(3, 301);
             btnDailySales.Name = "btnDailySales";
             btnDailySales.Padding = new Padding(35, 0, 0, 0);
             btnDailySales.Size = new Size(227, 36);
@@ -225,7 +196,7 @@
             panel6.BackColor = Color.FromArgb(35, 59, 59);
             panel6.Controls.Add(btnReport);
             panel6.ForeColor = Color.White;
-            panel6.Location = new Point(3, 387);
+            panel6.Location = new Point(3, 261);
             panel6.Name = "panel6";
             panel6.Size = new Size(232, 34);
             panel6.TabIndex = 5;
@@ -256,7 +227,7 @@
             btnSalesReturn.ForeColor = Color.FromArgb(224, 224, 224);
             btnSalesReturn.Image = Properties.Resources.icons8_dot_16;
             btnSalesReturn.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSalesReturn.Location = new Point(3, 345);
+            btnSalesReturn.Location = new Point(3, 219);
             btnSalesReturn.Name = "btnSalesReturn";
             btnSalesReturn.Padding = new Padding(35, 0, 0, 0);
             btnSalesReturn.Size = new Size(227, 36);
@@ -270,7 +241,7 @@
             // 
             panel4.Controls.Add(btnSale);
             panel4.ForeColor = Color.White;
-            panel4.Location = new Point(3, 305);
+            panel4.Location = new Point(3, 179);
             panel4.Name = "panel4";
             panel4.Size = new Size(232, 34);
             panel4.TabIndex = 3;
@@ -302,7 +273,7 @@
             btnPurchaseReturn.ForeColor = Color.FromArgb(224, 224, 224);
             btnPurchaseReturn.Image = Properties.Resources.icons8_dot_16;
             btnPurchaseReturn.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPurchaseReturn.Location = new Point(3, 263);
+            btnPurchaseReturn.Location = new Point(3, 137);
             btnPurchaseReturn.Name = "btnPurchaseReturn";
             btnPurchaseReturn.Padding = new Padding(35, 0, 0, 0);
             btnPurchaseReturn.Size = new Size(227, 36);
@@ -316,7 +287,7 @@
             // 
             panel3.Controls.Add(btnPurchases);
             panel3.ForeColor = Color.White;
-            panel3.Location = new Point(3, 223);
+            panel3.Location = new Point(3, 97);
             panel3.Name = "panel3";
             panel3.Size = new Size(232, 34);
             panel3.TabIndex = 2;
@@ -339,63 +310,6 @@
             btnPurchases.UseVisualStyleBackColor = false;
             btnPurchases.Click += btnPurchases_Click;
             // 
-            // btnProductDetails
-            // 
-            btnProductDetails.BackColor = Color.DarkSlateGray;
-            btnProductDetails.FlatAppearance.BorderSize = 0;
-            btnProductDetails.FlatStyle = FlatStyle.Flat;
-            btnProductDetails.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnProductDetails.ForeColor = Color.FromArgb(224, 224, 224);
-            btnProductDetails.Image = Properties.Resources.icons8_dot_16;
-            btnProductDetails.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProductDetails.Location = new Point(3, 181);
-            btnProductDetails.Name = "btnProductDetails";
-            btnProductDetails.Padding = new Padding(35, 0, 0, 0);
-            btnProductDetails.Size = new Size(227, 36);
-            btnProductDetails.TabIndex = 3;
-            btnProductDetails.Text = "              Product Details";
-            btnProductDetails.TextAlign = ContentAlignment.MiddleLeft;
-            btnProductDetails.UseVisualStyleBackColor = false;
-            btnProductDetails.Click += btnProductDetails_Click;
-            // 
-            // btnProductTypes
-            // 
-            btnProductTypes.BackColor = Color.DarkSlateGray;
-            btnProductTypes.FlatAppearance.BorderSize = 0;
-            btnProductTypes.FlatStyle = FlatStyle.Flat;
-            btnProductTypes.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnProductTypes.ForeColor = Color.FromArgb(224, 224, 224);
-            btnProductTypes.Image = Properties.Resources.icons8_dot_16;
-            btnProductTypes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProductTypes.Location = new Point(3, 139);
-            btnProductTypes.Name = "btnProductTypes";
-            btnProductTypes.Padding = new Padding(35, 0, 0, 0);
-            btnProductTypes.Size = new Size(227, 36);
-            btnProductTypes.TabIndex = 2;
-            btnProductTypes.Text = "              Product Types";
-            btnProductTypes.TextAlign = ContentAlignment.MiddleLeft;
-            btnProductTypes.UseVisualStyleBackColor = false;
-            btnProductTypes.Click += btnProductTypes_Click;
-            // 
-            // btnProductCategory
-            // 
-            btnProductCategory.BackColor = Color.DarkSlateGray;
-            btnProductCategory.FlatAppearance.BorderSize = 0;
-            btnProductCategory.FlatStyle = FlatStyle.Flat;
-            btnProductCategory.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnProductCategory.ForeColor = Color.FromArgb(224, 224, 224);
-            btnProductCategory.Image = Properties.Resources.icons8_dot_16;
-            btnProductCategory.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProductCategory.Location = new Point(3, 97);
-            btnProductCategory.Name = "btnProductCategory";
-            btnProductCategory.Padding = new Padding(35, 0, 0, 0);
-            btnProductCategory.Size = new Size(227, 36);
-            btnProductCategory.TabIndex = 1;
-            btnProductCategory.Text = "              Product Category";
-            btnProductCategory.TextAlign = ContentAlignment.MiddleLeft;
-            btnProductCategory.UseVisualStyleBackColor = false;
-            btnProductCategory.Click += btnProductCategory_Click;
-            // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(35, 59, 59);
@@ -413,10 +327,10 @@
             products.ForeColor = Color.FromArgb(224, 224, 224);
             products.Image = Properties.Resources.icons8_products_24;
             products.ImageAlign = ContentAlignment.MiddleLeft;
-            products.Location = new Point(-14, -13);
+            products.Location = new Point(-21, -13);
             products.Name = "products";
             products.Padding = new Padding(45, 0, 0, 0);
-            products.Size = new Size(253, 58);
+            products.Size = new Size(250, 58);
             products.TabIndex = 1;
             products.Text = "              Products";
             products.TextAlign = ContentAlignment.MiddleLeft;
@@ -462,9 +376,6 @@
             sidebar.BackColor = Color.DarkSlateGray;
             sidebar.Controls.Add(panel1);
             sidebar.Controls.Add(panel2);
-            sidebar.Controls.Add(btnProductCategory);
-            sidebar.Controls.Add(btnProductTypes);
-            sidebar.Controls.Add(btnProductDetails);
             sidebar.Controls.Add(panel3);
             sidebar.Controls.Add(btnPurchaseReturn);
             sidebar.Controls.Add(panel4);
@@ -483,6 +394,33 @@
             sidebar.Size = new Size(222, 1000);
             sidebar.TabIndex = 8;
             sidebar.WrapContents = false;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(35, 59, 59);
+            panel7.Controls.Add(btnAnalytics);
+            panel7.ForeColor = Color.White;
+            panel7.Location = new Point(3, 467);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(232, 34);
+            panel7.TabIndex = 5;
+            // 
+            // btnAnalytics
+            // 
+            btnAnalytics.FlatStyle = FlatStyle.Flat;
+            btnAnalytics.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAnalytics.ForeColor = Color.FromArgb(224, 224, 224);
+            btnAnalytics.Image = Properties.Resources.icons8_graph_report_24;
+            btnAnalytics.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAnalytics.Location = new Point(-10, -13);
+            btnAnalytics.Name = "btnAnalytics";
+            btnAnalytics.Padding = new Padding(35, 0, 0, 0);
+            btnAnalytics.Size = new Size(253, 57);
+            btnAnalytics.TabIndex = 1;
+            btnAnalytics.Text = "              Analytics";
+            btnAnalytics.TextAlign = ContentAlignment.MiddleLeft;
+            btnAnalytics.UseVisualStyleBackColor = true;
+            btnAnalytics.Click += btnAnalytics_Click;
             // 
             // button1
             // 
@@ -594,6 +532,13 @@
             userControlPrdType1.Size = new Size(762, 660);
             userControlPrdType1.TabIndex = 23;
             // 
+            // userControlAddproduct2
+            // 
+            userControlAddproduct2.Location = new Point(238, 61);
+            userControlAddproduct2.Name = "userControlAddproduct2";
+            userControlAddproduct2.Size = new Size(762, 660);
+            userControlAddproduct2.TabIndex = 24;
+            // 
             // dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -616,10 +561,10 @@
             Controls.Add(userControlPrdDetails1);
             Controls.Add(userControlPrdCategory1);
             Controls.Add(userControlAddproduct1);
+            Controls.Add(userControlAddproduct2);
             Name = "dashboard";
             Text = "dashboard";
             Load += dashboard_Load;
-            panel7.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel4.ResumeLayout(false);
@@ -629,6 +574,7 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)menubtn).EndInit();
             sidebar.ResumeLayout(false);
+            panel7.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -638,8 +584,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button btnLogout;
         private System.Windows.Forms.Timer siderbarTimer;
-        private Panel panel7;
-        private Button btnAnalysis;
         private Panel panel5;
         private Button btnStock;
         private Button btnYearlySales;
@@ -653,9 +597,6 @@
         private Button btnPurchaseReturn;
         private Panel panel3;
         private Button btnPurchases;
-        private Button btnProductDetails;
-        private Button btnProductTypes;
-        private Button btnProductCategory;
         private Panel panel2;
         private Button products;
         private Panel panel1;
@@ -676,5 +617,8 @@
         private usercontrol.userctrlPurchaseOrder userctrlPurchaseOrder1;
         private usercontrol.userontrolSaleReturn userontrolSaleReturn1;
         private usercontrol.UserControlPrdType userControlPrdType1;
+        private Panel panel7;
+        private Button btnAnalytics;
+        private usercontrol.UserControlAddproduct userControlAddproduct2;
     }
 }

@@ -28,54 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlAddproduct));
             groupBox1 = new GroupBox();
+            txtSellingPrice = new TextBox();
+            label1 = new Label();
+            label3 = new Label();
+            txtproductQuantity = new TextBox();
+            pictureBox1 = new PictureBox();
+            btnImage = new Button();
             label8 = new Label();
             btnAddProduct = new Button();
             label7 = new Label();
-            btnChooseProduct = new Button();
             cmbproductCategory = new ComboBox();
             label6 = new Label();
             label5 = new Label();
-            txtproductID = new TextBox();
+            txtproductNumber = new TextBox();
             label4 = new Label();
             txtproductName = new TextBox();
-            label3 = new Label();
-            txtproductQuantity = new TextBox();
             label2 = new Label();
-            txtproductPrice = new TextBox();
+            txtCostingPrice = new TextBox();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.FloralWhite;
+            groupBox1.Controls.Add(txtSellingPrice);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(txtproductQuantity);
+            groupBox1.Controls.Add(pictureBox1);
+            groupBox1.Controls.Add(btnImage);
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(btnAddProduct);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(btnChooseProduct);
             groupBox1.Controls.Add(cmbproductCategory);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(txtproductID);
+            groupBox1.Controls.Add(txtproductNumber);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txtproductName);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(txtproductQuantity);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtproductPrice);
+            groupBox1.Controls.Add(txtCostingPrice);
             groupBox1.Location = new Point(149, 40);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(480, 482);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Add Product";
+            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // txtSellingPrice
+            // 
+            txtSellingPrice.BackColor = SystemColors.InactiveBorder;
+            txtSellingPrice.Location = new Point(295, 173);
+            txtSellingPrice.Name = "txtSellingPrice";
+            txtSellingPrice.Size = new Size(156, 23);
+            txtSellingPrice.TabIndex = 25;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(295, 147);
+            label1.Name = "label1";
+            label1.Size = new Size(91, 23);
+            label1.TabIndex = 24;
+            label1.Text = "Selling Price:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(16, 209);
+            label3.Name = "label3";
+            label3.Size = new Size(120, 23);
+            label3.TabIndex = 23;
+            label3.Text = "Product Quantity:";
+            // 
+            // txtproductQuantity
+            // 
+            txtproductQuantity.BackColor = SystemColors.InactiveBorder;
+            txtproductQuantity.Location = new Point(16, 235);
+            txtproductQuantity.Name = "txtproductQuantity";
+            txtproductQuantity.Size = new Size(156, 23);
+            txtproductQuantity.TabIndex = 22;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(151, 274);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(143, 119);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 19;
+            pictureBox1.TabStop = false;
+            // 
+            // btnImage
+            // 
+            btnImage.BackColor = SystemColors.InactiveBorder;
+            btnImage.Location = new Point(23, 363);
+            btnImage.Name = "btnImage";
+            btnImage.Size = new Size(110, 30);
+            btnImage.TabIndex = 5;
+            btnImage.Text = "Choose File";
+            btnImage.UseVisualStyleBackColor = false;
+            btnImage.Click += btnImage_Click;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Sitka Banner", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label8.ForeColor = Color.DarkSlateGray;
-            label8.Location = new Point(151, 19);
+            label8.Location = new Point(151, 13);
             label8.Name = "label8";
             label8.Size = new Size(163, 42);
             label8.TabIndex = 17;
@@ -88,7 +155,7 @@
             btnAddProduct.Location = new Point(184, 423);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(110, 43);
-            btnAddProduct.TabIndex = 16;
+            btnAddProduct.TabIndex = 6;
             btnAddProduct.Text = "Add";
             btnAddProduct.UseVisualStyleBackColor = false;
             btnAddProduct.Click += btnAddProduct_Click;
@@ -97,37 +164,28 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(16, 333);
+            label7.Location = new Point(16, 274);
             label7.Name = "label7";
             label7.Size = new Size(103, 23);
             label7.TabIndex = 15;
             label7.Text = "Product Image:";
-            // 
-            // btnChooseProduct
-            // 
-            btnChooseProduct.BackColor = SystemColors.InactiveBorder;
-            btnChooseProduct.Location = new Point(20, 369);
-            btnChooseProduct.Name = "btnChooseProduct";
-            btnChooseProduct.Size = new Size(110, 23);
-            btnChooseProduct.TabIndex = 14;
-            btnChooseProduct.Text = "Choose File";
-            btnChooseProduct.UseVisualStyleBackColor = false;
             // 
             // cmbproductCategory
             // 
             cmbproductCategory.BackColor = SystemColors.InactiveBorder;
             cmbproductCategory.FormattingEnabled = true;
             cmbproductCategory.Items.AddRange(new object[] { "Karyana Items", "Kitchen Wares", "Bathroom Wares", "Crockery" });
-            cmbproductCategory.Location = new Point(20, 275);
+            cmbproductCategory.Location = new Point(295, 235);
             cmbproductCategory.Name = "cmbproductCategory";
-            cmbproductCategory.Size = new Size(431, 23);
-            cmbproductCategory.TabIndex = 13;
+            cmbproductCategory.Size = new Size(156, 23);
+            cmbproductCategory.TabIndex = 4;
+            cmbproductCategory.SelectedIndexChanged += cmbproductCategory_SelectedIndexChanged;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(16, 241);
+            label6.Location = new Point(295, 209);
             label6.Name = "label6";
             label6.Size = new Size(121, 23);
             label6.TabIndex = 12;
@@ -137,25 +195,25 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(16, 88);
+            label5.Location = new Point(16, 80);
             label5.Name = "label5";
-            label5.Size = new Size(80, 23);
+            label5.Size = new Size(117, 23);
             label5.TabIndex = 11;
-            label5.Text = "Product ID:";
+            label5.Text = "Product Number:";
             // 
-            // txtproductID
+            // txtproductNumber
             // 
-            txtproductID.BackColor = SystemColors.InactiveBorder;
-            txtproductID.Location = new Point(16, 114);
-            txtproductID.Name = "txtproductID";
-            txtproductID.Size = new Size(156, 23);
-            txtproductID.TabIndex = 10;
+            txtproductNumber.BackColor = SystemColors.InactiveBorder;
+            txtproductNumber.Location = new Point(16, 106);
+            txtproductNumber.Name = "txtproductNumber";
+            txtproductNumber.Size = new Size(156, 23);
+            txtproductNumber.TabIndex = 0;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(295, 88);
+            label4.Location = new Point(295, 80);
             label4.Name = "label4";
             label4.Size = new Size(102, 23);
             label4.TabIndex = 9;
@@ -164,46 +222,28 @@
             // txtproductName
             // 
             txtproductName.BackColor = SystemColors.InactiveBorder;
-            txtproductName.Location = new Point(295, 114);
+            txtproductName.Location = new Point(295, 106);
             txtproductName.Name = "txtproductName";
             txtproductName.Size = new Size(156, 23);
-            txtproductName.TabIndex = 8;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(16, 162);
-            label3.Name = "label3";
-            label3.Size = new Size(120, 23);
-            label3.TabIndex = 7;
-            label3.Text = "Product Quantity:";
-            // 
-            // txtproductQuantity
-            // 
-            txtproductQuantity.BackColor = SystemColors.InactiveBorder;
-            txtproductQuantity.Location = new Point(16, 188);
-            txtproductQuantity.Name = "txtproductQuantity";
-            txtproductQuantity.Size = new Size(156, 23);
-            txtproductQuantity.TabIndex = 6;
+            txtproductName.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(295, 162);
+            label2.Location = new Point(16, 147);
             label2.Name = "label2";
-            label2.Size = new Size(97, 23);
+            label2.Size = new Size(95, 23);
             label2.TabIndex = 5;
-            label2.Text = "Product Price:";
+            label2.Text = "Costing Price:";
             // 
-            // txtproductPrice
+            // txtCostingPrice
             // 
-            txtproductPrice.BackColor = SystemColors.InactiveBorder;
-            txtproductPrice.Location = new Point(295, 188);
-            txtproductPrice.Name = "txtproductPrice";
-            txtproductPrice.Size = new Size(156, 23);
-            txtproductPrice.TabIndex = 4;
+            txtCostingPrice.BackColor = SystemColors.InactiveBorder;
+            txtCostingPrice.Location = new Point(16, 173);
+            txtCostingPrice.Name = "txtCostingPrice";
+            txtCostingPrice.Size = new Size(156, 23);
+            txtCostingPrice.TabIndex = 3;
             // 
             // UserControlAddproduct
             // 
@@ -212,8 +252,10 @@
             Controls.Add(groupBox1);
             Name = "UserControlAddproduct";
             Size = new Size(762, 660);
+            Load += UserControlAddproduct_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -222,17 +264,20 @@
         private GroupBox groupBox1;
         private Button btnAddProduct;
         private Label label7;
-        private Button btnChooseProduct;
         private ComboBox cmbproductCategory;
         private Label label6;
         private Label label5;
-        private TextBox txtproductID;
+        private TextBox txtproductNumber;
         private Label label4;
         private TextBox txtproductName;
+        private Label label2;
+        private TextBox txtCostingPrice;
+        private Label label8;
+        private PictureBox pictureBox1;
+        private Button btnImage;
         private Label label3;
         private TextBox txtproductQuantity;
-        private Label label2;
-        private TextBox txtproductPrice;
-        private Label label8;
+        private TextBox txtSellingPrice;
+        private Label label1;
     }
 }

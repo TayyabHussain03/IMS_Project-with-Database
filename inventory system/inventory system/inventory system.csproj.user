@@ -10,7 +10,13 @@
     <Compile Update="Screens.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="usercontrol\usercontrolAddCtg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="usercontrol\UserControlAddproduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\usercontrolEditPrd.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\UserControlPrdCategory.cs">

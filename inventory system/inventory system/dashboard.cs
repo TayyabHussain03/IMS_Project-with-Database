@@ -1,4 +1,5 @@
-﻿using System;
+﻿using inventory_system.usercontrol;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,26 +22,23 @@ namespace inventory_system
 
         private void products_Click(object sender, EventArgs e)
         {
-            userControlAddproduct1.Show();
-            userControlAddproduct1.BringToFront();
+            userctrlProductPage1.Show();
+            userctrlProductPage1.BringToFront();
         }
 
         private void btnProductCategory_Click(object sender, EventArgs e)
         {
-            userControlPrdCategory1.Show();
-            userControlPrdCategory1.BringToFront();
+
         }
 
         private void btnProductTypes_Click(object sender, EventArgs e)
         {
-            userControlPrdType1.Show();
-            userControlPrdType1.BringToFront();
+
         }
 
         private void btnProductDetails_Click(object sender, EventArgs e)
         {
-            userControlPrdDetails1.Show();
-            userControlPrdDetails1.BringToFront();
+
         }
 
         private void btnPurchases_Click(object sender, EventArgs e)
@@ -136,8 +134,7 @@ namespace inventory_system
         private void btnAnalysis_Click(object sender, EventArgs e)
         {
 
-            userctrlanalysis1.Show();
-            userctrlanalysis1.BringToFront();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -146,5 +143,16 @@ namespace inventory_system
             Login login = new Login();
             login.Show();
         }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            userctrlanalysis1.Show();
+            userctrlanalysis1.BringToFront();
+        }
+        //public void ShowAddProduct()
+        //{
+        //    userControlAddproduct1.Show();
+        //    userControlAddproduct1.BringToFront();
+        //}
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Ims Project\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj": {}
+    "D:\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj": {}
   },
   "projects": {
-    "E:\\Ims Project\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj": {
+    "D:\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Ims Project\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj",
+        "projectUniqueName": "D:\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj",
         "projectName": "inventory system",
-        "projectPath": "E:\\Ims Project\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj",
+        "projectPath": "D:\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj",
         "packagesPath": "C:\\Users\\abu hurairah khan\\.nuget\\packages\\",
-        "outputPath": "E:\\Ims Project\\IMS_Project-with-Database\\inventory system\\inventory system\\obj\\",
+        "outputPath": "D:\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abu hurairah khan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

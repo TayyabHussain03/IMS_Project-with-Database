@@ -68,6 +68,7 @@
             txtSearchProducts = new TextBox();
             btnSearchProducts = new Button();
             label9 = new Label();
+            btnCtgPage = new Button();
             panel7.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -553,10 +554,30 @@
             label9.TabIndex = 12;
             label9.Text = "Product Category";
             // 
+            // btnCtgPage
+            // 
+            btnCtgPage.BackColor = Color.ForestGreen;
+            btnCtgPage.FlatAppearance.BorderSize = 0;
+            btnCtgPage.FlatStyle = FlatStyle.Flat;
+            btnCtgPage.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCtgPage.ForeColor = Color.FromArgb(224, 224, 224);
+            btnCtgPage.Image = Properties.Resources.icons8_plus_16;
+            btnCtgPage.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCtgPage.Location = new Point(576, 193);
+            btnCtgPage.Name = "btnCtgPage";
+            btnCtgPage.Padding = new Padding(10, 0, 0, 0);
+            btnCtgPage.Size = new Size(132, 39);
+            btnCtgPage.TabIndex = 13;
+            btnCtgPage.Text = "     Add Category";
+            btnCtgPage.TextAlign = ContentAlignment.MiddleLeft;
+            btnCtgPage.UseVisualStyleBackColor = false;
+            btnCtgPage.Click += btnCtgPage_Click;
+            // 
             // UserControlPrdCategory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnCtgPage);
             Controls.Add(label9);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(txtSearchProducts);
@@ -623,5 +644,6 @@
         private TextBox txtSearchProducts;
         private Button btnSearchProducts;
         private Label label9;
+        private Button btnCtgPage;
     }
 }
