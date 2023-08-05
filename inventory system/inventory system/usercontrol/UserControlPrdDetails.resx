@@ -57,4 +57,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="txtDescription.Text" xml:space="preserve">
+    <value>Some common synonyms of description are character, kind, nature, sort, and type. While all these words mean "a number of individuals thought of as a group because of a common quality or qualities," description implies a group marked by agreement in all details belonging to a type as described or defined.</value>
+  </data>
 </root>

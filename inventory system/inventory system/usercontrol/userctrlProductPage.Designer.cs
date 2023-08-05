@@ -84,6 +84,7 @@
             dgvProducts.RowTemplate.Height = 25;
             dgvProducts.Size = new Size(713, 325);
             dgvProducts.TabIndex = 10;
+            dgvProducts.CellClick += dgvProducts_CellClick;
             dgvProducts.CellContentClick += dgvProducts_CellContentClick;
             // 
             // btnAdd
@@ -141,7 +142,6 @@
             btnDelete.Text = "     Delete";
             btnDelete.TextAlign = ContentAlignment.MiddleLeft;
             btnDelete.UseVisualStyleBackColor = false;
-            btnDelete.Click += btnDelete_Click_1;
             // 
             // btnCtgPage
             // 

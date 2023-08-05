@@ -19,16 +19,33 @@ namespace inventory_system
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            if (txtemail.Text == "admin@gmail.com" && txtpassword.Text == "1234")
+            if (txtemail.Text == "" || txtpassword.Text == "")
             {
-                dashboard dashboard = new dashboard();
-                dashboard.Show();
-                this.Hide();
+                MessageBox.Show("Fill All Field");
             }
             else
             {
-                MessageBox.Show("Invalid Credential");
+                if (txtemail.Text == "admin@gmail.com" && txtpassword.Text == "1234")
+                {
+                    dashboard dashboard = new dashboard();
+                    dashboard.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Credential");
+                }
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+         
         }
     }
 }

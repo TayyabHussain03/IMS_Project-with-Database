@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlAddproduct));
             groupBox1 = new GroupBox();
-            txtSellingPrice = new TextBox();
+            txtproductQuantity = new NumericUpDown();
+            txtSellingPrice = new NumericUpDown();
+            txtCostingPrice = new NumericUpDown();
             label1 = new Label();
             label3 = new Label();
-            txtproductQuantity = new TextBox();
             pictureBox1 = new PictureBox();
             btnImage = new Button();
             label8 = new Label();
@@ -46,18 +47,21 @@
             label4 = new Label();
             txtproductName = new TextBox();
             label2 = new Label();
-            txtCostingPrice = new TextBox();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txtproductQuantity).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtSellingPrice).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtCostingPrice).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.FloralWhite;
+            groupBox1.Controls.Add(txtproductQuantity);
             groupBox1.Controls.Add(txtSellingPrice);
+            groupBox1.Controls.Add(txtCostingPrice);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(txtproductQuantity);
             groupBox1.Controls.Add(pictureBox1);
             groupBox1.Controls.Add(btnImage);
             groupBox1.Controls.Add(label8);
@@ -70,7 +74,6 @@
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txtproductName);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtCostingPrice);
             groupBox1.Location = new Point(149, 40);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(480, 482);
@@ -79,13 +82,30 @@
             groupBox1.Text = "Add Product";
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // txtproductQuantity
+            // 
+            txtproductQuantity.BackColor = SystemColors.InactiveBorder;
+            txtproductQuantity.Location = new Point(16, 235);
+            txtproductQuantity.Name = "txtproductQuantity";
+            txtproductQuantity.Size = new Size(156, 23);
+            txtproductQuantity.TabIndex = 28;
+            // 
             // txtSellingPrice
             // 
             txtSellingPrice.BackColor = SystemColors.InactiveBorder;
             txtSellingPrice.Location = new Point(295, 173);
             txtSellingPrice.Name = "txtSellingPrice";
             txtSellingPrice.Size = new Size(156, 23);
-            txtSellingPrice.TabIndex = 25;
+            txtSellingPrice.TabIndex = 27;
+            txtSellingPrice.ValueChanged += numericUpDown2_ValueChanged;
+            // 
+            // txtCostingPrice
+            // 
+            txtCostingPrice.BackColor = SystemColors.InactiveBorder;
+            txtCostingPrice.Location = new Point(16, 173);
+            txtCostingPrice.Name = "txtCostingPrice";
+            txtCostingPrice.Size = new Size(156, 23);
+            txtCostingPrice.TabIndex = 26;
             // 
             // label1
             // 
@@ -106,14 +126,6 @@
             label3.Size = new Size(120, 23);
             label3.TabIndex = 23;
             label3.Text = "Product Quantity:";
-            // 
-            // txtproductQuantity
-            // 
-            txtproductQuantity.BackColor = SystemColors.InactiveBorder;
-            txtproductQuantity.Location = new Point(16, 235);
-            txtproductQuantity.Name = "txtproductQuantity";
-            txtproductQuantity.Size = new Size(156, 23);
-            txtproductQuantity.TabIndex = 22;
             // 
             // pictureBox1
             // 
@@ -237,14 +249,6 @@
             label2.TabIndex = 5;
             label2.Text = "Costing Price:";
             // 
-            // txtCostingPrice
-            // 
-            txtCostingPrice.BackColor = SystemColors.InactiveBorder;
-            txtCostingPrice.Location = new Point(16, 173);
-            txtCostingPrice.Name = "txtCostingPrice";
-            txtCostingPrice.Size = new Size(156, 23);
-            txtCostingPrice.TabIndex = 3;
-            // 
             // UserControlAddproduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -255,6 +259,9 @@
             Load += UserControlAddproduct_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)txtproductQuantity).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtSellingPrice).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtCostingPrice).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -271,13 +278,13 @@
         private Label label4;
         private TextBox txtproductName;
         private Label label2;
-        private TextBox txtCostingPrice;
         private Label label8;
         private PictureBox pictureBox1;
         private Button btnImage;
         private Label label3;
-        private TextBox txtproductQuantity;
-        private TextBox txtSellingPrice;
         private Label label1;
+        private NumericUpDown txtSellingPrice;
+        private NumericUpDown txtCostingPrice;
+        private NumericUpDown txtproductQuantity;
     }
 }

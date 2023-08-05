@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace inventory_system
 {
@@ -18,6 +19,7 @@ namespace inventory_system
         public dashboard()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
 
         private void products_Click(object sender, EventArgs e)
@@ -148,6 +150,27 @@ namespace inventory_system
         {
             userctrlanalysis1.Show();
             userctrlanalysis1.BringToFront();
+        }
+        bool isToggled = false;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            isToggled = !isToggled;
+
+            if (isToggled)
+            {
+                Togglebtn.Text = "Light Mode";
+                this.BackColor = System.Drawing.Color.FromArgb(31, 31, 31);
+                Togglebtn.BackColor = System.Drawing.Color.FromArgb(31, 31, 31);
+                Togglebtn.ForeColor = System.Drawing.Color.White;
+                logout.ForeColor = System.Drawing.Color.DarkGreen;
+            }
+            else
+            {
+                this.BackColor = System.Drawing.Color.White;
+                Togglebtn.Text = "Dark Mode";
+                Togglebtn.BackColor = System.Drawing.Color.White;
+                Togglebtn.ForeColor = System.Drawing.Color.Black;
+            }
         }
         //public void ShowAddProduct()
         //{

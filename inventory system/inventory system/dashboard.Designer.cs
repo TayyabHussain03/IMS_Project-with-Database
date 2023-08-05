@@ -54,7 +54,7 @@
             sidebar = new FlowLayoutPanel();
             panel7 = new Panel();
             btnAnalytics = new Button();
-            button1 = new Button();
+            logout = new Button();
             userctrlanalysis1 = new userctrlanalysis();
             useryearlysale1 = new usercontrol.useryearlysale();
             usermonthlysale1 = new usercontrol.usermonthlysale();
@@ -69,6 +69,7 @@
             userontrolSaleReturn1 = new usercontrol.userontrolSaleReturn();
             userControlPrdType1 = new usercontrol.UserControlPrdType();
             userControlAddproduct2 = new usercontrol.UserControlAddproduct();
+            Togglebtn = new Button();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
@@ -422,23 +423,23 @@
             btnAnalytics.UseVisualStyleBackColor = true;
             btnAnalytics.Click += btnAnalytics_Click;
             // 
-            // button1
+            // logout
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.FromArgb(35, 59, 59);
-            button1.Image = Properties.Resources.icons8_logout_24__2_;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(879, 15);
-            button1.Name = "button1";
-            button1.Padding = new Padding(20, 0, 0, 0);
-            button1.Size = new Size(124, 47);
-            button1.TabIndex = 10;
-            button1.Text = "        Logout";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            logout.FlatAppearance.BorderSize = 0;
+            logout.FlatStyle = FlatStyle.Flat;
+            logout.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            logout.ForeColor = Color.FromArgb(35, 59, 59);
+            logout.Image = Properties.Resources.icons8_logout_24__2_;
+            logout.ImageAlign = ContentAlignment.MiddleLeft;
+            logout.Location = new Point(879, 15);
+            logout.Name = "logout";
+            logout.Padding = new Padding(20, 0, 0, 0);
+            logout.Size = new Size(124, 47);
+            logout.TabIndex = 10;
+            logout.Text = "        Logout";
+            logout.TextAlign = ContentAlignment.MiddleLeft;
+            logout.UseVisualStyleBackColor = true;
+            logout.Click += button1_Click;
             // 
             // userctrlanalysis1
             // 
@@ -484,8 +485,17 @@
             // 
             // userControlPrdDetails1
             // 
+            userControlPrdDetails1.CostingPrice = new decimal(new int[] { 0, 0, 0, 0 });
             userControlPrdDetails1.Location = new Point(238, 61);
             userControlPrdDetails1.Name = "userControlPrdDetails1";
+            userControlPrdDetails1.ProductCategoryDescription = null;
+            userControlPrdDetails1.ProductCategoryID = 0;
+            userControlPrdDetails1.ProductCategoryName = null;
+            userControlPrdDetails1.ProductID = 0;
+            userControlPrdDetails1.ProductImage = null;
+            userControlPrdDetails1.ProductNumber = 0;
+            userControlPrdDetails1.Quantity = 0;
+            userControlPrdDetails1.SellingPrice = new decimal(new int[] { 0, 0, 0, 0 });
             userControlPrdDetails1.Size = new Size(762, 660);
             userControlPrdDetails1.TabIndex = 17;
             // 
@@ -507,6 +517,7 @@
             // 
             userctrlProductPage1.Location = new Point(238, 61);
             userctrlProductPage1.Name = "userctrlProductPage1";
+            userctrlProductPage1.Padding = new Padding(3, 0, 0, 0);
             userctrlProductPage1.Size = new Size(762, 660);
             userctrlProductPage1.TabIndex = 20;
             // 
@@ -539,12 +550,30 @@
             userControlAddproduct2.Size = new Size(762, 660);
             userControlAddproduct2.TabIndex = 24;
             // 
+            // Togglebtn
+            // 
+            Togglebtn.FlatAppearance.BorderSize = 0;
+            Togglebtn.FlatStyle = FlatStyle.Flat;
+            Togglebtn.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            Togglebtn.ForeColor = Color.Black;
+            Togglebtn.ImageAlign = ContentAlignment.MiddleLeft;
+            Togglebtn.Location = new Point(259, 15);
+            Togglebtn.Name = "Togglebtn";
+            Togglebtn.Padding = new Padding(20, 0, 0, 0);
+            Togglebtn.Size = new Size(124, 47);
+            Togglebtn.TabIndex = 25;
+            Togglebtn.Text = "Dark Mode";
+            Togglebtn.TextAlign = ContentAlignment.MiddleLeft;
+            Togglebtn.UseVisualStyleBackColor = true;
+            Togglebtn.Click += button2_Click;
+            // 
             // dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1012, 733);
-            Controls.Add(button1);
+            Controls.Add(Togglebtn);
+            Controls.Add(logout);
             Controls.Add(btnLogout);
             Controls.Add(sidebar);
             Controls.Add(usercontrolPurchasereturn1);
@@ -603,7 +632,7 @@
         private Label label1;
         private PictureBox menubtn;
         private FlowLayoutPanel sidebar;
-        private Button button1;
+        private Button logout;
         private userctrlanalysis userctrlanalysis1;
         private usercontrol.useryearlysale useryearlysale1;
         private usercontrol.usermonthlysale usermonthlysale1;
@@ -620,5 +649,6 @@
         private Panel panel7;
         private Button btnAnalytics;
         private usercontrol.UserControlAddproduct userControlAddproduct2;
+        private Button Togglebtn;
     }
 }

@@ -54,6 +54,7 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Log In";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // txtpassword
             // 
@@ -125,7 +126,9 @@
             ClientSize = new Size(588, 484);
             Controls.Add(groupBox1);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

@@ -24,6 +24,8 @@ namespace inventory_system.usercontrol
         public int ProductID { get; set; }
         public Image ProductImage { get; set; }
 
+        private const string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS-1;Integrated Security=True";
+
         public usercontrolEditPrd()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace inventory_system.usercontrol
 
         private void usercontrolEditPrd_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;");
+            SqlConnection con = new SqlConnection(connectionString);
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Products_Category", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -83,7 +85,7 @@ namespace inventory_system.usercontrol
 
         private void btnEditProduct_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True");
+            SqlConnection con = new SqlConnection(connectionString);
             string productNumber = txtproductNumber.Text;
             string productName = txtproductName.Text;
             decimal costingPrice = Convert.ToDecimal(txtCostingPrice.Text);

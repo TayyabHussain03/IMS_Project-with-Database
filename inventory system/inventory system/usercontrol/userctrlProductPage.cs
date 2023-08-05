@@ -13,6 +13,8 @@ namespace inventory_system.usercontrol
 {
     public partial class userctrlProductPage : UserControl
     {
+        private const string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS-1;Integrated Security=True";
+
         public userctrlProductPage()
         {
             InitializeComponent();
@@ -24,11 +26,12 @@ namespace inventory_system.usercontrol
             usaddproduct.Dock = DockStyle.Fill;
             addproduct.Controls.Add(usaddproduct);
             addproduct.Size = new Size(762, 660);
+            addproduct.StartPosition = FormStartPosition.CenterScreen;
             addproduct.ShowDialog();
         }
         private void RefreshGrid(string query)
         {
-            SqlConnection con = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;");
+            SqlConnection con = new SqlConnection(connectionString);
             SqlDataAdapter da = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -58,7 +61,7 @@ namespace inventory_system.usercontrol
                     int selectedProductId = Convert.ToInt32(dgvProducts.SelectedRows[0].Cells["ID"].Value);
 
                     // Delete the record from the database
-                    SqlConnection con = new SqlConnection("Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(connectionString);
                     string deleteQuery = "DELETE FROM Products WHERE Product_ID = @ProductId";
 
                     using (SqlCommand cmd = new SqlCommand(deleteQuery, con))
@@ -85,7 +88,7 @@ namespace inventory_system.usercontrol
             string QRY = "SELECT Products.Product_ID as ID, Products.Product_Name as Name, Products_Category.Category_Name, Products.Selling_Price, Products.Costing_Price, Products.Quantity FROM Products JOIN Products_Category ON Products.Product_Category_ID = Products_Category.Product_Category_ID order by Products.Product_ID desc";
             RefreshGrid(QRY);
 
-            SqlConnection con = new SqlConnection("Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True");
+            SqlConnection con = new SqlConnection(connectionString);
             SqlDataAdapter da = new SqlDataAdapter("Select * from Products_Category", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -103,6 +106,7 @@ namespace inventory_system.usercontrol
             dgvProducts.SelectionChanged += DgvProducts_SelectionChanged;
 
             btnEdit.Click += btnEdit_Click;
+            dgvProducts.CellClick += dgvProducts_CellClick;
         }
         private void DgvProducts_SelectionChanged(object sender, EventArgs e)
         {
@@ -130,6 +134,7 @@ namespace inventory_system.usercontrol
             usaddproduct.Dock = DockStyle.Fill;
             addcategory.Controls.Add(usaddproduct);
             addcategory.Size = new Size(762, 660);
+            addcategory.StartPosition = FormStartPosition.CenterScreen;
             addcategory.ShowDialog();
         }
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -152,7 +157,7 @@ namespace inventory_system.usercontrol
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True");
+                SqlConnection con = new SqlConnection(connectionString);
 
                 string query = "SELECT Products.Product_ID as ID, Products.Product_Name as Name, Products_Category.Category_Name, Products.Selling_Price, Products.Costing_Price, Products.Quantity FROM Products JOIN Products_Category ON Products.Product_Category_ID = Products_Category.Product_Category_ID WHERE Products_Category.Category_Name LIKE '%" + cmbCategoryFilter.Text.ToString() + "%' order by Products.Product_ID desc";
 
@@ -169,7 +174,7 @@ namespace inventory_system.usercontrol
                 int selectedProductId = Convert.ToInt32(dgvProducts.SelectedRows[0].Cells["ID"].Value);
 
                 // Assuming you have the connection established.
-                using (SqlConnection con = new SqlConnection("Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True"))
+                using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     string QRY = "SELECT Product_ID, Product_Number, Product_Name, Selling_Price, Costing_Price, Quantity, Image FROM Products WHERE Product_ID = @ProductID";
                     SqlCommand cmd = new SqlCommand(QRY, con);
@@ -204,6 +209,7 @@ namespace inventory_system.usercontrol
                             editproduct.Controls.Add(editProductControl);
                             editProductControl.Dock = DockStyle.Fill;
                             editproduct.Size = new Size(762, 660);
+                            editproduct.StartPosition = FormStartPosition.CenterScreen;
                             editproduct.ShowDialog();
                         }
                     }
@@ -220,11 +226,89 @@ namespace inventory_system.usercontrol
                 return Image.FromStream(ms);
             }
         }
-        private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private void dgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Check if the clicked cell is of type DataGridViewButtonCell
+            if (e.RowIndex >= 0 && e.RowIndex < dgvProducts.Rows.Count &&
+                e.ColumnIndex >= 0 && e.ColumnIndex < dgvProducts.Columns.Count)
+            {
+                DataGridViewCell clickedCell = dgvProducts.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                // Check if the clicked cell is the "View" button cell
+                if (clickedCell is DataGridViewButtonCell buttonCell && buttonCell.Value != null &&
+                    buttonCell.Value.ToString() == "View")
+                {
+
+                    int selectedProductId = Convert.ToInt32(dgvProducts.Rows[e.RowIndex].Cells["ID"].Value);
+
+                    using (SqlConnection con = new SqlConnection(connectionString))
+                    {
+                        string productQuery = "SELECT Product_ID, Product_Number, Product_Name, Product_Category_ID, Selling_Price, Costing_Price, Quantity, Image FROM Products WHERE Product_ID = @ProductID";
+                        SqlCommand productCmd = new SqlCommand(productQuery, con);
+                        productCmd.Parameters.AddWithValue("@ProductID", selectedProductId);
+                        con.Open();
+
+                        using (SqlDataReader productReader = productCmd.ExecuteReader())
+                        {
+                            if (productReader.Read())
+                            {
+                                int productId = Convert.ToInt32(productReader["Product_ID"]);
+                                int productNumber = Convert.ToInt32(productReader["Product_Number"]);
+                                string productName = productReader["Product_Name"].ToString();
+                                int productCategoryId = Convert.ToInt32(productReader["Product_Category_ID"]);
+                                decimal sellingPrice = Convert.ToDecimal(productReader["Selling_Price"]);
+                                decimal costingPrice = Convert.ToDecimal(productReader["Costing_Price"]);
+                                int quantity = Convert.ToInt32(productReader["Quantity"]);
+                                byte[] imageData = (byte[])productReader["Image"];
+                                Image productImage = ConvertByteArrayToImage(imageData);
+
+                                // Close the first DataReader before executing the second query
+                                productReader.Close();
+
+                                // Fetch category information using the Product_Category_ID
+                                string categoryQuery = "SELECT Category_Name, Description FROM Products_Category WHERE Product_Category_ID = @CategoryID";
+                                SqlCommand categoryCmd = new SqlCommand(categoryQuery, con);
+                                categoryCmd.Parameters.AddWithValue("@CategoryID", productCategoryId);
+
+                                using (SqlDataReader categoryReader = categoryCmd.ExecuteReader())
+                                {
+                                    if (categoryReader.Read())
+                                    {
+                                        string categoryName = categoryReader["Category_Name"].ToString();
+                                        string categoryDescription = categoryReader["Description"].ToString();
+
+
+                                        UserControlPrdDetails usPrdDetails = new UserControlPrdDetails();
+
+                                        usPrdDetails.ProductID = productId;
+                                        usPrdDetails.ProductNumber = productNumber;
+                                        usPrdDetails.ProductName = productName;
+                                        usPrdDetails.ProductCategoryID = productCategoryId;
+                                        usPrdDetails.ProductCategoryName = categoryName;
+                                        usPrdDetails.ProductCategoryDescription = categoryDescription;
+                                        usPrdDetails.SellingPrice = sellingPrice;
+                                        usPrdDetails.CostingPrice = costingPrice;
+                                        usPrdDetails.Quantity = quantity;
+                                        usPrdDetails.ProductImage = productImage;
+
+                                        Form prdDetails = new Form();
+                                        usPrdDetails.Dock = DockStyle.Fill;
+                                        prdDetails.Controls.Add(usPrdDetails);
+                                        prdDetails.Size = new Size(830, 485);
+                                        prdDetails.StartPosition = FormStartPosition.CenterScreen;
+                                        prdDetails.ShowDialog();
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
         }
-        private void btnDelete_Click_1(object sender, EventArgs e)
+
+        private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

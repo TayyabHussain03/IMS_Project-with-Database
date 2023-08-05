@@ -101,7 +101,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Ivory;
+            panel1.BackColor = Color.Transparent;
             panel1.Controls.Add(flowLayoutPanel4);
             panel1.Controls.Add(flowLayoutPanel5);
             panel1.Controls.Add(flowLayoutPanel2);

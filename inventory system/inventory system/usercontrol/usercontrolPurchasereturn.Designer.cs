@@ -28,297 +28,325 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
-            label9 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            txtSubTotal = new TextBox();
-            label6 = new Label();
-            cmbPaymentType = new ComboBox();
-            label3 = new Label();
-            txtItemRate = new TextBox();
-            label8 = new Label();
-            txtItemName = new TextBox();
-            label7 = new Label();
-            txtQuantity = new TextBox();
-            Quantity = new Label();
-            txtItemId = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            txtCurrentDate = new TextBox();
+            dataGridView1 = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+       
+            cmbsuplier = new ComboBox();
             label2 = new Label();
+            label3 = new Label();
+            label7 = new Label();
+            Quantity = new Label();
+            label4 = new Label();
+            groupBox1 = new GroupBox();
+            label5 = new Label();
             label10 = new Label();
+            prdqty = new NumericUpDown();
+            prdprice = new NumericUpDown();
+            date = new DateTimePicker();
+            prdtotal = new TextBox();
+            prdnumb = new TextBox();
+            reason = new TextBox();
+            label9 = new Label();
+            label8 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)prdqty).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)prdprice).BeginInit();
             SuspendLayout();
             // 
-            // groupBox1
+            // dataGridView1
             // 
-            groupBox1.BackColor = Color.FloralWhite;
-            groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox1.ForeColor = SystemColors.ActiveCaptionText;
-            groupBox1.Location = new Point(72, 158);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(615, 329);
-            groupBox1.TabIndex = 12;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Purchase Return";
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, Column1, Column2, Column3, Column4, Column5, Column6 });
+            dataGridView1.Location = new Point(10, 343);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(743, 311);
+            dataGridView1.TabIndex = 57;
             // 
-            // textBox1
+            // Id
             // 
-            textBox1.BackColor = SystemColors.InactiveBorder;
-            textBox1.ForeColor = Color.SteelBlue;
-            textBox1.Location = new Point(519, 338);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(147, 23);
-            textBox1.TabIndex = 44;
+            Id.HeaderText = "Id";
+            Id.Name = "Id";
             // 
-            // label9
+            // Column1
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.SteelBlue;
-            label9.Location = new Point(401, 342);
-            label9.Name = "label9";
-            label9.Size = new Size(114, 20);
-            label9.TabIndex = 43;
-            label9.Text = "Total Amount :";
+            Column1.HeaderText = "Product Number";
+            Column1.Name = "Column1";
             // 
-            // button1
+            // Column2
             // 
-            button1.BackColor = Color.DarkRed;
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(401, 414);
-            button1.Name = "button1";
-            button1.Size = new Size(152, 44);
-            button1.TabIndex = 42;
-            button1.Text = "Clear Form";
-            button1.UseVisualStyleBackColor = false;
+            Column2.HeaderText = "Supplier";
+            Column2.Name = "Column2";
             // 
-            // button2
+            // Column3
             // 
-            button2.BackColor = Color.ForestGreen;
-            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(214, 414);
-            button2.Name = "button2";
-            button2.Size = new Size(152, 44);
-            button2.TabIndex = 41;
-            button2.Text = "Update Inventory";
-            button2.UseVisualStyleBackColor = false;
+            Column3.HeaderText = "Unit Price";
+            Column3.Name = "Column3";
             // 
-            // txtSubTotal
+            // Column4
             // 
-            txtSubTotal.BackColor = SystemColors.InactiveBorder;
-            txtSubTotal.ForeColor = Color.SteelBlue;
-            txtSubTotal.Location = new Point(519, 211);
-            txtSubTotal.Name = "txtSubTotal";
-            txtSubTotal.Size = new Size(147, 23);
-            txtSubTotal.TabIndex = 40;
+            Column4.HeaderText = "Quantity";
+            Column4.Name = "Column4";
             // 
-            // label6
+            // Column5
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.SteelBlue;
-            label6.Location = new Point(401, 212);
-            label6.Name = "label6";
-            label6.Size = new Size(78, 20);
-            label6.TabIndex = 39;
-            label6.Text = "Sub Total:";
+            Column5.HeaderText = "Total";
+            Column5.Name = "Column5";
             // 
-            // cmbPaymentType
+            // Column6
             // 
-            cmbPaymentType.BackColor = SystemColors.InactiveBorder;
-            cmbPaymentType.FormattingEnabled = true;
-            cmbPaymentType.Location = new Point(214, 338);
-            cmbPaymentType.Name = "cmbPaymentType";
-            cmbPaymentType.Size = new Size(147, 23);
-            cmbPaymentType.TabIndex = 38;
+            Column6.HeaderText = "Returning Reason";
+            Column6.Name = "Column6";
             // 
-            // label3
+            // update
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.SteelBlue;
-            label3.Location = new Point(92, 341);
-            label3.Name = "label3";
-            label3.Size = new Size(112, 20);
-            label3.TabIndex = 37;
-            label3.Text = "Payment Type:";
+        
             // 
-            // txtItemRate
+            // cmbsuplier
             // 
-            txtItemRate.BackColor = SystemColors.InactiveBorder;
-            txtItemRate.ForeColor = Color.SteelBlue;
-            txtItemRate.Location = new Point(519, 295);
-            txtItemRate.Name = "txtItemRate";
-            txtItemRate.Size = new Size(147, 23);
-            txtItemRate.TabIndex = 36;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.SteelBlue;
-            label8.Location = new Point(401, 298);
-            label8.Name = "label8";
-            label8.Size = new Size(86, 20);
-            label8.TabIndex = 35;
-            label8.Text = "Item Rate :";
-            // 
-            // txtItemName
-            // 
-            txtItemName.BackColor = SystemColors.InactiveBorder;
-            txtItemName.ForeColor = Color.SteelBlue;
-            txtItemName.Location = new Point(214, 295);
-            txtItemName.Name = "txtItemName";
-            txtItemName.Size = new Size(147, 23);
-            txtItemName.TabIndex = 34;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.SteelBlue;
-            label7.Location = new Point(93, 255);
-            label7.Name = "label7";
-            label7.Size = new Size(66, 20);
-            label7.TabIndex = 33;
-            label7.Text = "Item ID:";
-            // 
-            // txtQuantity
-            // 
-            txtQuantity.BackColor = SystemColors.InactiveBorder;
-            txtQuantity.ForeColor = Color.SteelBlue;
-            txtQuantity.Location = new Point(519, 252);
-            txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(147, 23);
-            txtQuantity.TabIndex = 32;
-            // 
-            // Quantity
-            // 
-            Quantity.AutoSize = true;
-            Quantity.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            Quantity.ForeColor = Color.SteelBlue;
-            Quantity.Location = new Point(401, 255);
-            Quantity.Name = "Quantity";
-            Quantity.Size = new Size(74, 20);
-            Quantity.TabIndex = 31;
-            Quantity.Text = "Quantity:";
-            // 
-            // txtItemId
-            // 
-            txtItemId.BackColor = SystemColors.InactiveBorder;
-            txtItemId.ForeColor = Color.SteelBlue;
-            txtItemId.Location = new Point(214, 252);
-            txtItemId.Name = "txtItemId";
-            txtItemId.Size = new Size(147, 23);
-            txtItemId.TabIndex = 30;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.SteelBlue;
-            label5.Location = new Point(92, 298);
-            label5.Name = "label5";
-            label5.Size = new Size(92, 20);
-            label5.TabIndex = 29;
-            label5.Text = "Item Name:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(519, 267);
-            label4.Name = "label4";
-            label4.Size = new Size(0, 15);
-            label4.TabIndex = 28;
-            // 
-            // txtCurrentDate
-            // 
-            txtCurrentDate.BackColor = SystemColors.InactiveBorder;
-            txtCurrentDate.ForeColor = Color.SteelBlue;
-            txtCurrentDate.Location = new Point(214, 208);
-            txtCurrentDate.Name = "txtCurrentDate";
-            txtCurrentDate.Size = new Size(147, 23);
-            txtCurrentDate.TabIndex = 27;
+            cmbsuplier.BackColor = SystemColors.InactiveBorder;
+            cmbsuplier.FormattingEnabled = true;
+            cmbsuplier.Location = new Point(493, 28);
+            cmbsuplier.Name = "cmbsuplier";
+            cmbsuplier.Size = new Size(165, 28);
+            cmbsuplier.TabIndex = 38;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.SteelBlue;
-            label2.Location = new Point(93, 212);
+            label2.Location = new Point(10, 30);
             label2.Name = "label2";
-            label2.Size = new Size(103, 20);
+            label2.Size = new Size(119, 21);
             label2.TabIndex = 26;
-            label2.Text = "Current Date:";
+            label2.Text = "Current Date : ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.SteelBlue;
+            label3.Location = new Point(355, 30);
+            label3.Name = "label3";
+            label3.Size = new Size(136, 21);
+            label3.TabIndex = 37;
+            label3.Text = "Supplier Name : ";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.SteelBlue;
+            label7.Location = new Point(10, 155);
+            label7.Name = "label7";
+            label7.Size = new Size(77, 21);
+            label7.TabIndex = 33;
+            label7.Text = "Reason : ";
+            // 
+            // Quantity
+            // 
+            Quantity.AutoSize = true;
+            Quantity.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Quantity.ForeColor = Color.SteelBlue;
+            Quantity.Location = new Point(10, 113);
+            Quantity.Name = "Quantity";
+            Quantity.Size = new Size(85, 21);
+            Quantity.TabIndex = 31;
+            Quantity.Text = "Quantity :";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(523, 271);
+            label4.Name = "label4";
+            label4.Size = new Size(0, 15);
+            label4.TabIndex = 55;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.FloralWhite;
+            groupBox1.Controls.Add(prdqty);
+           
+            groupBox1.Controls.Add(prdprice);
+            groupBox1.Controls.Add(cmbsuplier);
+            groupBox1.Controls.Add(date);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(prdtotal);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(prdnumb);
+            groupBox1.Controls.Add(reason);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(label9);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(Quantity);
+            groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox1.ForeColor = SystemColors.ActiveCaptionText;
+            groupBox1.Location = new Point(45, 66);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(681, 258);
+            groupBox1.TabIndex = 54;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Purchase Return";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.SteelBlue;
+            label5.Location = new Point(10, 72);
+            label5.Name = "label5";
+            label5.Size = new Size(149, 21);
+            label5.TabIndex = 29;
+            label5.Text = "Product Number : ";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Sitka Banner", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label10.Font = new Font("Sitka Banner", 26.2499962F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label10.ForeColor = Color.DarkSlateGray;
-            label10.Location = new Point(275, 37);
+            label10.Location = new Point(266, 0);
             label10.Name = "label10";
-            label10.Size = new Size(212, 42);
-            label10.TabIndex = 46;
+            label10.Size = new Size(257, 50);
+            label10.TabIndex = 56;
             label10.Text = "Purchase Return";
+            // 
+            // prdqty
+            // 
+            prdqty.BackColor = SystemColors.InactiveBorder;
+            prdqty.Location = new Point(156, 113);
+            prdqty.Name = "prdqty";
+            prdqty.Size = new Size(165, 27);
+            prdqty.TabIndex = 65;
+            // 
+            // prdprice
+            // 
+            prdprice.BackColor = SystemColors.InactiveBorder;
+            prdprice.Location = new Point(494, 71);
+            prdprice.Name = "prdprice";
+            prdprice.Size = new Size(165, 27);
+            prdprice.TabIndex = 64;
+            // 
+            // date
+            // 
+            date.CalendarMonthBackground = SystemColors.InactiveBorder;
+            date.Format = DateTimePickerFormat.Short;
+            date.Location = new Point(156, 28);
+            date.Name = "date";
+            date.Size = new Size(165, 27);
+            date.TabIndex = 58;
+            // 
+            // prdtotal
+            // 
+            prdtotal.BackColor = SystemColors.InactiveBorder;
+            prdtotal.ForeColor = Color.SteelBlue;
+            prdtotal.Location = new Point(494, 111);
+            prdtotal.Name = "prdtotal";
+            prdtotal.ReadOnly = true;
+            prdtotal.Size = new Size(165, 27);
+            prdtotal.TabIndex = 61;
+            // 
+            // prdnumb
+            // 
+            prdnumb.BackColor = SystemColors.InactiveBorder;
+            prdnumb.ForeColor = Color.SteelBlue;
+            prdnumb.Location = new Point(156, 70);
+            prdnumb.Name = "prdnumb";
+            prdnumb.Size = new Size(165, 27);
+            prdnumb.TabIndex = 59;
+            // 
+            // reason
+            // 
+            reason.BackColor = SystemColors.InactiveBorder;
+            reason.ForeColor = Color.SteelBlue;
+            reason.Location = new Point(156, 153);
+            reason.Multiline = true;
+            reason.Name = "reason";
+            reason.Size = new Size(503, 37);
+            reason.TabIndex = 63;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.SteelBlue;
+            label9.Location = new Point(355, 113);
+            label9.Name = "label9";
+            label9.Size = new Size(122, 21);
+            label9.TabIndex = 62;
+            label9.Text = "Total Amount :";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.SteelBlue;
+            label8.Location = new Point(355, 70);
+            label8.Name = "label8";
+            label8.Size = new Size(93, 21);
+            label8.TabIndex = 60;
+            label8.Text = "Unit Price :";
             // 
             // usercontrolPurchasereturn
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label10);
-            Controls.Add(textBox1);
-            Controls.Add(label9);
-            Controls.Add(button1);
-            Controls.Add(button2);
-            Controls.Add(txtSubTotal);
-            Controls.Add(label6);
-            Controls.Add(cmbPaymentType);
-            Controls.Add(label3);
-            Controls.Add(txtItemRate);
-            Controls.Add(label8);
-            Controls.Add(txtItemName);
-            Controls.Add(label7);
-            Controls.Add(txtQuantity);
-            Controls.Add(Quantity);
-            Controls.Add(txtItemId);
-            Controls.Add(label5);
+            Controls.Add(dataGridView1);
             Controls.Add(label4);
-            Controls.Add(txtCurrentDate);
-            Controls.Add(label2);
             Controls.Add(groupBox1);
+            Controls.Add(label10);
             Name = "usercontrolPurchasereturn";
             Size = new Size(762, 660);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)prdqty).EndInit();
+            ((System.ComponentModel.ISupportInitialize)prdprice).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private GroupBox groupBox1;
-        private TextBox textBox1;
-        private Label label9;
-        private Button button1;
-        private Button button2;
-        private TextBox txtSubTotal;
-        private Label label6;
-        private ComboBox cmbPaymentType;
-        private Label label3;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDown1;
+        private DateTimePicker dateTimePicker1;
         private TextBox txtItemRate;
-        private Label label8;
-        private TextBox txtItemName;
-        private Label label7;
-        private TextBox txtQuantity;
-        private Label Quantity;
         private TextBox txtItemId;
-        private Label label5;
-        private Label label4;
-        private TextBox txtCurrentDate;
+        private Button button2;
+        private TextBox textBox1;
+        private ComboBox cmbsuplier;
         private Label label2;
+        private Label label3;
+        private Label label7;
+        private Label Quantity;
+        private Label label4;
+        private GroupBox groupBox1;
+        private Label label5;
         private Label label10;
+        private NumericUpDown prdqty;
+        private NumericUpDown prdprice;
+        private DateTimePicker date;
+        private TextBox prdtotal;
+        private TextBox prdnumb;
+        private TextBox reason;
+        private Label label9;
+        private Label label8;
     }
 }

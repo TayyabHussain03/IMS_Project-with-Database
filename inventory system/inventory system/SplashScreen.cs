@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace inventory_system.usercontrol
+namespace inventory_system
 {
-    public partial class usercontrolPurchasereturn : UserControl
+    public partial class SplashScreen : Form
     {
-        public usercontrolPurchasereturn()
+        public SplashScreen()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

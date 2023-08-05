@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj": {}
+    "D:\\IMS_Project Add_to_Cart Remaining\\IMS_Project Add_to_Cart Added\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj": {}
   },
   "projects": {
-    "D:\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj": {
+    "D:\\IMS_Project Add_to_Cart Remaining\\IMS_Project Add_to_Cart Added\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj",
+        "projectUniqueName": "D:\\IMS_Project Add_to_Cart Remaining\\IMS_Project Add_to_Cart Added\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj",
         "projectName": "inventory system",
-        "projectPath": "D:\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj",
+        "projectPath": "D:\\IMS_Project Add_to_Cart Remaining\\IMS_Project Add_to_Cart Added\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\inventory system.csproj",
         "packagesPath": "C:\\Users\\abu hurairah khan\\.nuget\\packages\\",
-        "outputPath": "D:\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\obj\\",
+        "outputPath": "D:\\IMS_Project Add_to_Cart Remaining\\IMS_Project Add_to_Cart Added\\IMS_Projec Product Page Completed\\IMS_Project-with-Database2 updated\\inventory system\\inventory system\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abu hurairah khan\\AppData\\Roaming\\NuGet\\NuGet.Config",
