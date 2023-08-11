@@ -28,40 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtSearchProducts = new TextBox();
-            btnSearchProducts = new Button();
             label1 = new Label();
             dgvProducts = new DataGridView();
             btnAdd = new Button();
             btnEdit = new Button();
             btnDelete = new Button();
             btnCtgPage = new Button();
-            cmbCategoryFilter = new ComboBox();
             btnRefresh = new Button();
+            label2 = new Label();
+            cmbCategoryFilter = new ComboBox();
+            txtSearchProducts = new TextBox();
+            btnSearchProducts = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
             SuspendLayout();
-            // 
-            // txtSearchProducts
-            // 
-            txtSearchProducts.Font = new Font("Sitka Banner", 15.7499981F, FontStyle.Italic, GraphicsUnit.Point);
-            txtSearchProducts.Location = new Point(27, 124);
-            txtSearchProducts.Name = "txtSearchProducts";
-            txtSearchProducts.PlaceholderText = "Search Products";
-            txtSearchProducts.Size = new Size(171, 34);
-            txtSearchProducts.TabIndex = 9;
-            // 
-            // btnSearchProducts
-            // 
-            btnSearchProducts.BackColor = SystemColors.Window;
-            btnSearchProducts.Cursor = Cursors.Hand;
-            btnSearchProducts.FlatStyle = FlatStyle.Flat;
-            btnSearchProducts.Image = Properties.Resources.icons8_search_24;
-            btnSearchProducts.Location = new Point(204, 124);
-            btnSearchProducts.Name = "btnSearchProducts";
-            btnSearchProducts.Size = new Size(40, 34);
-            btnSearchProducts.TabIndex = 8;
-            btnSearchProducts.UseVisualStyleBackColor = false;
-            btnSearchProducts.Click += btnSearchProducts_Click;
             // 
             // label1
             // 
@@ -162,16 +141,6 @@
             btnCtgPage.UseVisualStyleBackColor = false;
             btnCtgPage.Click += btnCtgPage_Click;
             // 
-            // cmbCategoryFilter
-            // 
-            cmbCategoryFilter.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbCategoryFilter.FormattingEnabled = true;
-            cmbCategoryFilter.Location = new Point(483, 126);
-            cmbCategoryFilter.Name = "cmbCategoryFilter";
-            cmbCategoryFilter.Size = new Size(257, 33);
-            cmbCategoryFilter.TabIndex = 15;
-            cmbCategoryFilter.SelectedIndexChanged += cmbCategoryFilter_SelectedIndexChanged;
-            // 
             // btnRefresh
             // 
             btnRefresh.FlatAppearance.BorderSize = 0;
@@ -186,19 +155,61 @@
             btnRefresh.UseVisualStyleBackColor = true;
             btnRefresh.Click += btnRefresh_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(527, 137);
+            label2.Name = "label2";
+            label2.Size = new Size(69, 30);
+            label2.TabIndex = 21;
+            label2.Text = "Filter :";
+            // 
+            // cmbCategoryFilter
+            // 
+            cmbCategoryFilter.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbCategoryFilter.FormattingEnabled = true;
+            cmbCategoryFilter.Location = new Point(597, 136);
+            cmbCategoryFilter.Name = "cmbCategoryFilter";
+            cmbCategoryFilter.Size = new Size(143, 33);
+            cmbCategoryFilter.TabIndex = 20;
+            cmbCategoryFilter.SelectedIndexChanged += cmbCategoryFilter_SelectedIndexChanged_1;
+            // 
+            // txtSearchProducts
+            // 
+            txtSearchProducts.Font = new Font("Sitka Banner", 15.7499981F, FontStyle.Italic, GraphicsUnit.Point);
+            txtSearchProducts.Location = new Point(27, 134);
+            txtSearchProducts.Name = "txtSearchProducts";
+            txtSearchProducts.PlaceholderText = "Search Products";
+            txtSearchProducts.Size = new Size(414, 34);
+            txtSearchProducts.TabIndex = 19;
+            // 
+            // btnSearchProducts
+            // 
+            btnSearchProducts.Cursor = Cursors.Hand;
+            btnSearchProducts.FlatStyle = FlatStyle.Flat;
+            btnSearchProducts.Image = Properties.Resources.icons8_search_24;
+            btnSearchProducts.Location = new Point(447, 134);
+            btnSearchProducts.Name = "btnSearchProducts";
+            btnSearchProducts.Size = new Size(40, 34);
+            btnSearchProducts.TabIndex = 18;
+            btnSearchProducts.UseVisualStyleBackColor = true;
+            btnSearchProducts.Click += btnSearchProducts_Click_1;
+            // 
             // userctrlProductPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnRefresh);
+            Controls.Add(label2);
             Controls.Add(cmbCategoryFilter);
+            Controls.Add(txtSearchProducts);
+            Controls.Add(btnSearchProducts);
+            Controls.Add(btnRefresh);
             Controls.Add(btnCtgPage);
             Controls.Add(btnDelete);
             Controls.Add(btnEdit);
             Controls.Add(btnAdd);
             Controls.Add(dgvProducts);
-            Controls.Add(txtSearchProducts);
-            Controls.Add(btnSearchProducts);
             Controls.Add(label1);
             Name = "userctrlProductPage";
             Padding = new Padding(3, 0, 0, 0);
@@ -210,16 +221,16 @@
         }
 
         #endregion
-
-        private TextBox txtSearchProducts;
-        private Button btnSearchProducts;
         private Label label1;
         private DataGridView dgvProducts;
         private Button btnAdd;
         private Button btnEdit;
         private Button btnDelete;
         private Button btnCtgPage;
-        private ComboBox cmbCategoryFilter;
         private Button btnRefresh;
+        private Label label2;
+        private ComboBox cmbCategoryFilter;
+        private TextBox txtSearchProducts;
+        private Button btnSearchProducts;
     }
 }

@@ -24,7 +24,7 @@ namespace inventory_system.usercontrol
         public int ProductID { get; set; }
         public Image ProductImage { get; set; }
 
-        string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS;Integrated Security=True";
+        string connectionString = "Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True";
 
         public usercontrolEditPrd()
         {

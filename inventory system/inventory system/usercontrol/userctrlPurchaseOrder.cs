@@ -13,7 +13,7 @@ namespace inventory_system.usercontrol
 {
     public partial class userctrlPurchaseOrder : UserControl
     {
-        string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS;Integrated Security=True";
+        string connectionString = "Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True";
 
         public userctrlPurchaseOrder()
         {
@@ -313,6 +313,11 @@ namespace inventory_system.usercontrol
                 }
             }
             CalculateAndDisplayTotal();
+        }
+
+        private void btnProceed_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

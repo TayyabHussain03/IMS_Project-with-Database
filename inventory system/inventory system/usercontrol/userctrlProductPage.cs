@@ -13,7 +13,7 @@ namespace inventory_system.usercontrol
 {
     public partial class userctrlProductPage : UserControl
     {
-        private const string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS;Integrated Security=True";
+        private const string connectionString = "Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True";
 
         public userctrlProductPage()
         {
@@ -95,7 +95,7 @@ namespace inventory_system.usercontrol
 
             DataRow row = dt.NewRow();
             row["Product_Category_ID"] = 0;
-            row["Category_Name"] = "Filter By Category";
+            row["Category_Name"] = "All Products";
             dt.Rows.InsertAt(row, 0);
 
             cmbCategoryFilter.DataSource = dt;
@@ -311,6 +311,33 @@ namespace inventory_system.usercontrol
         private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnSearchProducts_Click_1(object sender, EventArgs e)
+        {
+            string query = "Select * From Products where Product_Name like '%" + txtSearchProducts.Text + "%'";
+            RefreshGrid(query);
+            txtSearchProducts.Text = "";
+        }
+
+        private void cmbCategoryFilter_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbCategoryFilter.SelectedIndex == 0)
+            {
+                string query = "SELECT Products.Product_ID as ID, Products.Product_Name as Name, Products_Category.Category_Name, Products.Selling_Price, Products.Costing_Price, Products.Quantity FROM Products JOIN Products_Category ON Products.Product_Category_ID = Products_Category.Product_Category_ID order by Products.Product_ID desc";
+                RefreshGrid(query);
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(connectionString);
+
+                string query = "SELECT Products.Product_ID as ID, Products.Product_Name as Name, Products_Category.Category_Name, Products.Selling_Price, Products.Costing_Price, Products.Quantity FROM Products JOIN Products_Category ON Products.Product_Category_ID = Products_Category.Product_Category_ID WHERE Products_Category.Category_Name LIKE '%" + cmbCategoryFilter.Text.ToString() + "%' order by Products.Product_ID desc";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvProducts.DataSource = dt;
+            }
         }
     }
 }

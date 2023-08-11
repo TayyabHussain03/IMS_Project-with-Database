@@ -14,7 +14,7 @@ namespace inventory_system.usercontrol
 {
     public partial class UsercontrolLogin : UserControl
     {
-        private SqlConnection connection = new SqlConnection("Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS;Integrated Security=True");
+        private SqlConnection connection = new SqlConnection("Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True");
         public UsercontrolLogin()
         {
             InitializeComponent();

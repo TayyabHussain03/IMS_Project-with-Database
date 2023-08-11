@@ -142,21 +142,21 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Font = new Font("Myriad Pro", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = SystemColors.ButtonShadow;
             label8.Location = new Point(531, 148);
             label8.Name = "label8";
-            label8.Size = new Size(80, 18);
+            label8.Size = new Size(73, 19);
             label8.TabIndex = 33;
             label8.Text = "12345678";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Myriad Pro Light", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(407, 147);
             label4.Name = "label4";
-            label4.Size = new Size(143, 20);
+            label4.Size = new Size(128, 20);
             label4.TabIndex = 32;
             label4.Text = "Product Number:";
             // 
@@ -172,26 +172,26 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Font = new Font("Myriad Pro", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label7.Location = new Point(602, 342);
             label7.Name = "label7";
-            label7.Size = new Size(37, 24);
+            label7.Size = new Size(32, 23);
             label7.TabIndex = 30;
             label7.Text = "Rs.";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Font = new Font("Myriad Pro", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label6.Location = new Point(407, 343);
             label6.Name = "label6";
-            label6.Size = new Size(37, 24);
+            label6.Size = new Size(32, 23);
             label6.TabIndex = 29;
             label6.Text = "Rs.";
             // 
             // txtBoxCostingPrice
             // 
-            txtBoxCostingPrice.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
+            txtBoxCostingPrice.Font = new Font("Myriad Pro Light", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             txtBoxCostingPrice.Location = new Point(636, 342);
             txtBoxCostingPrice.Multiline = true;
             txtBoxCostingPrice.Name = "txtBoxCostingPrice";
@@ -202,7 +202,7 @@
             // 
             // txtBoxSellingPrice
             // 
-            txtBoxSellingPrice.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
+            txtBoxSellingPrice.Font = new Font("Myriad Pro Light", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             txtBoxSellingPrice.Location = new Point(441, 343);
             txtBoxSellingPrice.Multiline = true;
             txtBoxSellingPrice.Name = "txtBoxSellingPrice";
@@ -242,21 +242,21 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Myriad Pro Light", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(407, 176);
             label1.Name = "label1";
-            label1.Size = new Size(110, 20);
+            label1.Size = new Size(96, 20);
             label1.TabIndex = 24;
             label1.Text = "Description :";
             // 
             // lblCategory
             // 
             lblCategory.AutoSize = true;
-            lblCategory.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCategory.Font = new Font("Myriad Pro", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblCategory.ForeColor = SystemColors.ButtonShadow;
             lblCategory.Location = new Point(409, 36);
             lblCategory.Name = "lblCategory";
-            lblCategory.Size = new Size(94, 18);
+            lblCategory.Size = new Size(80, 19);
             lblCategory.TabIndex = 23;
             lblCategory.Text = "BEDROOM";
             // 

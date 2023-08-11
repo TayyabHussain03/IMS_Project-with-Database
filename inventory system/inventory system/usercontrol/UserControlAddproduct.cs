@@ -13,7 +13,7 @@ namespace inventory_system.usercontrol
         // Declare a variable to store the selected image
         private Image selectedImage = null;
 
-        string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS;Integrated Security=True";
+        string connectionString = "Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True";
 
         public UserControlAddproduct()
         {

@@ -314,7 +314,6 @@ D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.dashboard.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Login.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Properties.Resources.resources
-D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Screens.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolAddCtg.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlAddproduct.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdCategory.resources
@@ -324,7 +323,6 @@ D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolSales.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolStock.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrlanalysis.resources
-D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrldailysale.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlProductPage.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlPurchaseOrder.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlSignin.resources
@@ -697,3 +695,8 @@ D:\IMS_Project Add_to_Cart Remaining\IMS_Project Add_to_Cart Added\IMS_Projec Pr
 D:\IMS_Project Add_to_Cart Remaining\IMS_Project Add_to_Cart Added\IMS_Projec Product Page Completed\IMS_Project-with-Database2 updated\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UsercontrolLogin.resources
 D:\IMS_Project Add_to_Cart Remaining\IMS_Project Add_to_Cart Added\IMS_Projec Product Page Completed\IMS_Project-with-Database2 updated\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.SalesDetails.resources
 D:\IMS_Project Add_to_Cart Remaining\IMS_Project Add_to_Cart Added\IMS_Projec Product Page Completed\IMS_Project-with-Database2 updated\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlInvoiceDetails.resources
+D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.SalesDetails.resources
+D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.SplashScreeen.resources
+D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolEditPrd.resources
+D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlInvoiceDetails.resources
+D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UsercontrolLogin.resources

@@ -124,6 +124,7 @@
             btnProceed.TabIndex = 70;
             btnProceed.Text = "Update Inventory";
             btnProceed.UseVisualStyleBackColor = false;
+            btnProceed.Click += btnProceed_Click;
             // 
             // btnClear
             // 
