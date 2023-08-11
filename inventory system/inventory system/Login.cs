@@ -19,33 +19,32 @@ namespace inventory_system
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            if (txtemail.Text == "" || txtpassword.Text == "")
-            {
-                MessageBox.Show("Fill All Field");
-            }
-            else
-            {
-                if (txtemail.Text == "admin@gmail.com" && txtpassword.Text == "1234")
-                {
-                    dashboard dashboard = new dashboard();
-                    dashboard.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Credential");
-                }
-            }
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
 
         }
-
         private void Login_Load(object sender, EventArgs e)
         {
-         
+
+        }
+
+        private void Togglebtn_Click(object sender, EventArgs e)
+        {
+            usercontrolLogin1.BringToFront();
+            usercontrolLogin1.Show();
+            Togglebtn.BackColor = Color.FloralWhite;
+            signup.BackColor = Color.White;
+        }
+
+        private void signup_Click(object sender, EventArgs e)
+        {
+            userctrlSignin1.BringToFront();
+            userctrlSignin1.Show();
+            signup.BackColor = Color.FloralWhite;
+            Togglebtn.BackColor = Color.White;
+        }
+
+        private void usercontrolLogin1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

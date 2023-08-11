@@ -42,29 +42,30 @@
             // 
             percentagelbl.AutoSize = true;
             percentagelbl.FlatStyle = FlatStyle.Popup;
-            percentagelbl.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            percentagelbl.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
             percentagelbl.ForeColor = Color.DimGray;
-            percentagelbl.Location = new Point(158, 417);
+            percentagelbl.Location = new Point(199, 589);
             percentagelbl.Name = "percentagelbl";
-            percentagelbl.Size = new Size(0, 20);
+            percentagelbl.Size = new Size(0, 29);
             percentagelbl.TabIndex = 8;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(27, 9);
+            pictureBox4.Location = new Point(74, 2);
             pictureBox4.Margin = new Padding(28, 5, 3, 0);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(535, 396);
+            pictureBox4.Size = new Size(861, 548);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 7;
             pictureBox4.TabStop = false;
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(52, 444);
+            progressBar1.Enabled = false;
+            progressBar1.Location = new Point(74, 629);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(488, 15);
+            progressBar1.Size = new Size(861, 27);
             progressBar1.Style = ProgressBarStyle.Continuous;
             progressBar1.TabIndex = 6;
             // 
@@ -72,13 +73,14 @@
             // 
             label1.AutoSize = true;
             label1.FlatStyle = FlatStyle.Popup;
-            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.DimGray;
-            label1.Location = new Point(54, 417);
+            label1.Location = new Point(74, 589);
             label1.Name = "label1";
-            label1.Size = new Size(78, 20);
+            label1.Size = new Size(118, 29);
             label1.TabIndex = 5;
             label1.Text = "Loading...";
+            label1.Click += label1_Click;
             // 
             // timer1
             // 
@@ -89,7 +91,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(588, 484);
+            ClientSize = new Size(1012, 733);
             Controls.Add(percentagelbl);
             Controls.Add(pictureBox4);
             Controls.Add(progressBar1);

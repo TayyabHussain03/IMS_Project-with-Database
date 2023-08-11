@@ -13,11 +13,12 @@ namespace inventory_system.usercontrol
 {
     public partial class usercontrolSales : UserControl
     {
-        private const string connString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS-1;Integrated Security=True";
-
+        string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS;Integrated Security=True";
         public usercontrolSales()
         {
             InitializeComponent();
+
+            txtQuantity.KeyPress += txtQuantity_KeyPress;
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -33,11 +34,11 @@ namespace inventory_system.usercontrol
         private void usercontrolSales_Load(object sender, EventArgs e)
         {
 
-            using (SqlConnection connection = new SqlConnection(connString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                string selectQuery = "Select Product_Number, Product_Name, Quantity, Unit_Price, Sub_Total from tblCart";
+                string selectQuery = "Select Product_Number, Product_Name, Quantity, Costing_Price, Unit_Price, Sub_Total from tblCart";
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(selectQuery, connection);
                 DataTable dataTable = new DataTable();
@@ -46,11 +47,14 @@ namespace inventory_system.usercontrol
                 // Bind the DataTable to your DataGridView
                 dgvCartItems.DataSource = dataTable;
 
-                // Calculate and display the total sum of Sub_Total values
+                // Calculate and display the total sum of Sub_Total and Costing_Price values
                 CalculateAndDisplayTotal();
+                CalculateAndDisplayCostingTotal();
+
             }
 
-
+            dgvCartItems.DefaultCellStyle.Font = new Font("Arial", 7); // Adjust the font and size
+            dgvCartItems.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold); // Adjust the font, size, and style for column headers
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -85,9 +89,26 @@ namespace inventory_system.usercontrol
             txtBoxTotalPrice.Text = totalSum.ToString("0.00");
         }
 
+        private void CalculateAndDisplayCostingTotal()
+        {
+            decimal totalSum = 0;
+
+            foreach (DataGridViewRow row in dgvCartItems.Rows)
+            {
+                decimal costingTotal;
+                if (decimal.TryParse(row.Cells["Costing_Price"].Value?.ToString(), out costingTotal))
+                {
+                    totalSum += costingTotal;
+                }
+            }
+
+            // Update the TextBox with the calculated total sum
+            txtBoxCostingPrice.Text = totalSum.ToString("0.00");
+        }
+
         private void btnClear_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
@@ -100,12 +121,18 @@ namespace inventory_system.usercontrol
             }
             usercontrolSales_Load(sender, e);
             CalculateAndDisplayTotal();
+            CalculateAndDisplayCostingTotal();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             usercontrolSales_Load(sender, e);
             CalculateAndDisplayTotal();
+
+            dgvCartItems.DefaultCellStyle.Font = new Font("Arial", 7); // Adjust the font and size
+            dgvCartItems.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold); // Adjust the font, size, and style for column headers
+
+
         }
 
         private void dgvCartItems_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -130,7 +157,7 @@ namespace inventory_system.usercontrol
                     int selectedProductNumber = Convert.ToInt32(dgvCartItems.SelectedRows[0].Cells["Product_Number"].Value);
 
                     // Delete the record from the database
-                    SqlConnection con = new SqlConnection(connString);
+                    SqlConnection con = new SqlConnection(connectionString);
                     string deleteQuery = "DELETE FROM tblCart WHERE Product_Number =@ProductNumber";
 
                     using (SqlCommand cmd = new SqlCommand(deleteQuery, con))
@@ -147,6 +174,7 @@ namespace inventory_system.usercontrol
                     MessageBox.Show("Product removed successfully.");
 
                     CalculateAndDisplayTotal();
+                    CalculateAndDisplayCostingTotal();
                 }
             }
             else
@@ -158,6 +186,7 @@ namespace inventory_system.usercontrol
         private CancellationTokenSource searchDelay;
         private string retrievedProductName;
         private decimal retrievedSellingPrice;
+        private decimal retrievedCostingPrice;
         private int retrievedQuantity;
         private decimal subTotal;
 
@@ -173,11 +202,11 @@ namespace inventory_system.usercontrol
                 {
                     if (int.TryParse(txtBoxProductNumber.Text, out int productNumber))
                     {
-                        using (SqlConnection connection = new SqlConnection(connString))
+                        using (SqlConnection connection = new SqlConnection(connectionString))
                         {
                             connection.Open();
 
-                            string selectQuery = "SELECT Product_Name, Selling_Price, Quantity FROM Products WHERE Product_Number = @ProductNumber";
+                            string selectQuery = "SELECT Product_Name, Costing_Price, Selling_Price, Quantity FROM Products WHERE Product_Number = @ProductNumber";
                             using (SqlCommand cmd = new SqlCommand(selectQuery, connection))
                             {
                                 cmd.Parameters.AddWithValue("@ProductNumber", productNumber);
@@ -187,10 +216,12 @@ namespace inventory_system.usercontrol
                                 {
                                     string productName = reader["Product_Name"].ToString();
                                     decimal sellingPrice = Convert.ToDecimal(reader["Selling_Price"]);
+                                    decimal costingPrice = Convert.ToDecimal(reader["Costing_Price"]);
                                     int quantity = Convert.ToInt32(reader["Quantity"]);
 
                                     retrievedProductName = productName;
                                     retrievedSellingPrice = sellingPrice;
+                                    retrievedCostingPrice = costingPrice;
 
                                     // Update retrievedQuantity here
                                     retrievedQuantity = quantity;
@@ -213,7 +244,7 @@ namespace inventory_system.usercontrol
                     }
                     else
                     {
-                        MessageBox.Show("Please enter numeric digits only.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //MessageBox.Show("Please enter numeric digits only.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtBoxProductNumber.Text = "";
                     }
                 }
@@ -262,7 +293,7 @@ namespace inventory_system.usercontrol
             int enteredQuantity = int.Parse(txtQuantity.Text);
             if (enteredQuantity <= retrievedQuantity)
             {
-                using (SqlConnection connection = new SqlConnection(connString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
@@ -286,11 +317,12 @@ namespace inventory_system.usercontrol
                         else
                         {
                             // Insert the new product into the cart
-                            string insertQuery = "INSERT INTO tblCart (Product_Number, Product_Name, Quantity, Unit_Price, Sub_Total) VALUES (@ProductNumber, @ProductName, @Quantity, @UnitPrice, @SubTotal)";
+                            string insertQuery = "INSERT INTO tblCart (Product_Number, Product_Name, Costing_Price, Quantity, Unit_Price, Sub_Total) VALUES (@ProductNumber, @ProductName, @CostingPrice, @Quantity, @UnitPrice, @SubTotal)";
                             using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
                             {
                                 insertCmd.Parameters.AddWithValue("@ProductNumber", txtBoxProductNumber.Text);
                                 insertCmd.Parameters.AddWithValue("@ProductName", retrievedProductName);
+                                insertCmd.Parameters.AddWithValue("@CostingPrice", retrievedCostingPrice);
                                 insertCmd.Parameters.AddWithValue("@Quantity", enteredQuantity);
                                 insertCmd.Parameters.AddWithValue("@UnitPrice", retrievedSellingPrice);
                                 insertCmd.Parameters.AddWithValue("@SubTotal", subTotal);
@@ -306,6 +338,9 @@ namespace inventory_system.usercontrol
                 txtQuantity.Text = "";
                 txtProductName.Text = "";
                 txtSellingPrice.Text = "";
+
+                dgvCartItems.DefaultCellStyle.Font = new Font("Arial", 7); // Adjust the font and size
+                dgvCartItems.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold); // Adjust the font, size, and style for column headers
             }
             else
             {
@@ -328,12 +363,9 @@ namespace inventory_system.usercontrol
         //Add Data in relevant tables when proceeding
         private void btnProceed_Click(object sender, EventArgs e)
         {
-            if (txtBoxCustomerName.Text == "" || txtBoxInvoiceNum.Text == "")
+            if (!string.IsNullOrWhiteSpace(txtBoxInvoiceNum.Text) && !string.IsNullOrWhiteSpace(txtBoxCustomerName.Text))
             {
-                MessageBox.Show("Enter Customer name and invoice");
-            }
-            else
-            {
+                string connString = connectionString;
                 string insertQuery = "INSERT INTO Customers (Customer_Name) VALUES (@CustomerName); SELECT SCOPE_IDENTITY() as Customer_ID;";
                 int customerId = -1;
 
@@ -349,59 +381,108 @@ namespace inventory_system.usercontrol
 
                     if (customerId != -1)
                     {
-                        string salesQuery = "INSERT INTO Sales (Sale_ID, Sale_Date, Amount, Customer_ID) VALUES (@SaleId, @SaleDate, @Amount, @CustomerId);";
+                        // Check if the cart is empty
+                        string selectQuery = "SELECT product_number, costing_price, unit_price, quantity, sub_total FROM tblCart";
 
-                        string selectQuery = "SELECT product_number, unit_price, quantity, sub_total FROM tblCart";
-
-                        using (SqlCommand salesCommand = new SqlCommand(salesQuery, connection))
+                        using (SqlConnection connectionForSelect = new SqlConnection(connString))
                         {
-                            string formattedDate = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
-                            salesCommand.Parameters.AddWithValue("@SaleId", Convert.ToInt32(txtBoxInvoiceNum.Text));
-                            salesCommand.Parameters.AddWithValue("@SaleDate", formattedDate);
-                            salesCommand.Parameters.AddWithValue("@Amount", Convert.ToDecimal(txtBoxTotalPrice.Text));
-                            salesCommand.Parameters.AddWithValue("@CustomerId", customerId);
-                            salesCommand.ExecuteNonQuery();
-                        }
+                            connectionForSelect.Open();
 
-                        using (SqlConnection connectionForInsert = new SqlConnection(connString))
-                        {
-                            connectionForInsert.Open();
-
-                            using (SqlCommand selectCommand = new SqlCommand(selectQuery, connection))
+                            using (SqlCommand selectCommand = new SqlCommand(selectQuery, connectionForSelect))
                             {
                                 using (SqlDataReader reader = selectCommand.ExecuteReader())
                                 {
-                                    while (reader.Read())
+                                    if (reader.HasRows) // Check if there are any rows in tblCart
                                     {
-                                        int productNumber = Convert.ToInt32(reader["product_number"]);
-                                        decimal unitPrice = Convert.ToDecimal(reader["unit_price"]);
-                                        int quantity = Convert.ToInt32(reader["quantity"]);
-                                        decimal subTotal = Convert.ToDecimal(reader["sub_total"]);
-
-                                        string insertItemsQuery = "INSERT INTO Sline_Items (Sale_ID, Product_ID, Quantity, Unit_Price, Sub_Total) values (@SaleId, @ProductId, @Quantity, @UnitPrice, @Subtotal);";
-
-                                        using (SqlCommand insertItemsCommand = new SqlCommand(insertItemsQuery, connectionForInsert))
+                                        // Create a new SqlConnection for inserting into Sales and Sline_Items tables
+                                        using (SqlConnection connectionForInsert = new SqlConnection(connectionString))
                                         {
-                                            insertItemsCommand.Parameters.AddWithValue("@SaleId", Convert.ToInt32(txtBoxInvoiceNum.Text));
-                                            insertItemsCommand.Parameters.AddWithValue("@ProductId", productNumber);
-                                            insertItemsCommand.Parameters.AddWithValue("@Quantity", quantity);
-                                            insertItemsCommand.Parameters.AddWithValue("@UnitPrice", unitPrice);
-                                            insertItemsCommand.Parameters.AddWithValue("@Subtotal", subTotal);
-                                            insertItemsCommand.ExecuteNonQuery();
+                                            connectionForInsert.Open();
+
+                                            string salesQuery = "INSERT INTO Sales (Sale_ID, Sale_Date, Amount, Customer_ID) VALUES (@SaleId, @SaleDate, @Amount, @CustomerId);";
+
+                                            using (SqlCommand salesCommand = new SqlCommand(salesQuery, connectionForInsert))
+                                            {
+                                                string formattedDate = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
+                                                salesCommand.Parameters.AddWithValue("@SaleId", Convert.ToInt32(txtBoxInvoiceNum.Text));
+                                                salesCommand.Parameters.AddWithValue("@SaleDate", formattedDate);
+                                                salesCommand.Parameters.AddWithValue("@Amount", Convert.ToDecimal(txtBoxTotalPrice.Text));
+                                                salesCommand.Parameters.AddWithValue("@CustomerId", customerId);
+                                                salesCommand.ExecuteNonQuery();
+                                            }
+
+                                            // Insert data from Cart into Sline_Items
+                                            string insertItemsQuery = "INSERT INTO Sline_Items (Sale_ID, Product_ID, Quantity, Costing_Price, Unit_Price, Sub_Total) values (@SaleId, @ProductId, @Quantity, @CostingPrice, @UnitPrice, @Subtotal);";
+
+                                            using (SqlCommand insertItemsCommand = new SqlCommand(insertItemsQuery, connection))
+                                            {
+                                                while (reader.Read())
+                                                {
+                                                    int productNumber = Convert.ToInt32(reader["product_number"]);
+                                                    decimal unitPrice = Convert.ToDecimal(reader["unit_price"]);
+                                                    decimal costingPrice = Convert.ToDecimal(reader["costing_price"]);
+                                                    int quantity = Convert.ToInt32(reader["quantity"]);
+                                                    decimal subTotal = Convert.ToDecimal(reader["sub_total"]);
+
+                                                    updateProductsTable(productNumber, quantity);
+
+                                                    insertItemsCommand.Parameters.Clear(); // Clear existing parameters
+                                                    insertItemsCommand.Parameters.AddWithValue("@SaleId", Convert.ToInt32(txtBoxInvoiceNum.Text));
+                                                    insertItemsCommand.Parameters.AddWithValue("@ProductId", productNumber);
+                                                    insertItemsCommand.Parameters.AddWithValue("@Quantity", quantity);
+                                                    insertItemsCommand.Parameters.AddWithValue("@CostingPrice", costingPrice);
+                                                    insertItemsCommand.Parameters.AddWithValue("@UnitPrice", unitPrice);
+                                                    insertItemsCommand.Parameters.AddWithValue("@Subtotal", subTotal);
+                                                    insertItemsCommand.ExecuteNonQuery();
+                                                }
+                                            }
+
+                                            // Delete data from tblCart
+                                            string deleteQuery = "DELETE FROM tblCart;";
+                                            using (SqlCommand deleteCommand = new SqlCommand(deleteQuery, connectionForInsert))
+                                            {
+                                                // Close the DataReader before executing deleteCommand
+                                                reader.Close();
+
+                                                deleteCommand.ExecuteNonQuery();
+                                            }
+
+                                            txtBoxCustomerName.Text = "";
+                                            txtBoxInvoiceNum.Text = "";
+
+                                            MessageBox.Show("Your Request has been proceed");
                                         }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Please add products to the cart before proceeding.");
+                                        return; // Exit the method if the cart is empty
                                     }
                                 }
                             }
                         }
-
-                        // Delete data from tblCart
-                        string deleteQuery = "DELETE FROM tblCart;";
-                        using (SqlCommand deleteCommand = new SqlCommand(deleteQuery, connection))
-                        {
-                            deleteCommand.ExecuteNonQuery();
-                        }
                     }
                 }
+
+                usercontrolSales_Load(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Please Generate Invoice Number and Enter Customer Name");
+            }
+        }
+
+        private void updateProductsTable(int productNumber, int purchaseQuantity)
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            string query = "Update Products set quantity = quantity - @purchaseQuantity where product_number = @productNumber";
+            using (SqlCommand updateCommand = new SqlCommand(query, con))
+            {
+                con.Open();
+                updateCommand.Parameters.AddWithValue("@purchaseQuantity", purchaseQuantity);
+                updateCommand.Parameters.AddWithValue("@productNumber", productNumber);
+                updateCommand.ExecuteNonQuery();
+                con.Close();
             }
         }
 
@@ -412,6 +493,21 @@ namespace inventory_system.usercontrol
             {
                 e.Handled = true; // Block the character input
                 MessageBox.Show("Please enter numeric digits only.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtBoxTotalPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check if the entered key is a digit or the backspace key
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.Handled = true; // Mark the event as handled to prevent the character from being entered
+                MessageBox.Show("Please type a numeric value.");
             }
         }
     }

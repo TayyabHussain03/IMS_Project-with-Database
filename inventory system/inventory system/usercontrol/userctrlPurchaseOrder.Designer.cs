@@ -29,368 +29,455 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            label15 = new Label();
-            textBox3 = new TextBox();
-            btnClearForm = new Button();
-            txtBoxSubTotal = new TextBox();
-            btnUpdateInventory = new Button();
-            label14 = new Label();
-            textBox1 = new TextBox();
-            label12 = new Label();
-            textBox2 = new TextBox();
+            btnProceed = new Button();
+            btnClear = new Button();
+            txtBoxTotalAmount = new TextBox();
+            btnRemove = new Button();
+            btnAddinPurchase = new Button();
             label13 = new Label();
-            txtBoxProductName = new TextBox();
+            dateTimePicker3 = new DateTimePicker();
+            label12 = new Label();
+            dateTimePicker2 = new DateTimePicker();
             label11 = new Label();
-            txtBoxProductID = new TextBox();
-            label10 = new Label();
-            dateTimePickerDateReceived = new DateTimePicker();
-            cmbBoxPaymentType = new ComboBox();
-            txtBoxVendorName = new TextBox();
-            dateTimePickerExpectedDate = new DateTimePicker();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
+            txtBoxSellingPrice = new TextBox();
             label9 = new Label();
-            txtBoxCreatedBy = new TextBox();
-            txtBoxPurchaseOrderNumber = new TextBox();
-            dateTimePickerCreationDate = new DateTimePicker();
-            dateTimePickerCurrentDate = new DateTimePicker();
-            label5 = new Label();
-            label4 = new Label();
+            label1 = new Label();
+            txtBoxProductName = new TextBox();
+            cmbBoxPayment = new ComboBox();
+            label7 = new Label();
             label3 = new Label();
-            label2 = new Label();
-            groupBox2 = new GroupBox();
+            txtBoxPONum = new TextBox();
+            numericUpDown1 = new NumericUpDown();
             dataGridView1 = new DataGridView();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            label10 = new Label();
+            btnRefresh = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            txtBoxSubTotal = new TextBox();
+            label6 = new Label();
+            txtBoxCostingPrice = new TextBox();
+            label8 = new Label();
+            txtBoxProductNum = new TextBox();
+            Quantity = new Label();
+            txtBoxSupplierName = new TextBox();
+            label5 = new Label();
+            label2 = new Label();
             ID = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             label16 = new Label();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.FloralWhite;
-            groupBox1.Controls.Add(label15);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(btnClearForm);
-            groupBox1.Controls.Add(txtBoxSubTotal);
-            groupBox1.Controls.Add(btnUpdateInventory);
-            groupBox1.Controls.Add(label14);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(label12);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(btnProceed);
+            groupBox1.Controls.Add(btnClear);
+            groupBox1.Controls.Add(txtBoxTotalAmount);
+            groupBox1.Controls.Add(btnRemove);
+            groupBox1.Controls.Add(btnAddinPurchase);
             groupBox1.Controls.Add(label13);
-            groupBox1.Controls.Add(txtBoxProductName);
+            groupBox1.Controls.Add(dateTimePicker3);
+            groupBox1.Controls.Add(label12);
+            groupBox1.Controls.Add(dateTimePicker2);
             groupBox1.Controls.Add(label11);
-            groupBox1.Controls.Add(txtBoxProductID);
-            groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(dateTimePickerDateReceived);
-            groupBox1.Controls.Add(cmbBoxPaymentType);
-            groupBox1.Controls.Add(txtBoxVendorName);
-            groupBox1.Controls.Add(dateTimePickerExpectedDate);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(txtBoxSellingPrice);
             groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(txtBoxCreatedBy);
-            groupBox1.Controls.Add(txtBoxPurchaseOrderNumber);
-            groupBox1.Controls.Add(dateTimePickerCreationDate);
-            groupBox1.Controls.Add(dateTimePickerCurrentDate);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(txtBoxProductName);
+            groupBox1.Controls.Add(cmbBoxPayment);
+            groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(txtBoxPONum);
+            groupBox1.Controls.Add(numericUpDown1);
+            groupBox1.Controls.Add(dataGridView1);
+            groupBox1.Controls.Add(label10);
+            groupBox1.Controls.Add(btnRefresh);
+            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(txtBoxSubTotal);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(txtBoxCostingPrice);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(txtBoxProductNum);
+            groupBox1.Controls.Add(Quantity);
+            groupBox1.Controls.Add(txtBoxSupplierName);
+            groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(70, 110);
+            groupBox1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            groupBox1.Location = new Point(11, 88);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(612, 325);
+            groupBox1.Size = new Size(841, 595);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Transaction:";
+            groupBox1.Text = "Purchasing Transaction:";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // label15
+            // btnProceed
             // 
-            label15.AutoSize = true;
-            label15.Location = new Point(20, 34);
-            label15.Name = "label15";
-            label15.Size = new Size(88, 15);
-            label15.TabIndex = 29;
-            label15.Text = "Expected Date :";
+            btnProceed.BackColor = Color.Black;
+            btnProceed.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnProceed.ForeColor = Color.White;
+            btnProceed.Location = new Point(680, 534);
+            btnProceed.Name = "btnProceed";
+            btnProceed.Size = new Size(140, 43);
+            btnProceed.TabIndex = 70;
+            btnProceed.Text = "Update Inventory";
+            btnProceed.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // btnClear
             // 
-            textBox3.Location = new Point(542, 186);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(40, 23);
-            textBox3.TabIndex = 28;
+            btnClear.BackColor = Color.RoyalBlue;
+            btnClear.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClear.ForeColor = Color.White;
+            btnClear.Location = new Point(506, 449);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(115, 42);
+            btnClear.TabIndex = 42;
+            btnClear.Text = "Clear Basket";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
-            // btnClearForm
+            // txtBoxTotalAmount
             // 
-            btnClearForm.BackColor = Color.DarkRed;
-            btnClearForm.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnClearForm.ForeColor = Color.White;
-            btnClearForm.Location = new Point(318, 266);
-            btnClearForm.Name = "btnClearForm";
-            btnClearForm.Size = new Size(152, 44);
-            btnClearForm.TabIndex = 19;
-            btnClearForm.Text = "Clear Form";
-            btnClearForm.UseVisualStyleBackColor = false;
+            txtBoxTotalAmount.BackColor = SystemColors.InactiveBorder;
+            txtBoxTotalAmount.Enabled = false;
+            txtBoxTotalAmount.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxTotalAmount.ForeColor = Color.SteelBlue;
+            txtBoxTotalAmount.Location = new Point(704, 457);
+            txtBoxTotalAmount.Name = "txtBoxTotalAmount";
+            txtBoxTotalAmount.Size = new Size(116, 25);
+            txtBoxTotalAmount.TabIndex = 69;
+            txtBoxTotalAmount.Text = ".00";
             // 
-            // txtBoxSubTotal
+            // btnRemove
             // 
-            txtBoxSubTotal.Location = new Point(422, 224);
-            txtBoxSubTotal.Name = "txtBoxSubTotal";
-            txtBoxSubTotal.Size = new Size(160, 23);
-            txtBoxSubTotal.TabIndex = 27;
+            btnRemove.BackColor = Color.Red;
+            btnRemove.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRemove.ForeColor = Color.White;
+            btnRemove.Location = new Point(381, 447);
+            btnRemove.Name = "btnRemove";
+            btnRemove.Size = new Size(115, 44);
+            btnRemove.TabIndex = 41;
+            btnRemove.Text = "Remove";
+            btnRemove.UseVisualStyleBackColor = false;
+            btnRemove.Click += btnRemove_Click_1;
             // 
-            // btnUpdateInventory
+            // btnAddinPurchase
             // 
-            btnUpdateInventory.BackColor = Color.ForestGreen;
-            btnUpdateInventory.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUpdateInventory.ForeColor = Color.White;
-            btnUpdateInventory.Location = new Point(134, 266);
-            btnUpdateInventory.Name = "btnUpdateInventory";
-            btnUpdateInventory.Size = new Size(152, 44);
-            btnUpdateInventory.TabIndex = 18;
-            btnUpdateInventory.Text = "Update Inventory";
-            btnUpdateInventory.UseVisualStyleBackColor = false;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(318, 224);
-            label14.Name = "label14";
-            label14.Size = new Size(61, 15);
-            label14.TabIndex = 26;
-            label14.Text = "Sub Total :";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(656, 187);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(40, 23);
-            textBox1.TabIndex = 25;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(318, 190);
-            label12.Name = "label12";
-            label12.Size = new Size(81, 15);
-            label12.TabIndex = 24;
-            label12.Text = "Product Rate :";
-            label12.Click += label12_Click;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(422, 187);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(40, 23);
-            textBox2.TabIndex = 23;
+            btnAddinPurchase.BackColor = Color.ForestGreen;
+            btnAddinPurchase.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddinPurchase.ForeColor = Color.White;
+            btnAddinPurchase.Location = new Point(254, 447);
+            btnAddinPurchase.Name = "btnAddinPurchase";
+            btnAddinPurchase.Size = new Size(115, 44);
+            btnAddinPurchase.TabIndex = 40;
+            btnAddinPurchase.Text = "Add in Purchase";
+            btnAddinPurchase.UseVisualStyleBackColor = false;
+            btnAddinPurchase.Click += btnAddinPurchase_Click;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(477, 190);
+            label13.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.ForeColor = Color.SteelBlue;
+            label13.Location = new Point(688, 436);
             label13.Name = "label13";
-            label13.Size = new Size(59, 15);
-            label13.TabIndex = 22;
-            label13.Text = "Quantity :";
+            label13.Size = new Size(101, 17);
+            label13.TabIndex = 68;
+            label13.Text = "Total Amount :";
             // 
-            // txtBoxProductName
+            // dateTimePicker3
             // 
-            txtBoxProductName.Location = new Point(123, 225);
-            txtBoxProductName.Name = "txtBoxProductName";
-            txtBoxProductName.Size = new Size(160, 23);
-            txtBoxProductName.TabIndex = 21;
+            dateTimePicker3.CalendarFont = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker3.CalendarForeColor = Color.SteelBlue;
+            dateTimePicker3.CalendarMonthBackground = SystemColors.InactiveBorder;
+            dateTimePicker3.CalendarTitleForeColor = Color.SteelBlue;
+            dateTimePicker3.CalendarTrailingForeColor = Color.SteelBlue;
+            dateTimePicker3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker3.Format = DateTimePickerFormat.Short;
+            dateTimePicker3.Location = new Point(165, 390);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(111, 23);
+            dateTimePicker3.TabIndex = 67;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.SteelBlue;
+            label12.Location = new Point(154, 372);
+            label12.Name = "label12";
+            label12.Size = new Size(84, 17);
+            label12.TabIndex = 66;
+            label12.Text = "Expiry Date:";
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.CalendarFont = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker2.CalendarForeColor = Color.SteelBlue;
+            dateTimePicker2.CalendarMonthBackground = SystemColors.InactiveBorder;
+            dateTimePicker2.CalendarTitleForeColor = Color.SteelBlue;
+            dateTimePicker2.CalendarTrailingForeColor = Color.SteelBlue;
+            dateTimePicker2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(23, 390);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(110, 23);
+            dateTimePicker2.TabIndex = 65;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(20, 228);
+            label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.SteelBlue;
+            label11.Location = new Point(6, 373);
             label11.Name = "label11";
-            label11.Size = new Size(90, 15);
-            label11.TabIndex = 20;
-            label11.Text = "Product Name :";
+            label11.Size = new Size(73, 17);
+            label11.TabIndex = 64;
+            label11.Text = "MFG Date:";
             // 
-            // txtBoxProductID
+            // txtBoxSellingPrice
             // 
-            txtBoxProductID.Location = new Point(123, 186);
-            txtBoxProductID.Name = "txtBoxProductID";
-            txtBoxProductID.Size = new Size(160, 23);
-            txtBoxProductID.TabIndex = 19;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(20, 189);
-            label10.Name = "label10";
-            label10.Size = new Size(69, 15);
-            label10.TabIndex = 18;
-            label10.Text = "Product ID :";
-            // 
-            // dateTimePickerDateReceived
-            // 
-            dateTimePickerDateReceived.Format = DateTimePickerFormat.Short;
-            dateTimePickerDateReceived.Location = new Point(422, 107);
-            dateTimePickerDateReceived.Name = "dateTimePickerDateReceived";
-            dateTimePickerDateReceived.Size = new Size(160, 23);
-            dateTimePickerDateReceived.TabIndex = 17;
-            // 
-            // cmbBoxPaymentType
-            // 
-            cmbBoxPaymentType.FormattingEnabled = true;
-            cmbBoxPaymentType.Items.AddRange(new object[] { "Cash", "Check" });
-            cmbBoxPaymentType.Location = new Point(422, 146);
-            cmbBoxPaymentType.Name = "cmbBoxPaymentType";
-            cmbBoxPaymentType.Size = new Size(160, 23);
-            cmbBoxPaymentType.TabIndex = 16;
-            // 
-            // txtBoxVendorName
-            // 
-            txtBoxVendorName.Location = new Point(422, 69);
-            txtBoxVendorName.Name = "txtBoxVendorName";
-            txtBoxVendorName.Size = new Size(160, 23);
-            txtBoxVendorName.TabIndex = 14;
-            // 
-            // dateTimePickerExpectedDate
-            // 
-            dateTimePickerExpectedDate.Format = DateTimePickerFormat.Short;
-            dateTimePickerExpectedDate.Location = new Point(422, 30);
-            dateTimePickerExpectedDate.Name = "dateTimePickerExpectedDate";
-            dateTimePickerExpectedDate.Size = new Size(160, 23);
-            dateTimePickerExpectedDate.TabIndex = 12;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(318, 146);
-            label6.Name = "label6";
-            label6.Size = new Size(87, 15);
-            label6.TabIndex = 11;
-            label6.Text = "Payment Type :";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(318, 110);
-            label7.Name = "label7";
-            label7.Size = new Size(87, 15);
-            label7.TabIndex = 10;
-            label7.Text = "Date Received :";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(318, 72);
-            label8.Name = "label8";
-            label8.Size = new Size(85, 15);
-            label8.TabIndex = 9;
-            label8.Text = "Vendor Name :";
+            txtBoxSellingPrice.BackColor = SystemColors.InactiveBorder;
+            txtBoxSellingPrice.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxSellingPrice.ForeColor = Color.SteelBlue;
+            txtBoxSellingPrice.Location = new Point(442, 390);
+            txtBoxSellingPrice.Name = "txtBoxSellingPrice";
+            txtBoxSellingPrice.Size = new Size(110, 25);
+            txtBoxSellingPrice.TabIndex = 63;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(318, 31);
+            label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.SteelBlue;
+            label9.Location = new Point(428, 372);
             label9.Name = "label9";
-            label9.Size = new Size(88, 15);
-            label9.TabIndex = 8;
-            label9.Text = "Expected Date :";
+            label9.Size = new Size(92, 17);
+            label9.TabIndex = 62;
+            label9.Text = "Selling Price :";
             // 
-            // txtBoxCreatedBy
+            // label1
             // 
-            txtBoxCreatedBy.Location = new Point(123, 110);
-            txtBoxCreatedBy.Name = "txtBoxCreatedBy";
-            txtBoxCreatedBy.Size = new Size(160, 23);
-            txtBoxCreatedBy.TabIndex = 7;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.SteelBlue;
+            label1.Location = new Point(4, 295);
+            label1.Name = "label1";
+            label1.Size = new Size(100, 17);
+            label1.TabIndex = 61;
+            label1.Text = "Product Name:";
             // 
-            // txtBoxPurchaseOrderNumber
+            // txtBoxProductName
             // 
-            txtBoxPurchaseOrderNumber.Location = new Point(123, 72);
-            txtBoxPurchaseOrderNumber.Name = "txtBoxPurchaseOrderNumber";
-            txtBoxPurchaseOrderNumber.Size = new Size(160, 23);
-            txtBoxPurchaseOrderNumber.TabIndex = 6;
+            txtBoxProductName.BackColor = SystemColors.InactiveBorder;
+            txtBoxProductName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxProductName.ForeColor = Color.SteelBlue;
+            txtBoxProductName.Location = new Point(23, 318);
+            txtBoxProductName.Name = "txtBoxProductName";
+            txtBoxProductName.Size = new Size(163, 25);
+            txtBoxProductName.TabIndex = 60;
             // 
-            // dateTimePickerCreationDate
+            // cmbBoxPayment
             // 
-            dateTimePickerCreationDate.Format = DateTimePickerFormat.Short;
-            dateTimePickerCreationDate.Location = new Point(123, 143);
-            dateTimePickerCreationDate.Name = "dateTimePickerCreationDate";
-            dateTimePickerCreationDate.Size = new Size(160, 23);
-            dateTimePickerCreationDate.TabIndex = 5;
+            cmbBoxPayment.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbBoxPayment.ForeColor = Color.SteelBlue;
+            cmbBoxPayment.FormattingEnabled = true;
+            cmbBoxPayment.Items.AddRange(new object[] { "Cash", "Cheque" });
+            cmbBoxPayment.Location = new Point(23, 457);
+            cmbBoxPayment.Name = "cmbBoxPayment";
+            cmbBoxPayment.Size = new Size(163, 25);
+            cmbBoxPayment.TabIndex = 54;
+            cmbBoxPayment.KeyPress += cmbBoxPayment_KeyPress;
             // 
-            // dateTimePickerCurrentDate
+            // label7
             // 
-            dateTimePickerCurrentDate.Format = DateTimePickerFormat.Short;
-            dateTimePickerCurrentDate.Location = new Point(123, 33);
-            dateTimePickerCurrentDate.Name = "dateTimePickerCurrentDate";
-            dateTimePickerCurrentDate.Size = new Size(160, 23);
-            dateTimePickerCurrentDate.TabIndex = 4;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(20, 149);
-            label5.Name = "label5";
-            label5.Size = new Size(85, 15);
-            label5.TabIndex = 3;
-            label5.Text = "Creation Date :";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(20, 113);
-            label4.Name = "label4";
-            label4.Size = new Size(70, 15);
-            label4.TabIndex = 2;
-            label4.Text = "Created By :";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.SteelBlue;
+            label7.Location = new Point(4, 174);
+            label7.Name = "label7";
+            label7.Size = new Size(85, 17);
+            label7.TabIndex = 59;
+            label7.Text = "PO Number:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(20, 75);
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.SteelBlue;
+            label3.Location = new Point(6, 436);
             label3.Name = "label3";
-            label3.Size = new Size(76, 15);
-            label3.TabIndex = 1;
-            label3.Text = "PO Number :";
+            label3.Size = new Size(103, 17);
+            label3.TabIndex = 51;
+            label3.Text = "Payment Type :";
+            // 
+            // txtBoxPONum
+            // 
+            txtBoxPONum.BackColor = SystemColors.InactiveBorder;
+            txtBoxPONum.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxPONum.ForeColor = Color.SteelBlue;
+            txtBoxPONum.Location = new Point(23, 197);
+            txtBoxPONum.Name = "txtBoxPONum";
+            txtBoxPONum.Size = new Size(163, 25);
+            txtBoxPONum.TabIndex = 58;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            numericUpDown1.Location = new Point(577, 391);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(110, 25);
+            numericUpDown1.TabIndex = 55;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.InactiveBorder;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(214, 74);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(606, 269);
+            dataGridView1.TabIndex = 50;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.SteelBlue;
+            label10.Location = new Point(4, 113);
+            label10.Name = "label10";
+            label10.Size = new Size(103, 17);
+            label10.TabIndex = 53;
+            label10.Text = "Supplier Name:";
+            // 
+            // btnRefresh
+            // 
+            btnRefresh.FlatAppearance.BorderSize = 0;
+            btnRefresh.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            btnRefresh.Image = Properties.Resources.icons8_refresh_18;
+            btnRefresh.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRefresh.Location = new Point(214, 38);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Padding = new Padding(4, 0, 0, 0);
+            btnRefresh.Size = new Size(91, 33);
+            btnRefresh.TabIndex = 49;
+            btnRefresh.Text = "      Refresh";
+            btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.CalendarFont = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker1.CalendarForeColor = Color.SteelBlue;
+            dateTimePicker1.CalendarMonthBackground = SystemColors.InactiveBorder;
+            dateTimePicker1.CalendarTitleForeColor = Color.SteelBlue;
+            dateTimePicker1.CalendarTrailingForeColor = Color.SteelBlue;
+            dateTimePicker1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(23, 74);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(163, 23);
+            dateTimePicker1.TabIndex = 52;
+            // 
+            // txtBoxSubTotal
+            // 
+            txtBoxSubTotal.BackColor = SystemColors.InactiveBorder;
+            txtBoxSubTotal.Enabled = false;
+            txtBoxSubTotal.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxSubTotal.ForeColor = Color.SteelBlue;
+            txtBoxSubTotal.Location = new Point(710, 390);
+            txtBoxSubTotal.Name = "txtBoxSubTotal";
+            txtBoxSubTotal.Size = new Size(110, 25);
+            txtBoxSubTotal.TabIndex = 46;
+            txtBoxSubTotal.Text = ".00";
+            txtBoxSubTotal.TextChanged += txtBoxSubTotal_TextChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.SteelBlue;
+            label6.Location = new Point(699, 369);
+            label6.Name = "label6";
+            label6.Size = new Size(70, 17);
+            label6.TabIndex = 45;
+            label6.Text = "Sub Total:";
+            // 
+            // txtBoxCostingPrice
+            // 
+            txtBoxCostingPrice.BackColor = SystemColors.InactiveBorder;
+            txtBoxCostingPrice.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxCostingPrice.ForeColor = Color.SteelBlue;
+            txtBoxCostingPrice.Location = new Point(309, 390);
+            txtBoxCostingPrice.Name = "txtBoxCostingPrice";
+            txtBoxCostingPrice.Size = new Size(110, 25);
+            txtBoxCostingPrice.TabIndex = 44;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.SteelBlue;
+            label8.Location = new Point(290, 372);
+            label8.Name = "label8";
+            label8.Size = new Size(97, 17);
+            label8.TabIndex = 43;
+            label8.Text = "Costing Price :";
+            // 
+            // txtBoxProductNum
+            // 
+            txtBoxProductNum.BackColor = SystemColors.InactiveBorder;
+            txtBoxProductNum.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxProductNum.ForeColor = Color.SteelBlue;
+            txtBoxProductNum.Location = new Point(23, 256);
+            txtBoxProductNum.Name = "txtBoxProductNum";
+            txtBoxProductNum.Size = new Size(163, 25);
+            txtBoxProductNum.TabIndex = 42;
+            // 
+            // Quantity
+            // 
+            Quantity.AutoSize = true;
+            Quantity.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            Quantity.ForeColor = Color.SteelBlue;
+            Quantity.Location = new Point(563, 373);
+            Quantity.Name = "Quantity";
+            Quantity.Size = new Size(66, 17);
+            Quantity.TabIndex = 41;
+            Quantity.Text = "Quantity:";
+            // 
+            // txtBoxSupplierName
+            // 
+            txtBoxSupplierName.BackColor = SystemColors.InactiveBorder;
+            txtBoxSupplierName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxSupplierName.ForeColor = Color.SteelBlue;
+            txtBoxSupplierName.Location = new Point(23, 136);
+            txtBoxSupplierName.Name = "txtBoxSupplierName";
+            txtBoxSupplierName.Size = new Size(163, 25);
+            txtBoxSupplierName.TabIndex = 40;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.SteelBlue;
+            label5.Location = new Point(4, 233);
+            label5.Name = "label5";
+            label5.Size = new Size(115, 17);
+            label5.TabIndex = 39;
+            label5.Text = "Product Number:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(134, 34);
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.SteelBlue;
+            label2.Location = new Point(4, 51);
             label2.Name = "label2";
-            label2.Size = new Size(80, 15);
-            label2.TabIndex = 0;
-            label2.Text = "Current Date :";
-            // 
-            // groupBox2
-            // 
-            groupBox2.BackColor = Color.FloralWhite;
-            groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(70, 473);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(612, 139);
-            groupBox2.TabIndex = 11;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Purchase Order Details";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn2 });
-            dataGridView1.Location = new Point(6, 22);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(606, 111);
-            dataGridView1.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "ID";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            label2.Size = new Size(91, 17);
+            label2.TabIndex = 38;
+            label2.Text = "Current Date:";
             // 
             // ID
             // 
@@ -407,7 +494,7 @@
             label16.AutoSize = true;
             label16.Font = new Font("Sitka Banner", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label16.ForeColor = Color.DarkSlateGray;
-            label16.Location = new Point(245, 33);
+            label16.Location = new Point(287, 40);
             label16.Name = "label16";
             label16.Size = new Size(287, 42);
             label16.TabIndex = 12;
@@ -419,13 +506,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             Controls.Add(label16);
-            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "userctrlPurchaseOrder";
-            Size = new Size(762, 660);
+            Size = new Size(866, 686);
+            Load += userctrlPurchaseOrder_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -433,41 +520,40 @@
 
         #endregion
         private GroupBox groupBox1;
-        private Button btnClearForm;
-        private TextBox txtBoxSubTotal;
-        private Button btnUpdateInventory;
-        private Label label14;
-        private TextBox textBox1;
-        private Label label12;
-        private TextBox textBox2;
-        private Label label13;
-        private TextBox txtBoxProductName;
-        private Label label11;
-        private TextBox txtBoxProductID;
-        private Label label10;
-        private DateTimePicker dateTimePickerDateReceived;
-        private ComboBox cmbBoxPaymentType;
-        private TextBox txtBoxVendorName;
-        private DateTimePicker dateTimePickerExpectedDate;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private TextBox txtBoxCreatedBy;
-        private TextBox txtBoxPurchaseOrderNumber;
-        private DateTimePicker dateTimePickerCreationDate;
-        private DateTimePicker dateTimePickerCurrentDate;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private GroupBox groupBox2;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private TextBox textBox3;
-        private Label label15;
         private Label label16;
+        private TextBox txtBoxSellingPrice;
+        private Label label9;
+        private Label label1;
+        private TextBox txtBoxProductName;
+        private ComboBox cmbBoxPayment;
+        private Label label7;
+        private Label label3;
+        private TextBox txtBoxPONum;
+        private NumericUpDown numericUpDown1;
+        private DataGridView dataGridView1;
+        private Label label10;
+        private Button btnRefresh;
+        private DateTimePicker dateTimePicker1;
+        private TextBox txtBoxSubTotal;
+        private Label label6;
+        private TextBox txtBoxCostingPrice;
+        private Label label8;
+        private TextBox txtBoxProductNum;
+        private Label Quantity;
+        private TextBox txtBoxSupplierName;
+        private Label label5;
+        private Label label2;
+        private TextBox txtBoxTotalAmount;
+        private Label label13;
+        private DateTimePicker dateTimePicker3;
+        private Label label12;
+        private DateTimePicker dateTimePicker2;
+        private Label label11;
+        private Button btnClear;
+        private Button btnRemove;
+        private Button btnAddinPurchase;
+        private Button btnProceed;
     }
 }

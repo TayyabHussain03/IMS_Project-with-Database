@@ -16,10 +16,5 @@ namespace inventory_system.usercontrol
         {
             InitializeComponent();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

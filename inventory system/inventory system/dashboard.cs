@@ -16,12 +16,18 @@ namespace inventory_system
     public partial class dashboard : Form
     {
         bool sidebarExpand;
-        public dashboard()
+        private string username;
+
+        public dashboard(string loggedInUsername)
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
+            this.username = loggedInUsername;
         }
-
+        private void dashboard_Load(object sender, EventArgs e)
+        {
+            usernameLabel.Text = "Welcome, " + username;
+        }
         private void products_Click(object sender, EventArgs e)
         {
             userctrlProductPage1.Show();
@@ -48,12 +54,6 @@ namespace inventory_system
             userctrlPurchaseOrder1.Show();
             userctrlPurchaseOrder1.BringToFront();
         }
-
-        private void dashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnPurchaseReturn_Click(object sender, EventArgs e)
         {
             usercontrolPurchasereturn1.Show();
@@ -89,8 +89,8 @@ namespace inventory_system
 
         private void btnMonthlySales_Click(object sender, EventArgs e)
         {
-            usermonthlysale1.Show();
-            usermonthlysale1.BringToFront();
+            //usermonthlysale1.Show();
+            //usermonthlysale1.BringToFront();
         }
 
         private void btnYearlySales_Click(object sender, EventArgs e)
@@ -151,6 +151,7 @@ namespace inventory_system
             userctrlanalysis1.Show();
             userctrlanalysis1.BringToFront();
         }
+
         bool isToggled = false;
         private void button2_Click(object sender, EventArgs e)
         {
@@ -171,6 +172,11 @@ namespace inventory_system
                 Togglebtn.BackColor = System.Drawing.Color.White;
                 Togglebtn.ForeColor = System.Drawing.Color.Black;
             }
+        }
+
+        private void userctrlanalysis1_Load(object sender, EventArgs e)
+        {
+
         }
         //public void ShowAddProduct()
         //{

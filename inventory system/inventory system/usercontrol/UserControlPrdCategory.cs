@@ -14,7 +14,7 @@ namespace inventory_system.usercontrol
     {
         public UserControlPrdCategory()
         {
-            InitializeComponent();
+
         }
 
         private void btnCtgPage_Click(object sender, EventArgs e)

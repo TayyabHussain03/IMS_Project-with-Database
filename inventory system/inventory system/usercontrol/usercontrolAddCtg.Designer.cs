@@ -121,6 +121,7 @@
             Controls.Add(groupBox1);
             Name = "usercontrolAddCtg";
             Size = new Size(762, 660);
+            Load += usercontrolAddCtg_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

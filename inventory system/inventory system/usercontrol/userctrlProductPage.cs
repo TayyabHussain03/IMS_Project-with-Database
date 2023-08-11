@@ -13,7 +13,7 @@ namespace inventory_system.usercontrol
 {
     public partial class userctrlProductPage : UserControl
     {
-        private const string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS-1;Integrated Security=True";
+        private const string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS;Integrated Security=True";
 
         public userctrlProductPage()
         {
@@ -95,7 +95,7 @@ namespace inventory_system.usercontrol
 
             DataRow row = dt.NewRow();
             row["Product_Category_ID"] = 0;
-            row["Category_Name"] = "Please Select";
+            row["Category_Name"] = "Filter By Category";
             dt.Rows.InsertAt(row, 0);
 
             cmbCategoryFilter.DataSource = dt;

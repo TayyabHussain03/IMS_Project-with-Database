@@ -12,7 +12,8 @@ namespace inventory_system.usercontrol
     {
         // Declare a variable to store the selected image
         private Image selectedImage = null;
-        private const string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS-1;Integrated Security=True";
+
+        string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS;Integrated Security=True";
 
         public UserControlAddproduct()
         {

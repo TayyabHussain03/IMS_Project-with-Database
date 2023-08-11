@@ -22,6 +22,8 @@ namespace inventory_system.usercontrol
         public int Quantity { get; set; }
         public Image ProductImage { get; set; }
 
+        string connectionString = "Data Source=DESKTOP-RRIV42K\\SQLEXPRESS;Initial Catalog=dbIMS;Integrated Security=True";
+
         public UserControlPrdDetails()
         {
             InitializeComponent();
@@ -40,6 +42,7 @@ namespace inventory_system.usercontrol
             numericUpDown1.Maximum = Quantity;
             numericUpDown1.Minimum = 1;
             numericUpDown1.ValueChanged += NumericUpDown1_ValueChanged;
+            label8.Text = ProductNumber.ToString();
         }
 
         private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -58,9 +61,10 @@ namespace inventory_system.usercontrol
             {
                 int quantity = (int)numericUpDown1.Value;
                 decimal unitPrice = decimal.Parse(txtBoxSellingPrice.Text);
+                decimal costingPrice = decimal.Parse(txtBoxCostingPrice.Text);
                 decimal subTotal = quantity * unitPrice;
 
-                using (SqlConnection connection = new SqlConnection("Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
@@ -94,12 +98,13 @@ namespace inventory_system.usercontrol
                         else
                         {
                             // Insert the new product into the cart
-                            string insertQuery = "INSERT INTO tblCart (Product_Number, Product_Name, Quantity, Unit_Price, Sub_Total) VALUES (@ProductNumber, @ProductName, @Quantity, @UnitPrice, @SubTotal)";
+                            string insertQuery = "INSERT INTO tblCart (Product_Number, Product_Name, Quantity, Costing_Price, Unit_Price, Sub_Total) VALUES (@ProductNumber, @ProductName, @Quantity, @CostingPrice, @UnitPrice, @SubTotal)";
                             using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
                             {
                                 insertCmd.Parameters.AddWithValue("@ProductNumber", ProductNumber);
                                 insertCmd.Parameters.AddWithValue("@ProductName", ProductName);
                                 insertCmd.Parameters.AddWithValue("@Quantity", quantity);
+                                insertCmd.Parameters.AddWithValue("@CostingPrice", costingPrice);
                                 insertCmd.Parameters.AddWithValue("@UnitPrice", unitPrice);
                                 insertCmd.Parameters.AddWithValue("@SubTotal", subTotal);
                                 insertCmd.ExecuteNonQuery();
@@ -114,6 +119,11 @@ namespace inventory_system.usercontrol
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
+        }
+
+        private void txtBoxSellingPrice_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

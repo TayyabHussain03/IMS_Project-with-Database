@@ -37,7 +37,6 @@
             btnDelete = new Button();
             btnCtgPage = new Button();
             cmbCategoryFilter = new ComboBox();
-            label2 = new Label();
             btnRefresh = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
             SuspendLayout();
@@ -48,19 +47,20 @@
             txtSearchProducts.Location = new Point(27, 124);
             txtSearchProducts.Name = "txtSearchProducts";
             txtSearchProducts.PlaceholderText = "Search Products";
-            txtSearchProducts.Size = new Size(414, 34);
+            txtSearchProducts.Size = new Size(171, 34);
             txtSearchProducts.TabIndex = 9;
             // 
             // btnSearchProducts
             // 
+            btnSearchProducts.BackColor = SystemColors.Window;
             btnSearchProducts.Cursor = Cursors.Hand;
             btnSearchProducts.FlatStyle = FlatStyle.Flat;
             btnSearchProducts.Image = Properties.Resources.icons8_search_24;
-            btnSearchProducts.Location = new Point(447, 124);
+            btnSearchProducts.Location = new Point(204, 124);
             btnSearchProducts.Name = "btnSearchProducts";
             btnSearchProducts.Size = new Size(40, 34);
             btnSearchProducts.TabIndex = 8;
-            btnSearchProducts.UseVisualStyleBackColor = true;
+            btnSearchProducts.UseVisualStyleBackColor = false;
             btnSearchProducts.Click += btnSearchProducts_Click;
             // 
             // label1
@@ -166,21 +166,11 @@
             // 
             cmbCategoryFilter.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             cmbCategoryFilter.FormattingEnabled = true;
-            cmbCategoryFilter.Location = new Point(597, 126);
+            cmbCategoryFilter.Location = new Point(483, 126);
             cmbCategoryFilter.Name = "cmbCategoryFilter";
-            cmbCategoryFilter.Size = new Size(143, 33);
+            cmbCategoryFilter.Size = new Size(257, 33);
             cmbCategoryFilter.TabIndex = 15;
             cmbCategoryFilter.SelectedIndexChanged += cmbCategoryFilter_SelectedIndexChanged;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(527, 127);
-            label2.Name = "label2";
-            label2.Size = new Size(69, 30);
-            label2.TabIndex = 16;
-            label2.Text = "Filter :";
             // 
             // btnRefresh
             // 
@@ -201,7 +191,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnRefresh);
-            Controls.Add(label2);
             Controls.Add(cmbCategoryFilter);
             Controls.Add(btnCtgPage);
             Controls.Add(btnDelete);
@@ -231,7 +220,6 @@
         private Button btnDelete;
         private Button btnCtgPage;
         private ComboBox cmbCategoryFilter;
-        private Label label2;
         private Button btnRefresh;
     }
 }

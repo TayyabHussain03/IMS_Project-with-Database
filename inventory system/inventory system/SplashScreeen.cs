@@ -15,11 +15,12 @@ namespace inventory_system
         public SplashScreeen()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
         int Progress = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Progress = Progress + 2;
+            Progress += 2;
             progressBar1.Value = Progress;
             percentagelbl.Text = Progress + "%";
             if (progressBar1.Value == 100)
@@ -31,10 +32,19 @@ namespace inventory_system
                 this.Hide();
             }
         }
-
         private void SplashScreeen_Load(object sender, EventArgs e)
         {
             timer1.Start();
+
+        }
+        private void progressBar1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

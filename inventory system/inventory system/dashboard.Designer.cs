@@ -57,7 +57,6 @@
             logout = new Button();
             userctrlanalysis1 = new userctrlanalysis();
             useryearlysale1 = new usercontrol.useryearlysale();
-            usermonthlysale1 = new usercontrol.usermonthlysale();
             userctrldailysale1 = new userctrldailysale();
             userControlAddproduct1 = new usercontrol.UserControlAddproduct();
             userControlPrdCategory1 = new usercontrol.UserControlPrdCategory();
@@ -70,6 +69,7 @@
             userControlPrdType1 = new usercontrol.UserControlPrdType();
             userControlAddproduct2 = new usercontrol.UserControlAddproduct();
             Togglebtn = new Button();
+            usernameLabel = new Label();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
@@ -447,6 +447,7 @@
             userctrlanalysis1.Name = "userctrlanalysis1";
             userctrlanalysis1.Size = new Size(762, 660);
             userctrlanalysis1.TabIndex = 11;
+            userctrlanalysis1.Load += userctrlanalysis1_Load;
             // 
             // useryearlysale1
             // 
@@ -457,10 +458,6 @@
             // 
             // usermonthlysale1
             // 
-            usermonthlysale1.Location = new Point(238, 61);
-            usermonthlysale1.Name = "usermonthlysale1";
-            usermonthlysale1.Size = new Size(762, 660);
-            usermonthlysale1.TabIndex = 13;
             // 
             // userctrldailysale1
             // 
@@ -557,7 +554,7 @@
             Togglebtn.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             Togglebtn.ForeColor = Color.Black;
             Togglebtn.ImageAlign = ContentAlignment.MiddleLeft;
-            Togglebtn.Location = new Point(259, 15);
+            Togglebtn.Location = new Point(259, 12);
             Togglebtn.Name = "Togglebtn";
             Togglebtn.Padding = new Padding(20, 0, 0, 0);
             Togglebtn.Size = new Size(124, 47);
@@ -567,11 +564,20 @@
             Togglebtn.UseVisualStyleBackColor = true;
             Togglebtn.Click += button2_Click;
             // 
+            // usernameLabel
+            // 
+            usernameLabel.AutoSize = true;
+            usernameLabel.Location = new Point(502, 29);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new Size(0, 15);
+            usernameLabel.TabIndex = 26;
+            // 
             // dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1012, 733);
+            Controls.Add(usernameLabel);
             Controls.Add(Togglebtn);
             Controls.Add(logout);
             Controls.Add(btnLogout);
@@ -580,7 +586,6 @@
             Controls.Add(userctrlanalysis1);
             Controls.Add(useryearlysale1);
             Controls.Add(userctrldailysale1);
-            Controls.Add(usermonthlysale1);
             Controls.Add(userControlPrdType1);
             Controls.Add(userontrolSaleReturn1);
             Controls.Add(userctrlPurchaseOrder1);
@@ -605,6 +610,7 @@
             sidebar.ResumeLayout(false);
             panel7.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -635,7 +641,6 @@
         private Button logout;
         private userctrlanalysis userctrlanalysis1;
         private usercontrol.useryearlysale useryearlysale1;
-        private usercontrol.usermonthlysale usermonthlysale1;
         private userctrldailysale userctrldailysale1;
         private usercontrol.UserControlAddproduct userControlAddproduct1;
         private usercontrol.UserControlPrdCategory userControlPrdCategory1;
@@ -650,5 +655,6 @@
         private Button btnAnalytics;
         private usercontrol.UserControlAddproduct userControlAddproduct2;
         private Button Togglebtn;
+        private Label usernameLabel;
     }
 }

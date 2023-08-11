@@ -7,10 +7,10 @@
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SplashScreeen.cs">
+    <Compile Update="SalesDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SplashScreen.cs">
+    <Compile Update="SplashScreeen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="usercontrol\usercontrolAddCtg.cs">
@@ -20,6 +20,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\usercontrolEditPrd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\UserControlInvoiceDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrol\UsercontrolLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\UserControlPrdCategory.cs">
@@ -53,9 +59,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\userctrlSignin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="usercontrol\usermonthlysale.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="usercontrol\userontrolSaleReturn.cs">

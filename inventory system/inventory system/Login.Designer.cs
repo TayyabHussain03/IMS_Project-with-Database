@@ -28,120 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            txtpassword = new TextBox();
-            txtemail = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            btnlogin = new Button();
-            groupBox1.SuspendLayout();
+            Togglebtn = new Button();
+            signup = new Button();
+            userctrlSignin1 = new usercontrol.userctrlSignin();
+            usercontrolLogin1 = new usercontrol.UsercontrolLogin();
             SuspendLayout();
             // 
-            // groupBox1
+            // Togglebtn
             // 
-            groupBox1.BackColor = Color.FloralWhite;
-            groupBox1.Controls.Add(txtpassword);
-            groupBox1.Controls.Add(txtemail);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(btnlogin);
-            groupBox1.Font = new Font("Sitka Banner", 11.249999F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(130, 58);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(328, 368);
-            groupBox1.TabIndex = 2;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Log In";
-            groupBox1.Enter += groupBox1_Enter;
+            Togglebtn.BackColor = Color.FloralWhite;
+            Togglebtn.Cursor = Cursors.Hand;
+            Togglebtn.FlatAppearance.BorderSize = 0;
+            Togglebtn.FlatStyle = FlatStyle.Flat;
+            Togglebtn.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            Togglebtn.ForeColor = Color.Black;
+            Togglebtn.ImageAlign = ContentAlignment.MiddleLeft;
+            Togglebtn.Location = new Point(1, 1);
+            Togglebtn.Name = "Togglebtn";
+            Togglebtn.Padding = new Padding(20, 0, 0, 0);
+            Togglebtn.Size = new Size(165, 47);
+            Togglebtn.TabIndex = 26;
+            Togglebtn.Text = "         LOG IN";
+            Togglebtn.TextAlign = ContentAlignment.MiddleLeft;
+            Togglebtn.UseVisualStyleBackColor = false;
+            Togglebtn.Click += Togglebtn_Click;
             // 
-            // txtpassword
+            // signup
             // 
-            txtpassword.BackColor = SystemColors.InactiveBorder;
-            txtpassword.Location = new Point(137, 168);
-            txtpassword.Name = "txtpassword";
-            txtpassword.Size = new Size(156, 26);
-            txtpassword.TabIndex = 5;
-            txtpassword.UseSystemPasswordChar = true;
+            signup.BackColor = Color.White;
+            signup.Cursor = Cursors.Hand;
+            signup.FlatAppearance.BorderSize = 0;
+            signup.FlatStyle = FlatStyle.Flat;
+            signup.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            signup.ForeColor = Color.Black;
+            signup.ImageAlign = ContentAlignment.MiddleLeft;
+            signup.Location = new Point(164, 1);
+            signup.Name = "signup";
+            signup.Padding = new Padding(20, 0, 0, 0);
+            signup.Size = new Size(175, 47);
+            signup.TabIndex = 27;
+            signup.Text = "         SIGN IN";
+            signup.TextAlign = ContentAlignment.MiddleLeft;
+            signup.UseVisualStyleBackColor = false;
+            signup.Click += signup_Click;
             // 
-            // txtemail
+            // userctrlSignin1
             // 
-            txtemail.BackColor = SystemColors.InactiveBorder;
-            txtemail.Location = new Point(137, 104);
-            txtemail.Name = "txtemail";
-            txtemail.Size = new Size(156, 26);
-            txtemail.TabIndex = 4;
+            userctrlSignin1.Location = new Point(3, 49);
+            userctrlSignin1.Name = "userctrlSignin1";
+            userctrlSignin1.Size = new Size(333, 373);
+            userctrlSignin1.TabIndex = 28;
             // 
-            // label3
+            // usercontrolLogin1
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(31, 168);
-            label3.Name = "label3";
-            label3.Size = new Size(69, 23);
-            label3.TabIndex = 3;
-            label3.Text = "Password";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(31, 104);
-            label2.Name = "label2";
-            label2.Size = new Size(45, 23);
-            label2.TabIndex = 2;
-            label2.Text = "Email";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Sitka Banner", 15.7499981F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = Color.DarkSlateGray;
-            label1.Location = new Point(88, 33);
-            label1.Name = "label1";
-            label1.Size = new Size(140, 30);
-            label1.TabIndex = 1;
-            label1.Text = "Welcome Admin";
-            // 
-            // btnlogin
-            // 
-            btnlogin.BackColor = Color.CadetBlue;
-            btnlogin.Cursor = Cursors.Hand;
-            btnlogin.FlatStyle = FlatStyle.Popup;
-            btnlogin.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnlogin.ForeColor = Color.White;
-            btnlogin.Location = new Point(114, 259);
-            btnlogin.Name = "btnlogin";
-            btnlogin.Size = new Size(80, 40);
-            btnlogin.TabIndex = 0;
-            btnlogin.Text = "LogIn";
-            btnlogin.UseVisualStyleBackColor = false;
-            btnlogin.Click += btnlogin_Click;
+            usercontrolLogin1.Location = new Point(3, 49);
+            usercontrolLogin1.Name = "usercontrolLogin1";
+            usercontrolLogin1.Size = new Size(334, 373);
+            usercontrolLogin1.TabIndex = 29;
+            usercontrolLogin1.Load += usercontrolLogin1_Load;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(588, 484);
-            Controls.Add(groupBox1);
+            ClientSize = new Size(338, 437);
+            Controls.Add(usercontrolLogin1);
+            Controls.Add(userctrlSignin1);
+            Controls.Add(signup);
+            Controls.Add(Togglebtn);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Login_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private GroupBox groupBox1;
-        private TextBox txtpassword;
-        private TextBox txtemail;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Button btnlogin;
+        private Button Togglebtn;
+        private Button signup;
+        private usercontrol.userctrlSignin userctrlSignin1;
+        private usercontrol.UsercontrolLogin usercontrolLogin1;
     }
 }

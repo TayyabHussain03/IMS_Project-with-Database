@@ -12,10 +12,10 @@ namespace inventory_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new dashboard());
+            Application.Run(new Login());
 
         }
-
       
+
     }
 }
