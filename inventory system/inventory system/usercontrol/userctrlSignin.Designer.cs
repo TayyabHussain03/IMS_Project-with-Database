@@ -168,7 +168,7 @@
             btnsignup.FlatStyle = FlatStyle.Popup;
             btnsignup.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnsignup.ForeColor = Color.White;
-            btnsignup.Location = new Point(112, 314);
+            btnsignup.Location = new Point(112, 313);
             btnsignup.Name = "btnsignup";
             btnsignup.Size = new Size(80, 40);
             btnsignup.TabIndex = 2;
