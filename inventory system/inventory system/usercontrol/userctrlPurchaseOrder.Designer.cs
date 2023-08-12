@@ -285,7 +285,7 @@
             cmbBoxPayment.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmbBoxPayment.ForeColor = Color.SteelBlue;
             cmbBoxPayment.FormattingEnabled = true;
-            cmbBoxPayment.Items.AddRange(new object[] { "Cash", "Cheque" });
+            cmbBoxPayment.Items.AddRange(new object[] { "Please Select", "Cash", "Cheque" });
             cmbBoxPayment.Location = new Point(23, 457);
             cmbBoxPayment.Name = "cmbBoxPayment";
             cmbBoxPayment.Size = new Size(163, 25);

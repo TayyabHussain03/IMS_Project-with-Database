@@ -382,12 +382,72 @@ namespace inventory_system.usercontrol
                                 int rowsAffected = lineItemsCommand.ExecuteNonQuery();
                                 if (rowsAffected > 0)
                                 {
-                                    MessageBox.Show($"Your Purchasing Data Successfully Recorded.");
+                                    string selectStockQuery = "SELECT COUNT(*) FROM Stocks WHERE Product_Number = @ProductNumber";
+
+                                    using (SqlCommand selectStockCommand = new SqlCommand(selectStockQuery, connection))
+                                    {
+                                        selectStockCommand.Parameters.AddWithValue("@ProductNumber", row.Cells["Product_Number"].Value);
+
+                                        int productCount = Convert.ToInt32(selectStockCommand.ExecuteScalar());
+
+                                        if (productCount > 0)
+                                        {
+                                            // Update existing record in Stocks
+                                            string updateStockQuery = "UPDATE Stocks SET Quantity = Quantity + @Quantity, Selling_Price = @SellingPrice, Costing_Price = @CostingPrice" +
+                                                                      " WHERE Product_Number = @ProductNumber";
+
+                                            using (SqlCommand updateStockCommand = new SqlCommand(updateStockQuery, connection))
+                                            {
+                                                updateStockCommand.Parameters.AddWithValue("@ProductNumber", row.Cells["Product_Number"].Value);
+                                                updateStockCommand.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value);
+                                                updateStockCommand.Parameters.AddWithValue("@SellingPrice", row.Cells["Selling_Price"].Value);
+                                                updateStockCommand.Parameters.AddWithValue("@CostingPrice", row.Cells["Costing_Price"].Value);
+
+                                                int updateRowsAffected = updateStockCommand.ExecuteNonQuery();
+                                                if (updateRowsAffected > 0)
+                                                {
+                                                    MessageBox.Show("Stocks Updated Successfully");
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show("Failed to Update Stocks");
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            // Insert new record into Stocks
+                                            string insertStockQuery = "INSERT INTO Stocks (Product_Number, Product_Name, Selling_Price, Costing_Price, Quantity)" +
+                                                                      "VALUES (@ProductNumber, @ProductName, @SellingPrice, @CostingPrice, @Quantity)";
+
+                                            using (SqlCommand insertStockCommand = new SqlCommand(insertStockQuery, connection))
+                                            {
+                                                insertStockCommand.Parameters.AddWithValue("@ProductNumber", row.Cells["Product_Number"].Value);
+                                                insertStockCommand.Parameters.AddWithValue("@ProductName", row.Cells["Product_Name"].Value);
+                                                insertStockCommand.Parameters.AddWithValue("@SellingPrice", row.Cells["Selling_Price"].Value);
+                                                insertStockCommand.Parameters.AddWithValue("@CostingPrice", row.Cells["Costing_Price"].Value);
+                                                insertStockCommand.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value);
+
+                                                int insertStockRowsAffected = insertStockCommand.ExecuteNonQuery();
+                                                if (insertStockRowsAffected > 0)
+                                                {
+                                                    MessageBox.Show("Items Successfully Inserted in Stocks");
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show("Failed to Insert New Items in Stocks");
+                                                }
+                                            }
+                                        }
+                                    }
+
                                 }
                                 else
                                 {
                                     MessageBox.Show($"Failed to insert purchase data for PO Number {poNumber}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
+
+
 
                                 PopulateDataGridView("delete from tblPurchaseCart");
                                 txtBoxProductNum.Clear();
@@ -399,6 +459,7 @@ namespace inventory_system.usercontrol
                                 numericUpDown1.Value = 0;
                                 cmbBoxPayment.SelectedIndex = -1;
                                 txtBoxTotalAmount.Text = "0.00";
+                                txtBoxPONum.Clear();
                             }
                         }
                     }
