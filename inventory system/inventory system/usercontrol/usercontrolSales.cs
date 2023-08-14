@@ -352,7 +352,7 @@ namespace inventory_system.usercontrol
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             int min = 10000; // Minimum 5-digit number
-            int max = 99999; // Maximum 5-digit number
+            int max = 999999; // Maximum 6-digit number
 
             Random random = new Random();
             int uniqueNumber = random.Next(min, max + 1);

@@ -46,9 +46,6 @@
     <Compile Update="usercontrol\UserControlStock.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="usercontrol\UserControlStocks.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="usercontrol\userctrlanalysis.cs">
       <SubType>UserControl</SubType>
     </Compile>

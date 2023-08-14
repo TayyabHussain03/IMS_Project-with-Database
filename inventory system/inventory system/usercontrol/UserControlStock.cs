@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlClient;
 
 namespace inventory_system.usercontrol
 {
@@ -12,49 +13,62 @@ namespace inventory_system.usercontrol
 
         private void FillStocksDataInGridView(string selectionQuery)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-
-                string selectStocksQuery = selectionQuery;
-
-                using (SqlCommand selectStocksCommand = new SqlCommand(selectStocksQuery, connection))
-                {
-                    using (SqlDataReader reader = selectStocksCommand.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            string productNumber = reader["Product_Number"].ToString();
-                            string productName = reader["Product_Name"].ToString();
-                            decimal sellingPrice = Convert.ToDecimal(reader["Selling_Price"]);
-                            decimal costingPrice = Convert.ToDecimal(reader["Costing_Price"]);
-                            int quantity = Convert.ToInt32(reader["Quantity"]);
-
-                            dgvProducts.Rows.Add(productNumber, productName, sellingPrice, costingPrice, quantity);
-                        }
-                    }
-                }
-            }
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter da = new SqlDataAdapter(selectionQuery, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dgvProducts.DataSource = dt;
         }
 
-        private void UserControlStocks_Load(object sender, EventArgs e)
+        private void UserControlStock_Load(object sender, EventArgs e)
         {
             FillStocksDataInGridView("Select * from Stocks");
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            FillStocksDataInGridView("Select * from Stocks");
-        }
-
-        private void btnSearchProducts_Click(object sender, EventArgs e)
+        private void btnSearchProducts_Click_1(object sender, EventArgs e)
         {
             string query = "Select * From Stocks where Product_Name like '%" + txtSearchProducts.Text + "%'";
             FillStocksDataInGridView(query);
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
 
+        private void btnRefresh_Click_1(object sender, EventArgs e)
+        {
+            string query = "Select * From Stocks where Product_Name like '%" + txtSearchProducts.Text + "%'";
+            FillStocksDataInGridView(query);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvProducts.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this product?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    int selectedProductNumber = Convert.ToInt32(dgvProducts.SelectedRows[0].Cells["Product_Number"].Value);
+
+                    // Delete the record from the database
+                    SqlConnection con = new SqlConnection(connectionString);
+                    string deleteQuery = "DELETE FROM Stocks WHERE Product_Number = @ProductNumber";
+
+                    using (SqlCommand cmd = new SqlCommand(deleteQuery, con))
+                    {
+                        cmd.Parameters.AddWithValue("@ProductNumber", selectedProductNumber);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+
+                    // Remove the selected row from the DataGridView
+                    dgvProducts.Rows.RemoveAt(dgvProducts.SelectedRows[0].Index);
+
+                    MessageBox.Show("Product deleted successfully.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a product to delete.");
+            }
         }
     }
 }

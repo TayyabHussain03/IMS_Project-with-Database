@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abu hurairah khan\\Source\\Repos\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj": {}
+    "D:\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abu hurairah khan\\Source\\Repos\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj": {
+    "D:\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abu hurairah khan\\Source\\Repos\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj",
+        "projectUniqueName": "D:\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj",
         "projectName": "inventory system",
-        "projectPath": "C:\\Users\\abu hurairah khan\\Source\\Repos\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj",
-        "packagesPath": "C:\\Users\\abu hurairah khan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abu hurairah khan\\Source\\Repos\\IMS_Project-with-Database\\inventory system\\inventory system\\obj\\",
+        "projectPath": "D:\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj",
+        "packagesPath": "C:\\Users\\ADMIN_PC\\.nuget\\packages\\",
+        "outputPath": "D:\\IMS_Project-with-Database\\inventory system\\inventory system\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\abu hurairah khan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

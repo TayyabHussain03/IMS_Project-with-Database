@@ -49,6 +49,7 @@
             btnRefresh.TabIndex = 36;
             btnRefresh.Text = "      Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click_1;
             // 
             // btnDelete
             // 
@@ -67,6 +68,7 @@
             btnDelete.Text = "     Delete";
             btnDelete.TextAlign = ContentAlignment.MiddleLeft;
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // dgvProducts
             // 
@@ -98,6 +100,7 @@
             btnSearchProducts.Size = new Size(40, 34);
             btnSearchProducts.TabIndex = 32;
             btnSearchProducts.UseVisualStyleBackColor = true;
+            btnSearchProducts.Click += btnSearchProducts_Click_1;
             // 
             // label1
             // 
@@ -109,7 +112,6 @@
             label1.Size = new Size(94, 42);
             label1.TabIndex = 31;
             label1.Text = "Stocks";
-            label1.Click += label1_Click;
             // 
             // UserControlStock
             // 
@@ -123,6 +125,7 @@
             Controls.Add(label1);
             Name = "UserControlStock";
             Size = new Size(762, 660);
+            Load += UserControlStock_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
             ResumeLayout(false);
             PerformLayout();
