@@ -47,6 +47,7 @@
             label2 = new Label();
             txtCostingPrice = new TextBox();
             groupBox1 = new GroupBox();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -86,12 +87,13 @@
             txtproductQuantity.Name = "txtproductQuantity";
             txtproductQuantity.Size = new Size(156, 23);
             txtproductQuantity.TabIndex = 22;
+            txtproductQuantity.TextChanged += txtproductQuantity_TextChanged;
             // 
             // pictureBox1
             // 
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(151, 274);
+            pictureBox1.Location = new Point(151, 311);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(143, 119);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -101,7 +103,7 @@
             // btnImage
             // 
             btnImage.BackColor = SystemColors.InactiveBorder;
-            btnImage.Location = new Point(23, 363);
+            btnImage.Location = new Point(23, 400);
             btnImage.Name = "btnImage";
             btnImage.Size = new Size(110, 30);
             btnImage.TabIndex = 5;
@@ -124,7 +126,7 @@
             // 
             btnEditProduct.BackColor = Color.CadetBlue;
             btnEditProduct.ForeColor = Color.White;
-            btnEditProduct.Location = new Point(184, 423);
+            btnEditProduct.Location = new Point(184, 460);
             btnEditProduct.Name = "btnEditProduct";
             btnEditProduct.Size = new Size(110, 43);
             btnEditProduct.TabIndex = 6;
@@ -136,7 +138,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(16, 274);
+            label7.Location = new Point(16, 311);
             label7.Name = "label7";
             label7.Size = new Size(103, 23);
             label7.TabIndex = 15;
@@ -219,6 +221,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.FloralWhite;
+            groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(txtSellingPrice);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label3);
@@ -238,10 +241,20 @@
             groupBox1.Controls.Add(txtCostingPrice);
             groupBox1.Location = new Point(155, 80);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(480, 482);
+            groupBox1.Size = new Size(480, 513);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Add Product";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(16, 261);
+            label9.Name = "label9";
+            label9.Size = new Size(185, 15);
+            label9.TabIndex = 26;
+            label9.Text = "//Only products Available in Stock";
             // 
             // usercontrolEditPrd
             // 
@@ -277,5 +290,6 @@
         private Label label2;
         private TextBox txtCostingPrice;
         private GroupBox groupBox1;
+        private Label label9;
     }
 }
