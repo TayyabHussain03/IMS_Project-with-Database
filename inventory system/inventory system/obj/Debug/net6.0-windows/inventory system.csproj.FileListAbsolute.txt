@@ -700,3 +700,50 @@ D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolEditPrd.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlInvoiceDetails.resources
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UsercontrolLogin.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.exe
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.deps.json
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.runtimeconfig.json
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.dll
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\inventory system.pdb
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.AssemblyReference.cache
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.dashboard.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Login.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.Properties.Resources.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.SalesDetails.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.SplashScreeen.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolAddCtg.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlAddproduct.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolEditPrd.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlInvoiceDetails.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UsercontrolLogin.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdCategory.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdDetails.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlPrdType.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolPurchasereturn.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usercontrolSales.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlStocks.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.userctrlanalysis.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlProductPage.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlPurchaseOrder.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userctrlSignin.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.usermonthlysale.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.userontrolSaleReturn.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.useryearlysale.resources
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.GenerateResource.cache
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.AssemblyInfoInputs.cache
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.AssemblyInfo.cs
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.CoreCompileInputs.cache
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.csproj.CopyComplete
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.dll
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\refint\inventory system.dll
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.pdb
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.genruntimeconfig.cache
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\ref\inventory system.dll
+C:\Users\abu hurairah khan\Source\Repos\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlStock.resources

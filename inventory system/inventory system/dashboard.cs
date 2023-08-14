@@ -1,17 +1,4 @@
-﻿using inventory_system.usercontrol;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-
-namespace inventory_system
+﻿namespace inventory_system
 {
     public partial class dashboard : Form
     {
@@ -177,6 +164,12 @@ namespace inventory_system
         private void userctrlanalysis1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            userControlStock1.Show();
+            userControlStock1.BringToFront();
         }
         //public void ShowAddProduct()
         //{

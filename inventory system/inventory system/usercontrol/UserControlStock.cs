@@ -1,23 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data.SqlClient;
 
 namespace inventory_system.usercontrol
 {
-    public partial class UserControlStocks : UserControl
+    public partial class UserControlStock : UserControl
     {
-        public UserControlStocks()
+        public UserControlStock()
         {
             InitializeComponent();
         }
-
         string connectionString = "Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True";
 
         private void FillStocksDataInGridView(string selectionQuery)
@@ -61,6 +51,10 @@ namespace inventory_system.usercontrol
         {
             string query = "Select * From Stocks where Product_Name like '%" + txtSearchProducts.Text + "%'";
             FillStocksDataInGridView(query);
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

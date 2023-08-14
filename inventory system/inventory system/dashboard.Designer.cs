@@ -70,6 +70,7 @@
             userControlAddproduct2 = new usercontrol.UserControlAddproduct();
             Togglebtn = new Button();
             usernameLabel = new Label();
+            userControlStock1 = new usercontrol.UserControlStock();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
@@ -134,6 +135,7 @@
             btnStock.Text = "              Stock";
             btnStock.TextAlign = ContentAlignment.MiddleLeft;
             btnStock.UseVisualStyleBackColor = true;
+            btnStock.Click += btnStock_Click;
             // 
             // btnYearlySales
             // 
@@ -456,9 +458,6 @@
             useryearlysale1.Size = new Size(762, 660);
             useryearlysale1.TabIndex = 12;
             // 
-            // usermonthlysale1
-            // 
-            // 
             // userctrldailysale1
             // 
             userctrldailysale1.Location = new Point(238, 61);
@@ -572,6 +571,13 @@
             usernameLabel.Size = new Size(0, 15);
             usernameLabel.TabIndex = 26;
             // 
+            // userControlStock1
+            // 
+            userControlStock1.Location = new Point(238, 61);
+            userControlStock1.Name = "userControlStock1";
+            userControlStock1.Size = new Size(762, 660);
+            userControlStock1.TabIndex = 27;
+            // 
             // dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -596,6 +602,7 @@
             Controls.Add(userControlPrdCategory1);
             Controls.Add(userControlAddproduct1);
             Controls.Add(userControlAddproduct2);
+            Controls.Add(userControlStock1);
             Name = "dashboard";
             Text = "dashboard";
             Load += dashboard_Load;
@@ -656,5 +663,6 @@
         private usercontrol.UserControlAddproduct userControlAddproduct2;
         private Button Togglebtn;
         private Label usernameLabel;
+        private usercontrol.UserControlStock userControlStock1;
     }
 }
