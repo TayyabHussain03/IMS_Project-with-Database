@@ -197,7 +197,7 @@ namespace inventory_system.usercontrol
         {
             string query = "SELECT P.Product_Name as Name, S.Reason as Reason, SR.Quantity, SR.Unit_Price as Price, SR.Sub_Total as Amount, S.Sales_Return_Date as Date" +
                 " FROM SRline_Items AS SR" +
-                " INNER JOIN Products AS P ON SR.Product_Number = P.Product_Number " +
+                " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
                 "INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -296,7 +296,7 @@ namespace inventory_system.usercontrol
             // Fetch all data from the database
             string query = "SELECT P.Product_Name as Name, S.Reason as Reason, SR.Quantity, SR.Unit_Price as Price, SR.Sub_Total as Amount, S.Sales_Return_Date as Date" +
                            " FROM SRline_Items AS SR" +
-                           " INNER JOIN Products AS P ON SR.Product_Number = P.Product_Number " +
+                           " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
                            " INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -352,7 +352,7 @@ namespace inventory_system.usercontrol
             // Fetch data from the database using the start date
             string query = "SELECT P.Product_Name as Name, S.Reason as Reason, SR.Quantity, SR.Unit_Price as Price, SR.Sub_Total as Amount, S.Sales_Return_Date as Date" +
                            " FROM SRline_Items AS SR" +
-                           " INNER JOIN Products AS P ON SR.Product_Number = P.Product_Number " +
+                           " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
                            " INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID";
 
             List<DataRow> filteredRows = new List<DataRow>();
@@ -383,7 +383,9 @@ namespace inventory_system.usercontrol
                 filteredDataTable = filteredRows.CopyToDataTable();
             }
 
-            dataGridView1.DataSource = filteredDataTable;
+            DataView dv = new DataView(filteredDataTable); // Create a DataView from the filtered DataTable
+            dataGridView1.DataSource = dv; // Set the DataView as the DataSource
+
 
         }
 
