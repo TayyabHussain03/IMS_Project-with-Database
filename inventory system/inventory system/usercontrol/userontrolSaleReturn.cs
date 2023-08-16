@@ -21,7 +21,7 @@ namespace inventory_system.usercontrol
 
             cmbBoxReason.KeyPress += cmbBoxReason_KeyPress;
             cmbBoxView.KeyPress += cmbBoxView_KeyPress;
-              
+
 
             // Attach event handlers to the relevant textboxes
             txtBoxSellingPrice.KeyPress += NumericOnly_KeyPress;

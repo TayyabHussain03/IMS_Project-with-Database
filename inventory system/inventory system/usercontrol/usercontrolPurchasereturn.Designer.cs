@@ -325,6 +325,7 @@
             Controls.Add(label10);
             Name = "usercontrolPurchasereturn";
             Size = new Size(775, 664);
+            Load += usercontrolPurchasereturn_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();

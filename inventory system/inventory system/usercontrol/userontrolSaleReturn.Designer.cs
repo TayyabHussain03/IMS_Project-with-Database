@@ -52,6 +52,7 @@
             btnClear = new Button();
             btnUpdate = new Button();
             txtBoxProductNum = new TextBox();
+            btnSalesReturnView = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -76,7 +77,7 @@
             txtBoxSubTotal.Enabled = false;
             txtBoxSubTotal.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtBoxSubTotal.ForeColor = Color.SteelBlue;
-            txtBoxSubTotal.Location = new Point(555, 375);
+            txtBoxSubTotal.Location = new Point(563, 375);
             txtBoxSubTotal.Name = "txtBoxSubTotal";
             txtBoxSubTotal.Size = new Size(141, 25);
             txtBoxSubTotal.TabIndex = 17;
@@ -87,7 +88,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.SteelBlue;
-            label6.Location = new Point(538, 348);
+            label6.Location = new Point(546, 348);
             label6.Name = "label6";
             label6.Size = new Size(110, 20);
             label6.TabIndex = 16;
@@ -98,7 +99,7 @@
             txtBoxSellingPrice.BackColor = SystemColors.InactiveBorder;
             txtBoxSellingPrice.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtBoxSellingPrice.ForeColor = Color.SteelBlue;
-            txtBoxSellingPrice.Location = new Point(391, 375);
+            txtBoxSellingPrice.Location = new Point(399, 375);
             txtBoxSellingPrice.Name = "txtBoxSellingPrice";
             txtBoxSellingPrice.Size = new Size(118, 25);
             txtBoxSellingPrice.TabIndex = 13;
@@ -109,7 +110,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.SteelBlue;
-            label8.Location = new Point(365, 348);
+            label8.Location = new Point(373, 348);
             label8.Name = "label8";
             label8.Size = new Size(85, 20);
             label8.TabIndex = 12;
@@ -161,6 +162,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.FloralWhite;
+            groupBox1.Controls.Add(btnSalesReturnView);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(txtBoxInvNum);
             groupBox1.Controls.Add(label4);
@@ -187,7 +189,7 @@
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
             groupBox1.Location = new Point(9, 55);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(756, 502);
+            groupBox1.Size = new Size(756, 570);
             groupBox1.TabIndex = 22;
             groupBox1.TabStop = false;
             groupBox1.Text = "Sale Return";
@@ -212,7 +214,6 @@
             txtBoxInvNum.Name = "txtBoxInvNum";
             txtBoxInvNum.Size = new Size(163, 25);
             txtBoxInvNum.TabIndex = 36;
-           
             // 
             // label4
             // 
@@ -353,7 +354,18 @@
             txtBoxProductNum.Name = "txtBoxProductNum";
             txtBoxProductNum.Size = new Size(163, 25);
             txtBoxProductNum.TabIndex = 11;
-           
+            // 
+            // btnSalesReturnView
+            // 
+            btnSalesReturnView.BackColor = Color.Black;
+            btnSalesReturnView.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSalesReturnView.ForeColor = Color.White;
+            btnSalesReturnView.Location = new Point(599, 497);
+            btnSalesReturnView.Name = "btnSalesReturnView";
+            btnSalesReturnView.Size = new Size(140, 45);
+            btnSalesReturnView.TabIndex = 38;
+            btnSalesReturnView.Text = "Detail View";
+            btnSalesReturnView.UseVisualStyleBackColor = false;
             // 
             // userontrolSaleReturn
             // 
@@ -397,5 +409,6 @@
         private ComboBox cmbBoxView;
         private Label label7;
         private TextBox txtBoxInvNum;
+        private Button btnSalesReturnView;
     }
 }

@@ -70,22 +70,6 @@ namespace inventory_system.usercontrol
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold); // Adjust the font, size, and style for column headers
         }
 
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBoxSubTotal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void NumericOnly_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Allow control keys (Backspace, Delete)
@@ -144,7 +128,6 @@ namespace inventory_system.usercontrol
 
             txtBoxTotalAmount.Text = totalAmount.ToString("0.00");
         }
-
 
         private void btnAddinPurchase_Click(object sender, EventArgs e)
         {
@@ -316,6 +299,28 @@ namespace inventory_system.usercontrol
             CalculateAndDisplayTotal();
         }
 
+        private DataTable RetrieveDataFromPurchaseCart()
+        {
+            DataTable purchaseCartData = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string selectQuery = "SELECT Product_Number, Product_Name, Costing_Price, Selling_Price, Quantity FROM tblPurchaseCart";
+
+                using (SqlCommand selectCommand = new SqlCommand(selectQuery, connection))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(selectCommand))
+                    {
+                        adapter.Fill(purchaseCartData);
+                    }
+                }
+            }
+
+            return purchaseCartData;
+        }
+
         private void btnProceed_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -365,89 +370,69 @@ namespace inventory_system.usercontrol
                             int purchaseID = Convert.ToInt32(selectCommand.ExecuteScalar());
 
                             // Insert data into Pline_Items table
-                            string insertLineItemsQuery = "INSERT INTO Pline_Items (Purchase_ID, Product_ID, Quantity, Costing_Price, Selling_price, Sub_Total, Expiry_Date, Manufacturing_Date)" +
-                                                          "VALUES (@PurchaseID, @ProductNumber, @Quantity, @CostingPrice, @SellingPrice, @SubTotal, @ExpiryDate, @MFGDate)";
+                            string insertLineItemsQuery = "INSERT INTO Pline_Items (Purchase_ID, Product_ID, Product_Name, Quantity, Costing_Price, Selling_price, Sub_Total, Expiry_Date, Manufacturing_Date)" +
+                                                          "VALUES (@PurchaseID, @ProductNumber, @ProductName, @Quantity, @CostingPrice, @SellingPrice, @SubTotal, @ExpiryDate, @MFGDate)";
 
                             using (SqlCommand lineItemsCommand = new SqlCommand(insertLineItemsQuery, connection))
                             {
                                 lineItemsCommand.Parameters.AddWithValue("@PurchaseID", purchaseID);
                                 lineItemsCommand.Parameters.AddWithValue("@ProductNumber", row.Cells["Product_Number"].Value);
+                                lineItemsCommand.Parameters.AddWithValue("@ProductName", row.Cells["Product_Name"].Value);
                                 lineItemsCommand.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value);
                                 lineItemsCommand.Parameters.AddWithValue("@CostingPrice", row.Cells["Costing_Price"].Value);
                                 lineItemsCommand.Parameters.AddWithValue("@SellingPrice", row.Cells["Selling_Price"].Value);
                                 lineItemsCommand.Parameters.AddWithValue("@SubTotal", row.Cells["Sub_Total"].Value);
                                 lineItemsCommand.Parameters.AddWithValue("@ExpiryDate", row.Cells["Expiry_Date"].Value);
                                 lineItemsCommand.Parameters.AddWithValue("@MFGDate", row.Cells["MFG_Date"].Value);
-
+                                
                                 int rowsAffected = lineItemsCommand.ExecuteNonQuery();
+                                
                                 if (rowsAffected > 0)
                                 {
-                                    string selectStockQuery = "SELECT COUNT(*) FROM Stocks WHERE Product_Number = @ProductNumber";
+                                    DataTable purchaseCartData = RetrieveDataFromPurchaseCart();
 
-                                    using (SqlCommand selectStockCommand = new SqlCommand(selectStockQuery, connection))
+                                    foreach (DataRow purchaseRow in purchaseCartData.Rows)
                                     {
-                                        selectStockCommand.Parameters.AddWithValue("@ProductNumber", row.Cells["Product_Number"].Value);
+                                        string productNumber = purchaseRow["Product_Number"].ToString();
+                                        string productName = purchaseRow["Product_Name"].ToString();
+                                        decimal costingPrice = Convert.ToDecimal(purchaseRow["Costing_Price"]);
+                                        decimal sellingPrice = Convert.ToDecimal(purchaseRow["Selling_Price"]);
+                                        int quantity = Convert.ToInt32(purchaseRow["Quantity"]);
+                                        string mergeStockQuery =
+    "MERGE INTO Stocks AS target " +
+    "USING (SELECT @ProductNumber AS ProductNumber, @ProductName AS ProductName, @SellingPrice AS SellingPrice, " +
+    "@CostingPrice AS CostingPrice, @Quantity AS Quantity) AS source " +
+    "ON target.Product_Number = source.ProductNumber " +
+    "WHEN MATCHED THEN " +
+    "UPDATE SET " +
+    "   target.Selling_Price = source.SellingPrice, " +
+    "   target.Costing_Price = source.CostingPrice, " +
+    "   target.Quantity = target.Quantity + source.Quantity " +
+    "WHEN NOT MATCHED THEN " +
+    "INSERT (Product_Number, Product_Name, Selling_Price, Costing_Price, Quantity) " +
+    "VALUES (source.ProductNumber, source.ProductName, source.SellingPrice, source.CostingPrice, source.Quantity);";
 
-                                        int productCount = Convert.ToInt32(selectStockCommand.ExecuteScalar());
-
-                                        if (productCount > 0)
+                                        using (SqlCommand mergeStockCommand = new SqlCommand(mergeStockQuery, connection))
                                         {
-                                            // Update existing record in Stocks
-                                            string updateStockQuery = "UPDATE Stocks SET Quantity = Quantity + @Quantity, Selling_Price = @SellingPrice, Costing_Price = @CostingPrice" +
-                                                                      " WHERE Product_Number = @ProductNumber";
+                                            mergeStockCommand.Parameters.AddWithValue("@ProductNumber", productNumber);
+                                            mergeStockCommand.Parameters.AddWithValue("@ProductName", productName);
+                                            mergeStockCommand.Parameters.AddWithValue("@SellingPrice", sellingPrice);
+                                            mergeStockCommand.Parameters.AddWithValue("@CostingPrice", costingPrice);
+                                            mergeStockCommand.Parameters.AddWithValue("@Quantity", quantity);
 
-                                            using (SqlCommand updateStockCommand = new SqlCommand(updateStockQuery, connection))
+
+                                            int rowsAffectedStocks = mergeStockCommand.ExecuteNonQuery();
+                                            if (rowsAffectedStocks > 0)
                                             {
-                                                updateStockCommand.Parameters.AddWithValue("@ProductNumber", row.Cells["Product_Number"].Value);
-                                                updateStockCommand.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value);
-                                                updateStockCommand.Parameters.AddWithValue("@SellingPrice", row.Cells["Selling_Price"].Value);
-                                                updateStockCommand.Parameters.AddWithValue("@CostingPrice", row.Cells["Costing_Price"].Value);
-
-                                                int updateRowsAffected = updateStockCommand.ExecuteNonQuery();
-                                                if (updateRowsAffected > 0)
-                                                {
-                                                    MessageBox.Show("Stocks Updated Successfully");
-                                                }
-                                                else
-                                                {
-                                                    MessageBox.Show("Failed to Update Stocks");
-                                                }
+                                                MessageBox.Show("Successfully Data Inserted in Stocks");
                                             }
-                                        }
-                                        else
-                                        {
-                                            // Insert new record into Stocks
-                                            string insertStockQuery = "INSERT INTO Stocks (Product_Number, Product_Name, Selling_Price, Costing_Price, Quantity)" +
-                                                                      "VALUES (@ProductNumber, @ProductName, @SellingPrice, @CostingPrice, @Quantity)";
-
-                                            using (SqlCommand insertStockCommand = new SqlCommand(insertStockQuery, connection))
+                                            else
                                             {
-                                                insertStockCommand.Parameters.AddWithValue("@ProductNumber", row.Cells["Product_Number"].Value);
-                                                insertStockCommand.Parameters.AddWithValue("@ProductName", row.Cells["Product_Name"].Value);
-                                                insertStockCommand.Parameters.AddWithValue("@SellingPrice", row.Cells["Selling_Price"].Value);
-                                                insertStockCommand.Parameters.AddWithValue("@CostingPrice", row.Cells["Costing_Price"].Value);
-                                                insertStockCommand.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value);
-
-                                                int insertStockRowsAffected = insertStockCommand.ExecuteNonQuery();
-                                                if (insertStockRowsAffected > 0)
-                                                {
-                                                    MessageBox.Show("Items Successfully Inserted in Stocks");
-                                                }
-                                                else
-                                                {
-                                                    MessageBox.Show("Failed to Insert New Items in Stocks");
-                                                }
+                                                MessageBox.Show("Failed to Insert Data in Stocks");
                                             }
                                         }
                                     }
-
-                                }
-                                else
-                                {
-                                    MessageBox.Show($"Failed to insert purchase data for PO Number {poNumber}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-
-
+                                }                                                             
 
                                 PopulateDataGridView("delete from tblPurchaseCart");
                                 txtBoxProductNum.Clear();
@@ -500,15 +485,6 @@ namespace inventory_system.usercontrol
             return supplierID;
         }
 
-        private void cmbBoxView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void userctrlPurchaseOrder_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

@@ -16,5 +16,10 @@ namespace inventory_system.usercontrol
         {
             InitializeComponent();
         }
+
+        private void usercontrolPurchasereturn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
