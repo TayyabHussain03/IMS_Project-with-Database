@@ -393,8 +393,8 @@ namespace inventory_system.usercontrol
         {
             txtBoxProductNum.Clear();
             txtBoxInvNum.Clear();
-            txtBoxSubTotal.Clear();
-            txtBoxSellingPrice.Clear();
+            txtBoxSubTotal.Text = "0.00";
+            txtBoxSellingPrice.Text = "0.00";
             numericUpDown1.Value = 0;
             txtBoxCustomerName.Clear();
 
@@ -403,6 +403,17 @@ namespace inventory_system.usercontrol
             cmbBoxView.SelectedIndex = 0;
             //load datgridview
             LoadDataGridViewData();
+        }
+
+        private void btnSalesReturnView_Click(object sender, EventArgs e)
+        {
+            Form salesReturnView = new Form();
+            UserControlSalesReturnView usSalesReturnView = new UserControlSalesReturnView();
+            usSalesReturnView.Dock = DockStyle.Fill;
+            salesReturnView.Controls.Add(usSalesReturnView);
+            salesReturnView.Size = new Size(780, 589);
+            salesReturnView.StartPosition = FormStartPosition.CenterScreen;
+            salesReturnView.ShowDialog();
         }
     }
 }

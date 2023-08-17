@@ -747,3 +747,4 @@ D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.pdb
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory system.genruntimeconfig.cache
 D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\ref\inventory system.dll
+D:\IMS_Project-with-Database\inventory system\inventory system\obj\Debug\net6.0-windows\inventory_system.usercontrol.UserControlSalesReturnView.resources

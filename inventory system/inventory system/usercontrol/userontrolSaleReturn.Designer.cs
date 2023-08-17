@@ -38,6 +38,7 @@
             label5 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
+            btnSalesReturnView = new Button();
             label7 = new Label();
             txtBoxInvNum = new TextBox();
             label4 = new Label();
@@ -52,7 +53,6 @@
             btnClear = new Button();
             btnUpdate = new Button();
             txtBoxProductNum = new TextBox();
-            btnSalesReturnView = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -193,6 +193,19 @@
             groupBox1.TabIndex = 22;
             groupBox1.TabStop = false;
             groupBox1.Text = "Sale Return";
+            // 
+            // btnSalesReturnView
+            // 
+            btnSalesReturnView.BackColor = Color.Black;
+            btnSalesReturnView.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSalesReturnView.ForeColor = Color.White;
+            btnSalesReturnView.Location = new Point(599, 497);
+            btnSalesReturnView.Name = "btnSalesReturnView";
+            btnSalesReturnView.Size = new Size(140, 45);
+            btnSalesReturnView.TabIndex = 38;
+            btnSalesReturnView.Text = "Detail View";
+            btnSalesReturnView.UseVisualStyleBackColor = false;
+            btnSalesReturnView.Click += btnSalesReturnView_Click;
             // 
             // label7
             // 
@@ -354,18 +367,6 @@
             txtBoxProductNum.Name = "txtBoxProductNum";
             txtBoxProductNum.Size = new Size(163, 25);
             txtBoxProductNum.TabIndex = 11;
-            // 
-            // btnSalesReturnView
-            // 
-            btnSalesReturnView.BackColor = Color.Black;
-            btnSalesReturnView.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSalesReturnView.ForeColor = Color.White;
-            btnSalesReturnView.Location = new Point(599, 497);
-            btnSalesReturnView.Name = "btnSalesReturnView";
-            btnSalesReturnView.Size = new Size(140, 45);
-            btnSalesReturnView.TabIndex = 38;
-            btnSalesReturnView.Text = "Detail View";
-            btnSalesReturnView.UseVisualStyleBackColor = false;
             // 
             // userontrolSaleReturn
             // 
