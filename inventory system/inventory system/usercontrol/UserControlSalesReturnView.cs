@@ -15,6 +15,7 @@ namespace inventory_system.usercontrol
     public partial class UserControlSalesReturnView : UserControl
     {
         string connectionString = "Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True";
+        private DataTable originalDataTable;
         public UserControlSalesReturnView()
         {
             InitializeComponent();
@@ -24,12 +25,22 @@ namespace inventory_system.usercontrol
         {
             cmbBoxReason.SelectedIndex = 0; // Select the "Please select" option by default                                          
 
-            // Load the original DataTable and keep a reference to it
 
+            // Attach the event handler for cmbBoxReason.SelectedIndexChanged
+            cmbBoxReason.SelectedIndexChanged += cmbBoxReason_SelectedIndexChanged;
+
+            // Load data into the DataGridView on form load
+            
+            LoadDataGridViewData();
+            LoadOriginalDataTable();
+        }
+
+        private void LoadOriginalDataTable()
+        {
             string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, SR.Quantity, SR.Unit_Price as Price, SR.Sub_Total as Amount, S.Sales_Return_Date as Date" +
-                   " FROM SRline_Items AS SR" +
-                   " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
-                   " INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID";
+                           " FROM SRline_Items AS SR" +
+                           " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
+                           " INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -39,15 +50,8 @@ namespace inventory_system.usercontrol
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     originalDataTable = new DataTable();
                     adapter.Fill(originalDataTable);
-                    dataGridView1.DataSource = originalDataTable;
                 }
             }
-
-            // Attach the event handler for cmbBoxReason.SelectedIndexChanged
-            cmbBoxReason.SelectedIndexChanged += cmbBoxReason_SelectedIndexChanged;
-            
-            // Load data into the DataGridView on form load
-            LoadDataGridViewData();
         }
 
         private void cmbBoxReason_KeyPress(object sender, KeyPressEventArgs e)
@@ -92,23 +96,6 @@ namespace inventory_system.usercontrol
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold); // Adjust the font, size, and style for column headers
         }
 
-        private void cmbBoxView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Get the selected option from cmbBoxView
-            string selectedOption = cmbBoxView.SelectedItem.ToString();
-
-            if (selectedOption == "All")
-            {
-                // Load all data
-                LoadAllData();
-            }
-            else
-            {
-                // Load data based on the selected option
-                LoadData(selectedOption);
-            }
-        }
-
         private void LoadAllData()
         {
             // Fetch all data from the database
@@ -129,7 +116,8 @@ namespace inventory_system.usercontrol
                 }
             }
         }
-        private void LoadData(string selectedOption)
+
+        private void LoadData(string selectedOption, string selectedReason)
         {
             DateTime currentDate = DateTime.Now;
             DateTime startDate = currentDate;
@@ -185,7 +173,9 @@ namespace inventory_system.usercontrol
                     foreach (DataRow row in dt.Rows)
                     {
                         DateTime salesReturnDate = Convert.ToDateTime(row["Date"]);
-                        if (salesReturnDate >= startDate)
+                        string reason = row["Reason"].ToString();
+
+                        if (salesReturnDate >= startDate && (selectedReason == "All" || reason == selectedReason))
                         {
                             filteredRows.Add(row);
                         }
@@ -201,8 +191,6 @@ namespace inventory_system.usercontrol
 
             DataView dv = new DataView(filteredDataTable); // Create a DataView from the filtered DataTable
             dataGridView1.DataSource = dv; // Set the DataView as the DataSource
-
-
         }
 
         private void cmbBoxReason_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -223,23 +211,43 @@ namespace inventory_system.usercontrol
             cmbBoxReason.SelectedIndex = 0;
         }
 
-        private DataTable originalDataTable; // Keep a reference to the original DataTable
-        private void cmbBoxReason_SelectedIndexChanged(object sender, EventArgs e)
+        private DataTable displayedDataTable; // Keep a reference to the currently displayed DataTable
+        private string currentSelectedOption = "All"; // Keep track of the current selected view option
+
+        private void cmbBoxView_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Get the selected option from cmbBoxView
+            currentSelectedOption = cmbBoxView.SelectedItem.ToString();
             string selectedReason = cmbBoxReason.SelectedItem.ToString();
 
-            if (selectedReason == "All")
+            if (currentSelectedOption == "All")
             {
-                // Load all data
-                LoadAllData();
+                // Load all data from the displayedDataTable
+                LoadData("All", selectedReason);
             }
             else
             {
-                if (originalDataTable != null)
+                // Load data based on the selected option and reason
+                LoadData(currentSelectedOption, selectedReason);
+            }
+        }
+
+        private void cmbBoxReason_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (displayedDataTable != null) // Check if the displayedDataTable is initialized
+            {
+                string selectedReason = cmbBoxReason.SelectedItem.ToString();
+
+                if (currentSelectedOption == "All")
                 {
-                    // Filter the rows based on the selected reason
-                    DataTable filteredDataTable = originalDataTable.Clone();
-                    foreach (DataRow row in originalDataTable.Rows)
+                    // Load all data from the displayedDataTable
+                    dataGridView1.DataSource = displayedDataTable;
+                }
+                else
+                {
+                    // Filter the rows based on the selected reason in the displayedDataTable
+                    DataTable filteredDataTable = displayedDataTable.Clone();
+                    foreach (DataRow row in displayedDataTable.Rows)
                     {
                         if (row["Reason"].ToString() == selectedReason)
                         {
@@ -252,5 +260,33 @@ namespace inventory_system.usercontrol
             }
         }
 
+
+        private void SearchProducts(string searchText)
+        {
+            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, SR.Quantity, SR.Unit_Price as Price, SR.Sub_Total as Amount, S.Sales_Return_Date as Date" +
+                   " FROM SRline_Items AS SR" +
+                   " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
+                   " INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID" +
+                   $" WHERE P.Product_Name LIKE '%{searchText}%'"; // Use LIKE to perform a partial match search
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(command);
+                    displayedDataTable = new DataTable(); // Initialize the displayedDataTable
+                    da.Fill(displayedDataTable);
+                    dataGridView1.DataSource = displayedDataTable;
+                }
+            }
+        }
+
+        private void btnSearchProducts_Click(object sender, EventArgs e)
+        {
+            string searchText = Convert.ToString(txtSearchProducts.Text);
+            SearchProducts(searchText);
+            txtSearchProducts.Text = "";
+        }
     }
 }

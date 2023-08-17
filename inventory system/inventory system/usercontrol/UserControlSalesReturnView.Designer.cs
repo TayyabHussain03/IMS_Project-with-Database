@@ -83,6 +83,7 @@
             btnSearchProducts.Size = new Size(40, 34);
             btnSearchProducts.TabIndex = 30;
             btnSearchProducts.UseVisualStyleBackColor = false;
+            btnSearchProducts.Click += btnSearchProducts_Click;
             // 
             // label4
             // 
