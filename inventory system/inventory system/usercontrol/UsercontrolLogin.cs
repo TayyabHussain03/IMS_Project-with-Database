@@ -74,6 +74,7 @@ namespace inventory_system.usercontrol
                         txtemail.Focus();
                         txtpassword.Focus();
                     }
+                    connection.Close();
                 }
             }
         }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +11,24 @@ using System.Windows.Forms;
 
 namespace inventory_system.usercontrol
 {
-    public partial class UserControlSalesReturnView : UserControl
+    public partial class UserControlPurchaseReturnView : UserControl
     {
         string connectionString = "Data Source=Desktop-SJVABES;Initial Catalog=dbIMS;Integrated Security=True";
-        public UserControlSalesReturnView()
+        public UserControlPurchaseReturnView()
         {
             InitializeComponent();
         }
 
-        private void UserControlSalesReturnView_Load(object sender, EventArgs e)
+        private void UserControlPurchaseRetrunView_Load(object sender, EventArgs e)
         {
             cmbBoxReason.SelectedIndex = 0; // Select the "Please select" option by default                                          
 
             // Load the original DataTable and keep a reference to it
 
-            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, SR.Quantity, SR.Unit_Price as Price, SR.Sub_Total as Amount, S.Sales_Return_Date as Date" +
-                   " FROM SRline_Items AS SR" +
-                   " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
-                   " INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID";
+            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, PR.Quantity, PR.Unit_Price as Price, PR.Sub_Total as Amount, S.Purchase_Return_Date as Date" +
+                   " FROM PRline_Items AS PR" +
+                   " INNER JOIN Stocks AS P ON PR.Product_ID = P.Product_Number " +
+                   " INNER JOIN Purchase_Return AS S ON PR.Purchase_Return_ID = S.Purchase_Return_ID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -57,10 +56,10 @@ namespace inventory_system.usercontrol
 
         private void LoadDataGridViewData()
         {
-            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, SR.Quantity, SR.Unit_Price as Price, SR.Sub_Total as Amount, S.Sales_Return_Date as Date" +
-                " FROM SRline_Items AS SR" +
-                " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
-                "INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID";
+            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, PR.Quantity, PR.Unit_Price as Price, PR.Sub_Total as Amount, S.Purchase_Return_Date as Date" +
+                " FROM PRline_Items AS PR" +
+                " INNER JOIN Stocks AS P ON PR.Product_ID = P.Product_Number " +
+                "INNER JOIN Purchase_Return AS S ON PR.Purchase_Return_ID = S.Purchase_Return_ID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -113,10 +112,10 @@ namespace inventory_system.usercontrol
         private void LoadAllData()
         {
             // Fetch all data from the database
-            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, SR.Quantity, SR.Unit_Price as Price, SR.Sub_Total as Amount, S.Sales_Return_Date as Date" +
-                           " FROM SRline_Items AS SR" +
-                           " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
-                           " INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID";
+            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, PR.Quantity, PR.Unit_Price as Price, PR.Sub_Total as Amount, S.Purchase_Return_Date as Date" +
+                           " FROM PRline_Items AS PR" +
+                           " INNER JOIN Stocks AS P ON PR.Product_ID = P.Product_Number " +
+                           " INNER JOIN Purchase_Return AS S ON PR.Purchase_Return_ID = S.Purchase_Return_ID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -168,10 +167,10 @@ namespace inventory_system.usercontrol
             }
 
             // Fetch data from the database using the start date
-            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, SR.Quantity, SR.Unit_Price as Price, SR.Sub_Total as Amount, S.Sales_Return_Date as Date" +
-                           " FROM SRline_Items AS SR" +
-                           " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
-                           " INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID";
+            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, PR.Quantity, PR.Unit_Price as Price, PR.Sub_Total as Amount, S.Purchase_Return_Date as Date" +
+                           " FROM PRline_Items AS PR" +
+                           " INNER JOIN Stocks AS P ON PR.Product_ID = P.Product_Number " +
+                           " INNER JOIN Purchase_Return AS S ON PR.Purchase_Return_ID = S.Purchase_Return_ID";
 
             List<DataRow> filteredRows = new List<DataRow>();
 
@@ -264,10 +263,10 @@ namespace inventory_system.usercontrol
 
         private void SearchProducts(string searchText)
         {
-            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, SR.Quantity, SR.Unit_Price as Price, SR.Sub_Total as Amount, S.Sales_Return_Date as Date" +
-                           " FROM SRline_Items AS SR" +
-                           " INNER JOIN Stocks AS P ON SR.Product_Number = P.Product_Number " +
-                           " INNER JOIN Sales_Return AS S ON SR.Sales_Return_ID = S.Sales_Return_ID" +
+            string query = "SELECT P.Product_Name as Name, S.Reason as Reason, S.Invoice_Number, PR.Quantity, PR.Unit_Price as Price, PR.Sub_Total as Amount, S.Purchase_Return_Date as Date" +
+                           " FROM PRline_Items AS PR" +
+                           " INNER JOIN Stocks AS P ON PR.Product_ID = P.Product_Number " +
+                           " INNER JOIN Purchase_Return AS S ON PR.Purchase_Return_ID = S.Purchase_Return_ID" +
                            $" WHERE P.Product_Name LIKE '%{searchText}%'"; // Use LIKE to perform a partial match search
 
             using (SqlConnection connection = new SqlConnection(connectionString))

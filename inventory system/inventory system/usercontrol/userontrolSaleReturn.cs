@@ -130,8 +130,8 @@ namespace inventory_system.usercontrol
 
                         txtBoxProductNum.Clear();
                         txtBoxInvNum.Clear();
-                        txtBoxSubTotal.Clear();
-                        txtBoxSellingPrice.Clear();
+                        txtBoxSubTotal.Text = "0.00";
+                        txtBoxSellingPrice.Text = "0.00";
                         numericUpDown1.Value = 0;
                         txtBoxCustomerName.Clear();
 
