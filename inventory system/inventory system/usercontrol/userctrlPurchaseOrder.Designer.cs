@@ -508,7 +508,6 @@
             Controls.Add(groupBox1);
             Name = "userctrlPurchaseOrder";
             Size = new Size(866, 686);
-           
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();

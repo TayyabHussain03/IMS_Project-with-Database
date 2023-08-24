@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TWuspuJSBxK8eMXpJ8KZCur314KjGkqU8D/nlcXd9s4uyFLN7M/s8oZjXMs2vcZMKnyF2UOFtVAnj3FsaxzNbw==",
+  "dgSpecHash": "WbDepQQlY/KRryHZrdmW1/Zgf2eLv9M3aGH65EW1WQOh397rhLynwCsSBGNhJ56NO/GPmQyPb1hBHJeXKsBbzQ==",
   "success": true,
-  "projectFilePath": "D:\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj",
+  "projectFilePath": "D:\\IMS_Project-with-Database-Complete\\inventory system\\inventory system\\inventory system.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN_PC\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ADMIN_PC\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -216,9 +216,9 @@ namespace inventory_system.usercontrol
             // Clear fields
             txtBoxProductNum.Clear();
             txtBoxProductName.Clear();
-            txtBoxCostingPrice.Clear();
-            txtBoxSellingPrice.Clear();
-            txtBoxSubTotal.Clear();
+            txtBoxCostingPrice.Text = "0.00";
+            txtBoxSellingPrice.Text = "0.00";
+            txtBoxSubTotal.Text = "0.00";
             numericUpDown1.Value = 0;
             cmbBoxPayment.SelectedIndex = -1;
             PopulateDataGridView("Select * from tblPurchaseCart");
@@ -323,118 +323,120 @@ namespace inventory_system.usercontrol
 
         private void btnProceed_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.Cells["PO_Number"].Value != null && row.Cells["Purchasing_Date"].Value != null && row.Cells["Payment_Type"].Value != null)
+            try {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-
-                    string poNumber = row.Cells["PO_Number"].Value.ToString();
-                    DateTime purchasingDate = Convert.ToDateTime(row.Cells["Purchasing_Date"].Value);
-                    string paymentType = row.Cells["Payment_Type"].Value.ToString();
-                    decimal totalAmount = Convert.ToDecimal(txtBoxTotalAmount.Text);
-                    string supplierName = row.Cells["Supplier_Name"].Value.ToString();
-
-                    int supplierID = GetSupplierID(supplierName); // Function to get or insert supplier and return ID
-
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    if (row.Cells["PO_Number"].Value != null && row.Cells["Purchasing_Date"].Value != null && row.Cells["Payment_Type"].Value != null)
                     {
-                        connection.Open();
+                        string poNumber = row.Cells["PO_Number"].Value.ToString();
+                        DateTime purchasingDate = Convert.ToDateTime(row.Cells["Purchasing_Date"].Value);
+                        string paymentType = row.Cells["Payment_Type"].Value.ToString();
+                        decimal totalAmount = Convert.ToDecimal(txtBoxTotalAmount.Text);
+                        string supplierName = row.Cells["Supplier_Name"].Value.ToString();
 
-                        string insertOrUpdateQuery = "IF EXISTS (SELECT 1 FROM Purchases WHERE Purchase_ID = @PurchaseID)" +
-     "    UPDATE Purchases SET Purchase_date = @PurchaseDate, total_amount = total_amount + @TotalAmount, payment_type = @PaymentType, Supplier_ID = @SupplierID" +
-     "    WHERE Purchase_ID = @PurchaseID" +
-     " ELSE" +
-     "    INSERT INTO Purchases (Purchase_ID, Purchase_date, total_amount, payment_type, Supplier_ID)" +
-     "    VALUES (@PurchaseID, @PurchaseDate, @TotalAmount, @PaymentType, @SupplierID)";
+                        int supplierID = GetSupplierID(supplierName); // Function to get or insert supplier and return ID
 
-
-                        using (SqlCommand insertOrUpdateCommand = new SqlCommand(insertOrUpdateQuery, connection))
+                        using (SqlConnection connection = new SqlConnection(connectionString))
                         {
-                            insertOrUpdateCommand.Parameters.AddWithValue("@PurchaseID", poNumber);
-                            insertOrUpdateCommand.Parameters.AddWithValue("@PurchaseDate", purchasingDate);
-                            insertOrUpdateCommand.Parameters.AddWithValue("@TotalAmount", totalAmount); // Not changed
-                            insertOrUpdateCommand.Parameters.AddWithValue("@PaymentType", paymentType);
-                            insertOrUpdateCommand.Parameters.AddWithValue("@SupplierID", supplierID);
+                            connection.Open();
 
-                            insertOrUpdateCommand.ExecuteNonQuery();
-                        }
+                            string insertOrUpdateQuery = "IF EXISTS (SELECT 1 FROM Purchases WHERE Purchase_ID = @PurchaseID)" +
+                         "    UPDATE Purchases SET Purchase_date = @PurchaseDate, total_amount = total_amount + @TotalAmount, payment_type = @PaymentType, Supplier_ID = @SupplierID" +
+                         "    WHERE Purchase_ID = @PurchaseID" +
+                         " ELSE" +
+                         "    INSERT INTO Purchases (Purchase_ID, Purchase_date, total_amount, payment_type, Supplier_ID)" +
+                         "    VALUES (@PurchaseID, @PurchaseDate, @TotalAmount, @PaymentType, @SupplierID)";
 
-
-                        // Retrieve existing Purchase_ID based on the provided PO_Number
-                        string selectPurchaseIDQuery = "SELECT Purchase_ID FROM Purchases WHERE Purchase_ID = @PurchaseID";
-
-                        using (SqlCommand selectCommand = new SqlCommand(selectPurchaseIDQuery, connection))
-                        {
-                            selectCommand.Parameters.AddWithValue("@PurchaseID", poNumber);
-
-                            int purchaseID = Convert.ToInt32(selectCommand.ExecuteScalar());
-
-                            // Insert data into Pline_Items table
-                            string insertLineItemsQuery = "INSERT INTO Pline_Items (Purchase_ID, Product_ID, Product_Name, Quantity, Costing_Price, Selling_price, Sub_Total, Expiry_Date, Manufacturing_Date)" +
-                                                          "VALUES (@PurchaseID, @ProductNumber, @ProductName, @Quantity, @CostingPrice, @SellingPrice, @SubTotal, @ExpiryDate, @MFGDate)";
-
-                            using (SqlCommand lineItemsCommand = new SqlCommand(insertLineItemsQuery, connection))
+                            using (SqlCommand insertOrUpdateCommand = new SqlCommand(insertOrUpdateQuery, connection))
                             {
-                                lineItemsCommand.Parameters.AddWithValue("@PurchaseID", purchaseID);
-                                lineItemsCommand.Parameters.AddWithValue("@ProductNumber", row.Cells["Product_Number"].Value);
-                                lineItemsCommand.Parameters.AddWithValue("@ProductName", row.Cells["Product_Name"].Value);
-                                lineItemsCommand.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value);
-                                lineItemsCommand.Parameters.AddWithValue("@CostingPrice", row.Cells["Costing_Price"].Value);
-                                lineItemsCommand.Parameters.AddWithValue("@SellingPrice", row.Cells["Selling_Price"].Value);
-                                lineItemsCommand.Parameters.AddWithValue("@SubTotal", row.Cells["Sub_Total"].Value);
-                                lineItemsCommand.Parameters.AddWithValue("@ExpiryDate", row.Cells["Expiry_Date"].Value);
-                                lineItemsCommand.Parameters.AddWithValue("@MFGDate", row.Cells["MFG_Date"].Value);
-                                
-                                int rowsAffected = lineItemsCommand.ExecuteNonQuery();
-                                
-                                if (rowsAffected > 0)
+                                insertOrUpdateCommand.Parameters.AddWithValue("@PurchaseID", poNumber);
+                                insertOrUpdateCommand.Parameters.AddWithValue("@PurchaseDate", purchasingDate);
+                                insertOrUpdateCommand.Parameters.AddWithValue("@TotalAmount", totalAmount); // Not changed
+                                insertOrUpdateCommand.Parameters.AddWithValue("@PaymentType", paymentType);
+                                insertOrUpdateCommand.Parameters.AddWithValue("@SupplierID", supplierID);
+
+                                insertOrUpdateCommand.ExecuteNonQuery();
+                            }
+
+                            string selectPurchaseIDQuery = "SELECT Purchase_ID FROM Purchases WHERE Purchase_ID = @PurchaseID";
+
+                            using (SqlCommand selectCommand = new SqlCommand(selectPurchaseIDQuery, connection))
+                            {
+                                selectCommand.Parameters.AddWithValue("@PurchaseID", poNumber);
+
+                                int purchaseID = Convert.ToInt32(selectCommand.ExecuteScalar());
+
+                                // Retrieve data from tblPurchaseCart
+                                DataTable purchaseCartData = new DataTable();
+                                using (SqlCommand selectPurchaseCartCommand = new SqlCommand("SELECT * FROM tblPurchaseCart", connection))
                                 {
-                                    DataTable purchaseCartData = RetrieveDataFromPurchaseCart();
-
-                                    foreach (DataRow purchaseRow in purchaseCartData.Rows)
+                                    using (SqlDataAdapter adapter = new SqlDataAdapter(selectPurchaseCartCommand))
                                     {
-                                        string productNumber = purchaseRow["Product_Number"].ToString();
-                                        string productName = purchaseRow["Product_Name"].ToString();
-                                        decimal costingPrice = Convert.ToDecimal(purchaseRow["Costing_Price"]);
-                                        decimal sellingPrice = Convert.ToDecimal(purchaseRow["Selling_Price"]);
-                                        int quantity = Convert.ToInt32(purchaseRow["Quantity"]);
-                                        string mergeStockQuery =
-    "MERGE INTO Stocks AS target " +
-    "USING (SELECT @ProductNumber AS ProductNumber, @ProductName AS ProductName, @SellingPrice AS SellingPrice, " +
-    "@CostingPrice AS CostingPrice, @Quantity AS Quantity) AS source " +
-    "ON target.Product_Number = source.ProductNumber " +
-    "WHEN MATCHED THEN " +
-    "UPDATE SET " +
-    "   target.Selling_Price = source.SellingPrice, " +
-    "   target.Costing_Price = source.CostingPrice, " +
-    "   target.Quantity = target.Quantity + source.Quantity " +
-    "WHEN NOT MATCHED THEN " +
-    "INSERT (Product_Number, Product_Name, Selling_Price, Costing_Price, Quantity) " +
-    "VALUES (source.ProductNumber, source.ProductName, source.SellingPrice, source.CostingPrice, source.Quantity);";
-
-                                        using (SqlCommand mergeStockCommand = new SqlCommand(mergeStockQuery, connection))
-                                        {
-                                            mergeStockCommand.Parameters.AddWithValue("@ProductNumber", productNumber);
-                                            mergeStockCommand.Parameters.AddWithValue("@ProductName", productName);
-                                            mergeStockCommand.Parameters.AddWithValue("@SellingPrice", sellingPrice);
-                                            mergeStockCommand.Parameters.AddWithValue("@CostingPrice", costingPrice);
-                                            mergeStockCommand.Parameters.AddWithValue("@Quantity", quantity);
-
-
-                                            int rowsAffectedStocks = mergeStockCommand.ExecuteNonQuery();
-                                            if (rowsAffectedStocks > 0)
-                                            {
-                                                MessageBox.Show("Successfully Data Inserted in Stocks");
-                                            }
-                                            else
-                                            {
-                                                MessageBox.Show("Failed to Insert Data in Stocks");
-                                            }
-                                        }
+                                        adapter.Fill(purchaseCartData);
                                     }
-                                }                                                             
+                                }
 
-                                PopulateDataGridView("delete from tblPurchaseCart");
+                                foreach (DataRow purchaseRow in purchaseCartData.Rows)
+                                {
+                                    string productNumber = purchaseRow["Product_Number"].ToString();
+                                    string productName = purchaseRow["Product_Name"].ToString();
+                                    decimal costingPrice = Convert.ToDecimal(purchaseRow["Costing_Price"]);
+                                    decimal sellingPrice = Convert.ToDecimal(purchaseRow["Selling_Price"]);
+                                    int quantity = Convert.ToInt32(purchaseRow["Quantity"]);
+                                    DateTime expiryDate = DateTime.Parse(purchaseRow["Expiry_Date"].ToString());
+                                    DateTime manufacturingDate = DateTime.Parse(purchaseRow["MFG_Date"].ToString());
+
+                                    string insertPlineItemsQuery = "INSERT INTO Pline_Items (Purchase_ID, Product_ID, Product_Name, Quantity, Costing_Price, Selling_Price, Sub_Total, Expiry_Date, Manufacturing_Date)" +
+                                                                  "VALUES (@PurchaseID, @ProductNumber, @ProductName, @Quantity, @CostingPrice, @SellingPrice, @SubTotal, @ExpiryDate, @ManufacturingDate)";
+
+                                    using (SqlCommand plineItemsCommand = new SqlCommand(insertPlineItemsQuery, connection))
+                                    {
+                                        plineItemsCommand.Parameters.AddWithValue("@PurchaseID", purchaseID);
+                                        plineItemsCommand.Parameters.AddWithValue("@ProductNumber", productNumber);
+                                        plineItemsCommand.Parameters.AddWithValue("@ProductName", productName);
+                                        plineItemsCommand.Parameters.AddWithValue("@Quantity", quantity);
+                                        plineItemsCommand.Parameters.AddWithValue("@CostingPrice", costingPrice);
+                                        plineItemsCommand.Parameters.AddWithValue("@SellingPrice", sellingPrice);
+                                        plineItemsCommand.Parameters.AddWithValue("@SubTotal", quantity * costingPrice); // Calculate subtotal
+                                        plineItemsCommand.Parameters.AddWithValue("@ExpiryDate", expiryDate);
+                                        plineItemsCommand.Parameters.AddWithValue("@ManufacturingDate", manufacturingDate);
+
+                                        plineItemsCommand.ExecuteNonQuery();
+                                    }
+
+                                    // Merge into Stocks
+                                    string mergeStockQuery = "MERGE INTO Stocks AS target " +
+                                                             "USING (SELECT @ProductNumber AS ProductNumber, @ProductName AS ProductName, @Quantity AS Quantity, @CostingPrice AS CostingPrice, @SellingPrice AS SellingPrice) AS source " +
+                                                             "ON target.Product_Number = source.ProductNumber " +
+                                                             "WHEN MATCHED THEN " +
+                                                             "UPDATE SET target.Quantity = target.Quantity + source.Quantity " +
+                                                             "WHEN NOT MATCHED THEN " +
+                                                             "INSERT (Product_Number, Product_Name, Quantity, Costing_Price, Selling_Price) " +
+                                                             "VALUES (source.ProductNumber, source.ProductName, source.Quantity, source.CostingPrice, source.SellingPrice);";
+
+                                    using (SqlCommand mergeStockCommand = new SqlCommand(mergeStockQuery, connection))
+                                    {
+                                        mergeStockCommand.Parameters.AddWithValue("@ProductNumber", productNumber);
+                                        mergeStockCommand.Parameters.AddWithValue("@ProductName", productName);
+                                        mergeStockCommand.Parameters.AddWithValue("@Quantity", quantity);
+                                        mergeStockCommand.Parameters.AddWithValue("@CostingPrice", costingPrice);
+                                        mergeStockCommand.Parameters.AddWithValue("@SellingPrice", sellingPrice);
+
+                                        mergeStockCommand.ExecuteNonQuery();
+                                    }
+                                }
+
+                                // Clear purchase cart after processing
+                                using (SqlCommand deletePurchaseCartCommand = new SqlCommand("DELETE FROM tblPurchaseCart", connection))
+                                {
+                                    deletePurchaseCartCommand.ExecuteNonQuery();
+                                }
+
+                                MessageBox.Show("Items purchased successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                PopulateDataGridView("Select * from tblPurchaseCart");
+
+                                // Clear input fields
                                 txtBoxProductNum.Clear();
                                 txtBoxProductName.Clear();
                                 txtBoxSupplierName.Clear();
@@ -450,7 +452,15 @@ namespace inventory_system.usercontrol
                     }
                 }
             }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
+
+
 
         private int GetSupplierID(string supplierName)
         {

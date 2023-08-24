@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj",
+      "projectUniqueName": "D:\\IMS_Project-with-Database-Complete\\inventory system\\inventory system\\inventory system.csproj",
       "projectName": "inventory system",
-      "projectPath": "D:\\IMS_Project-with-Database\\inventory system\\inventory system\\inventory system.csproj",
+      "projectPath": "D:\\IMS_Project-with-Database-Complete\\inventory system\\inventory system\\inventory system.csproj",
       "packagesPath": "C:\\Users\\ADMIN_PC\\.nuget\\packages\\",
-      "outputPath": "D:\\IMS_Project-with-Database\\inventory system\\inventory system\\obj\\",
+      "outputPath": "D:\\IMS_Project-with-Database-Complete\\inventory system\\inventory system\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
